@@ -1,0 +1,16 @@
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+        http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+    <!-- doctrine Symfony-->
+    <!-- creation de entity avec le fichier Auteur.orm.xml-->
+    <entity name="gaelicBundle\Entity\Actualite" table="actualite">    <!-- name de mon bundle et le nom du fichier (orm.xml)-->
+        <id name="id" type="integer">
+            <generator strategy="AUTO" />
+        </id>
+        <field name="title" type="text" column="title" />
+        <field name="img" type= "text" column="img" />  <!-- creation de mes colonnes dans ma table-->
+        <field name="content" type="text" column="content" />
+
+    </entity>
+</doctrine-mapping>
