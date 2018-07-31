@@ -39,7 +39,7 @@ class DebugCommand extends Command
     public function __construct($twig = null, $projectDir = null)
     {
         if (!$twig instanceof Environment) {
-            @trigger_error(sprintf('Passing a command name as the first argument of "%s" is deprecated since Symfony 3.4 and will be removed in 4.0. If the command was registered by convention, make it a service instead.', __METHOD__), E_USER_DEPRECATED);
+            @trigger_error(sprintf('Passing a command name as the first argument of "%s()" is deprecated since Symfony 3.4 and support for it will be removed in 4.0. If the command was registered by convention, make it a service instead.', __METHOD__), E_USER_DEPRECATED);
 
             parent::__construct($twig);
 
@@ -54,7 +54,7 @@ class DebugCommand extends Command
 
     public function setTwigEnvironment(Environment $twig)
     {
-        @trigger_error(sprintf('Method "%s" is deprecated since Symfony 3.4 and will be removed in 4.0.', __METHOD__), E_USER_DEPRECATED);
+        @trigger_error(sprintf('The "%s()" method is deprecated since Symfony 3.4 and will be removed in 4.0.', __METHOD__), E_USER_DEPRECATED);
 
         $this->twig = $twig;
     }
@@ -64,7 +64,7 @@ class DebugCommand extends Command
      */
     protected function getTwigEnvironment()
     {
-        @trigger_error(sprintf('Method "%s" is deprecated since Symfony 3.4 and will be removed in 4.0.', __METHOD__), E_USER_DEPRECATED);
+        @trigger_error(sprintf('The "%s()" method is deprecated since Symfony 3.4 and will be removed in 4.0.', __METHOD__), E_USER_DEPRECATED);
 
         return $this->twig;
     }
@@ -151,19 +151,27 @@ EOF
         }
 
         $rows = array();
+        $firstNamespace = true;
+        $prevHasSeparator = false;
         foreach ($this->getLoaderPaths() as $namespace => $paths) {
-            if (count($paths) > 1) {
+            if (!$firstNamespace && !$prevHasSeparator && count($paths) > 1) {
                 $rows[] = array('', '');
             }
+            $firstNamespace = false;
             foreach ($paths as $path) {
-                $rows[] = array($namespace, '- '.$path);
+                $rows[] = array($namespace, $path.DIRECTORY_SEPARATOR);
                 $namespace = '';
             }
             if (count($paths) > 1) {
                 $rows[] = array('', '');
+                $prevHasSeparator = true;
+            } else {
+                $prevHasSeparator = false;
             }
         }
-        array_pop($rows);
+        if ($prevHasSeparator) {
+            array_pop($rows);
+        }
         $io->section('Loader Paths');
         $io->table(array('Namespace', 'Paths'), $rows);
 

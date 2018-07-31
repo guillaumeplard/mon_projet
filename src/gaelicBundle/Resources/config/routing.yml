@@ -1,3 +1,9 @@
 gaelic:
     path:     /gaelic
     defaults: { _controller: gaelicBundle:Default:gaelic }
+
+gaelic:
+    path:     /gaelic
+    defaults: { _controller: gaelicBundle:Default:gaelic }
+
+

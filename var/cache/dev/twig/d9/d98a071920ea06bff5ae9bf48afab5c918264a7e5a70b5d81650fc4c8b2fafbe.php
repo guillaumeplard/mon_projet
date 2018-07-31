@@ -39,7 +39,11 @@ class __TwigTemplate_31b6ac3abe5691e80862ee371f8456400cf1399792f7c88f681adb96565
 <nav>
     <ul class=\"nav\">
         <li>Football Gaélique</li>
-        <li> Le club</li>
+        <li>Le club</li>
+        <li><img src=\"";
+        // line 16
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/gaelic-football.png"), "html", null, true);
+        echo "\" alt=\"\"></li>
         <li>Média</li>
         <li>Partenaire</li>
         <li>Contact</li>
@@ -68,7 +72,7 @@ class __TwigTemplate_31b6ac3abe5691e80862ee371f8456400cf1399792f7c88f681adb96565
 
     public function getDebugInfo()
     {
-        return array (  34 => 8,  25 => 1,);
+        return array (  45 => 16,  34 => 8,  25 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -95,7 +99,8 @@ class __TwigTemplate_31b6ac3abe5691e80862ee371f8456400cf1399792f7c88f681adb96565
 <nav>
     <ul class=\"nav\">
         <li>Football Gaélique</li>
-        <li> Le club</li>
+        <li>Le club</li>
+        <li><img src=\"{{ asset('images/gaelic-football.png') }}\" alt=\"\"></li>
         <li>Média</li>
         <li>Partenaire</li>
         <li>Contact</li>

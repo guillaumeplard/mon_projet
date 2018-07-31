@@ -1,3 +1,11 @@
 body{
-    background-color: #66dd66;
+    background-image: radial-gradient(circle, #051937, #211536, #340d2f, #410423, #470312);
+}
+.nav{
+    list-style-type: none;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    line-height: 50px;
+    font-size: 20px;
 }
