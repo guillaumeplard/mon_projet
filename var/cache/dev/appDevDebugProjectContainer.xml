@@ -19,6 +19,7 @@
       <parameter key="AppBundle">AppBundle\AppBundle</parameter>
       <parameter key="gaelicBundle">gaelicBundle\gaelicBundle</parameter>
       <parameter key="FOSUserBundle">FOS\UserBundle\FOSUserBundle</parameter>
+      <parameter key="EasyAdminBundle">EasyCorp\Bundle\EasyAdminBundle\EasyAdminBundle</parameter>
       <parameter key="DebugBundle">Symfony\Bundle\DebugBundle\DebugBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
@@ -76,6 +77,11 @@
         <parameter key="path">/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle</parameter>
         <parameter key="namespace">FOS\UserBundle</parameter>
       </parameter>
+      <parameter key="EasyAdminBundle" type="collection">
+        <parameter key="parent">null</parameter>
+        <parameter key="path">/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src</parameter>
+        <parameter key="namespace">EasyCorp\Bundle\EasyAdminBundle</parameter>
+      </parameter>
       <parameter key="DebugBundle" type="collection">
         <parameter key="parent">null</parameter>
         <parameter key="path">/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle</parameter>
@@ -116,13 +122,13 @@
     <parameter key="mailer_user">smtp.gmail.com</parameter>
     <parameter key="mailer_password">votreemail@gmail.com</parameter>
     <parameter key="secret">26fec43fa84c93ef127b9d5b8378a80113576d1d</parameter>
-    <parameter key="locale">en</parameter>
+    <parameter key="locale">fr</parameter>
     <parameter key="fragment.renderer.hinclude.global_template">null</parameter>
     <parameter key="fragment.path">/_fragment</parameter>
     <parameter key="kernel.secret">26fec43fa84c93ef127b9d5b8378a80113576d1d</parameter>
     <parameter key="kernel.http_method_override">true</parameter>
     <parameter key="kernel.trusted_hosts" type="collection"/>
-    <parameter key="kernel.default_locale">en</parameter>
+    <parameter key="kernel.default_locale">fr</parameter>
     <parameter key="templating.helper.code.file_link_format">null</parameter>
     <parameter key="debug.file_link_format">null</parameter>
     <parameter key="session.metadata.storage_key">_sf2_meta</parameter>
@@ -393,6 +399,75 @@
       <parameter>ResetPassword</parameter>
       <parameter>Default</parameter>
     </parameter>
+    <parameter key="easyadmin.config" type="collection">
+      <parameter key="entities" type="collection">
+        <parameter key="User" type="collection">
+          <parameter key="class">gaelicBundle\Entity\User</parameter>
+          <parameter key="name">User</parameter>
+        </parameter>
+        <parameter key="Media" type="collection">
+          <parameter key="class">gaelicBundle\Entity\Media</parameter>
+          <parameter key="name">Media</parameter>
+        </parameter>
+        <parameter key="News" type="collection">
+          <parameter key="class">gaelicBundle\Entity\News</parameter>
+          <parameter key="name">News</parameter>
+        </parameter>
+        <parameter key="Sponsors" type="collection">
+          <parameter key="class">gaelicBundle\Entity\Sponsors</parameter>
+          <parameter key="name">Sponsors</parameter>
+        </parameter>
+        <parameter key="Entrainement" type="collection">
+          <parameter key="class">gaelicBundle\Entity\Entrainement</parameter>
+          <parameter key="name">Entrainement</parameter>
+        </parameter>
+        <parameter key="Contact" type="collection">
+          <parameter key="class">gaelicBundle\Entity\Contact</parameter>
+          <parameter key="name">Contact</parameter>
+        </parameter>
+      </parameter>
+      <parameter key="design" type="collection">
+        <parameter key="assets" type="collection">
+          <parameter key="css" type="collection"/>
+          <parameter key="js" type="collection"/>
+          <parameter key="favicon" type="collection">
+            <parameter key="path">favicon.ico</parameter>
+            <parameter key="mime_type">image/x-icon</parameter>
+          </parameter>
+        </parameter>
+        <parameter key="theme">default</parameter>
+        <parameter key="color_scheme">dark</parameter>
+        <parameter key="brand_color">#205081</parameter>
+        <parameter key="form_theme" type="collection">
+          <parameter>@EasyAdmin/form/bootstrap_3_horizontal_layout.html.twig</parameter>
+        </parameter>
+        <parameter key="menu" type="collection"/>
+      </parameter>
+      <parameter key="site_name">EasyAdmin</parameter>
+      <parameter key="formats" type="collection">
+        <parameter key="date">Y-m-d</parameter>
+        <parameter key="time">H:i:s</parameter>
+        <parameter key="datetime">F j, Y H:i</parameter>
+      </parameter>
+      <parameter key="disabled_actions" type="collection"/>
+      <parameter key="translation_domain">messages</parameter>
+      <parameter key="list" type="collection">
+        <parameter key="actions" type="collection"/>
+        <parameter key="max_results">15</parameter>
+      </parameter>
+      <parameter key="search" type="collection"/>
+      <parameter key="edit" type="collection">
+        <parameter key="actions" type="collection"/>
+      </parameter>
+      <parameter key="new" type="collection">
+        <parameter key="actions" type="collection"/>
+      </parameter>
+      <parameter key="show" type="collection">
+        <parameter key="actions" type="collection"/>
+        <parameter key="max_results">10</parameter>
+      </parameter>
+    </parameter>
+    <parameter key="easyadmin.cache.dir">/Applications/MAMP/htdocs/mon_projet/var/cache/dev/easy_admin</parameter>
     <parameter key="web_profiler.debug_toolbar.position">bottom</parameter>
     <parameter key="web_profiler.debug_toolbar.intercept_redirects">false</parameter>
     <parameter key="web_profiler.debug_toolbar.mode">2</parameter>
@@ -464,6 +539,10 @@
       <parameter key="data_collector.dump" type="collection">
         <parameter>dump</parameter>
         <parameter>@Debug/Profiler/dump.html.twig</parameter>
+      </parameter>
+      <parameter key="easyadmin.data_collector" type="collection">
+        <parameter>easyadmin</parameter>
+        <parameter>@EasyAdmin/data_collector/easyadmin.html.twig</parameter>
       </parameter>
       <parameter key="data_collector.config" type="collection">
         <parameter>config</parameter>
@@ -629,7 +708,7 @@
       <tag name="container.hot_path"/>
       <tag name="container.hot_path"/>
       <argument type="service" id="request_stack"/>
-      <argument>en</argument>
+      <argument>fr</argument>
       <argument type="service" id="router.default" on-invalid="ignore"/>
     </service>
     <service id="validate_request_listener" class="Symfony\Component\HttpKernel\EventListener\ValidateRequestListener">
@@ -835,7 +914,7 @@
       <argument type="service" id="translation.writer"/>
       <argument type="service" id="translation.reader"/>
       <argument type="service" id="translation.extractor"/>
-      <argument>en</argument>
+      <argument>fr</argument>
       <argument>/Applications/MAMP/htdocs/mon_projet/translations</argument>
       <argument>/Applications/MAMP/htdocs/mon_projet/templates</argument>
       <call method="setName">
@@ -861,6 +940,7 @@
         <argument>Symfony\Component\Form\Extension\Core\Type</argument>
         <argument>Symfony\Bridge\Doctrine\Form\Type</argument>
         <argument>FOS\UserBundle\Form\Type</argument>
+        <argument>EasyCorp\Bundle\EasyAdminBundle\Form\Type</argument>
       </argument>
       <argument type="collection">
         <argument>Symfony\Component\Form\Extension\Core\Type\FormType</argument>
@@ -871,6 +951,11 @@
         <argument>FOS\UserBundle\Form\Type\RegistrationFormType</argument>
         <argument>FOS\UserBundle\Form\Type\ChangePasswordFormType</argument>
         <argument>FOS\UserBundle\Form\Type\ResettingFormType</argument>
+        <argument>EasyCorp\Bundle\EasyAdminBundle\Form\Type\EasyAdminFormType</argument>
+        <argument>EasyCorp\Bundle\EasyAdminBundle\Form\Type\EasyAdminAutocompleteType</argument>
+        <argument>EasyCorp\Bundle\EasyAdminBundle\Form\Type\EasyAdminDividerType</argument>
+        <argument>EasyCorp\Bundle\EasyAdminBundle\Form\Type\EasyAdminSectionType</argument>
+        <argument>EasyCorp\Bundle\EasyAdminBundle\Form\Type\EasyAdminGroupType</argument>
       </argument>
       <argument type="collection">
         <argument>Symfony\Component\Form\Extension\HttpFoundation\Type\FormTypeHttpFoundationExtension</argument>
@@ -880,10 +965,12 @@
         <argument>Symfony\Component\Form\Extension\Validator\Type\UploadValidatorExtension</argument>
         <argument>Symfony\Component\Form\Extension\Csrf\Type\FormTypeCsrfExtension</argument>
         <argument>Symfony\Component\Form\Extension\DataCollector\Type\DataCollectorTypeExtension</argument>
+        <argument>EasyCorp\Bundle\EasyAdminBundle\Form\Extension\EasyAdminExtension</argument>
       </argument>
       <argument type="collection">
         <argument>Symfony\Component\Form\Extension\Validator\ValidatorTypeGuesser</argument>
         <argument>Symfony\Bridge\Doctrine\Form\DoctrineOrmTypeGuesser</argument>
+        <argument>EasyCorp\Bundle\EasyAdminBundle\Form\Guesser\MissingDoctrineOrmTypeGuesser</argument>
       </argument>
       <call method="setName">
         <argument>debug:form</argument>
@@ -1077,7 +1164,7 @@
       <argument type="service" id="form.resolved_type_factory"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
-      <argument type="service" id="service_locator.gflhj7f"/>
+      <argument type="service" id="service_locator.nigypai"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.http_foundation"/>
@@ -1085,6 +1172,7 @@
           <argument type="service" id="form.type_extension.upload.validator"/>
           <argument type="service" id="form.type_extension.csrf"/>
           <argument type="service" id="form.type_extension.form.data_collector"/>
+          <argument type="service" id="easyadmin.form.type.extension"/>
         </argument>
         <argument key="Symfony\Component\Form\Extension\Core\Type\RepeatedType" type="iterator">
           <argument type="service" id="form.type_extension.repeated.validator"/>
@@ -1096,6 +1184,7 @@
       <argument type="iterator">
         <argument type="service" id="form.type_guesser.validator"/>
         <argument type="service" id="form.type_guesser.doctrine"/>
+        <argument type="service" id="easyadmin.form.guesser.missing_doctrine_orm_type_guesser"/>
       </argument>
       <argument>null</argument>
     </service>
@@ -1397,7 +1486,7 @@
     <service id="translator.default" class="Symfony\Bundle\FrameworkBundle\Translation\Translator">
       <argument type="service" id="service_locator.yepb.pt"/>
       <argument type="service" id="translator.formatter.default"/>
-      <argument>en</argument>
+      <argument>fr</argument>
       <argument type="collection">
         <argument key="translation.loader.php" type="collection">
           <argument>php</argument>
@@ -1449,6 +1538,8 @@
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Resources/translations/security.ar.xlf</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/FOSUserBundle.ar.yml</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/validators.ar.yml</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/EasyAdminBundle.ar.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/messages.ar.xlf</argument>
           </argument>
           <argument key="az" type="collection">
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.az.xlf</argument>
@@ -1461,6 +1552,8 @@
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Resources/translations/security.bg.xlf</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/FOSUserBundle.bg.yml</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/validators.bg.yml</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/EasyAdminBundle.bg.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/messages.bg.xlf</argument>
           </argument>
           <argument key="ca" type="collection">
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.ca.xlf</argument>
@@ -1468,6 +1561,8 @@
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Resources/translations/security.ca.xlf</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/FOSUserBundle.ca.yml</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/validators.ca.yml</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/EasyAdminBundle.ca.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/messages.ca.xlf</argument>
           </argument>
           <argument key="cs" type="collection">
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.cs.xlf</argument>
@@ -1475,6 +1570,8 @@
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Resources/translations/security.cs.xlf</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/FOSUserBundle.cs.yml</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/validators.cs.yml</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/EasyAdminBundle.cs.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/messages.cs.xlf</argument>
           </argument>
           <argument key="cy" type="collection">
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.cy.xlf</argument>
@@ -1485,6 +1582,8 @@
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Resources/translations/security.da.xlf</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/FOSUserBundle.da.yml</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/validators.da.yml</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/EasyAdminBundle.da.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/messages.da.xlf</argument>
           </argument>
           <argument key="de" type="collection">
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.de.xlf</argument>
@@ -1492,6 +1591,8 @@
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Resources/translations/security.de.xlf</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/FOSUserBundle.de.yml</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/validators.de.yml</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/EasyAdminBundle.de.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/messages.de.xlf</argument>
           </argument>
           <argument key="el" type="collection">
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.el.xlf</argument>
@@ -1499,6 +1600,8 @@
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Resources/translations/security.el.xlf</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/FOSUserBundle.el.yml</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/validators.el.yml</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/EasyAdminBundle.el.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/messages.el.xlf</argument>
           </argument>
           <argument key="en" type="collection">
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.en.xlf</argument>
@@ -1506,6 +1609,8 @@
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Resources/translations/security.en.xlf</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/FOSUserBundle.en.yml</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/validators.en.yml</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/EasyAdminBundle.en.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/messages.en.xlf</argument>
           </argument>
           <argument key="es" type="collection">
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.es.xlf</argument>
@@ -1513,6 +1618,8 @@
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Resources/translations/security.es.xlf</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/FOSUserBundle.es.yml</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/validators.es.yml</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/EasyAdminBundle.es.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/messages.es.xlf</argument>
           </argument>
           <argument key="et" type="collection">
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.et.xlf</argument>
@@ -1524,6 +1631,8 @@
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.eu.xlf</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/FOSUserBundle.eu.yml</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/validators.eu.yml</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/EasyAdminBundle.eu.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/messages.eu.xlf</argument>
           </argument>
           <argument key="fa" type="collection">
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.fa.xlf</argument>
@@ -1531,12 +1640,16 @@
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Resources/translations/security.fa.xlf</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/FOSUserBundle.fa.yml</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/validators.fa.yml</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/EasyAdminBundle.fa.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/messages.fa.xlf</argument>
           </argument>
           <argument key="fi" type="collection">
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.fi.xlf</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.fi.xlf</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/FOSUserBundle.fi.yml</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/validators.fi.yml</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/EasyAdminBundle.fi.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/messages.fi.xlf</argument>
           </argument>
           <argument key="fr" type="collection">
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.fr.xlf</argument>
@@ -1544,6 +1657,8 @@
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Resources/translations/security.fr.xlf</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/FOSUserBundle.fr.yml</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/validators.fr.yml</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/EasyAdminBundle.fr.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/messages.fr.xlf</argument>
           </argument>
           <argument key="gl" type="collection">
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.gl.xlf</argument>
@@ -1564,6 +1679,8 @@
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Resources/translations/security.hr.xlf</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/FOSUserBundle.hr.yml</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/validators.hr.yml</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/EasyAdminBundle.hr.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/messages.hr.xlf</argument>
           </argument>
           <argument key="hu" type="collection">
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.hu.xlf</argument>
@@ -1571,6 +1688,8 @@
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Resources/translations/security.hu.xlf</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/FOSUserBundle.hu.yml</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/validators.hu.yml</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/EasyAdminBundle.hu.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/messages.hu.xlf</argument>
           </argument>
           <argument key="hy" type="collection">
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.hy.xlf</argument>
@@ -1589,6 +1708,8 @@
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Resources/translations/security.it.xlf</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/FOSUserBundle.it.yml</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/validators.it.yml</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/EasyAdminBundle.it.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/messages.it.xlf</argument>
           </argument>
           <argument key="ja" type="collection">
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.ja.xlf</argument>
@@ -1609,6 +1730,8 @@
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Resources/translations/security.lt.xlf</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/FOSUserBundle.lt.yml</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/validators.lt.yml</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/EasyAdminBundle.lt.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/messages.lt.xlf</argument>
           </argument>
           <argument key="lv" type="collection">
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.lv.xlf</argument>
@@ -1634,6 +1757,8 @@
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Resources/translations/security.nl.xlf</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/FOSUserBundle.nl.yml</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/validators.nl.yml</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/EasyAdminBundle.nl.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/messages.nl.xlf</argument>
           </argument>
           <argument key="nn" type="collection">
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.nn.xlf</argument>
@@ -1651,12 +1776,16 @@
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Resources/translations/security.pl.xlf</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/FOSUserBundle.pl.yml</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/validators.pl.yml</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/EasyAdminBundle.pl.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/messages.pl.xlf</argument>
           </argument>
           <argument key="pt" type="collection">
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.pt.xlf</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.pt.xlf</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/FOSUserBundle.pt.yml</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/validators.pt.yml</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/EasyAdminBundle.pt.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/messages.pt.xlf</argument>
           </argument>
           <argument key="pt_BR" type="collection">
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.pt_BR.xlf</argument>
@@ -1671,6 +1800,8 @@
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Resources/translations/security.ro.xlf</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/FOSUserBundle.ro.yml</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/validators.ro.yml</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/EasyAdminBundle.ro.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/messages.ro.xlf</argument>
           </argument>
           <argument key="ru" type="collection">
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.ru.xlf</argument>
@@ -1678,6 +1809,8 @@
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Resources/translations/security.ru.xlf</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/FOSUserBundle.ru.yml</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/validators.ru.yml</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/EasyAdminBundle.ru.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/messages.ru.xlf</argument>
           </argument>
           <argument key="sk" type="collection">
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.sk.xlf</argument>
@@ -1692,6 +1825,8 @@
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Resources/translations/security.sl.xlf</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/FOSUserBundle.sl.yml</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/validators.sl.yml</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/EasyAdminBundle.sl.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/messages.sl.xlf</argument>
           </argument>
           <argument key="sq" type="collection">
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.sq.xlf</argument>
@@ -1714,6 +1849,8 @@
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Resources/translations/security.sv.xlf</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/FOSUserBundle.sv.yml</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/validators.sv.yml</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/EasyAdminBundle.sv.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/messages.sv.xlf</argument>
           </argument>
           <argument key="th" type="collection">
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.th.xlf</argument>
@@ -1731,12 +1868,16 @@
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Resources/translations/security.tr.xlf</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/FOSUserBundle.tr.yml</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/validators.tr.yml</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/EasyAdminBundle.tr.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/messages.tr.xlf</argument>
           </argument>
           <argument key="uk" type="collection">
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.uk.xlf</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.uk.xlf</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/FOSUserBundle.uk.yml</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/validators.uk.yml</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/EasyAdminBundle.uk.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/messages.uk.xlf</argument>
           </argument>
           <argument key="vi" type="collection">
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.vi.xlf</argument>
@@ -1750,6 +1891,8 @@
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Resources/translations/security.zh_CN.xlf</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/FOSUserBundle.zh_CN.yml</argument>
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/translations/validators.zh_CN.yml</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/EasyAdminBundle.zh_CN.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/translations/messages.zh_CN.xlf</argument>
           </argument>
           <argument key="zh_TW" type="collection">
             <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.zh_TW.xlf</argument>
@@ -1783,7 +1926,7 @@
       </call>
       <call method="setFallbackLocales">
         <argument type="collection">
-          <argument>en</argument>
+          <argument>fr</argument>
         </argument>
       </call>
     </service>
@@ -2100,6 +2243,9 @@
         <argument type="service" id="data_collector.dump"/>
       </call>
       <call method="add">
+        <argument type="service" id="easyadmin.data_collector"/>
+      </call>
+      <call method="add">
         <argument type="service" id="data_collector.config"/>
       </call>
     </service>
@@ -2255,6 +2401,22 @@
         <argument type="collection">
           <argument type="service" id="data_collector.router"/>
           <argument>onKernelController</argument>
+        </argument>
+        <argument>0</argument>
+      </call>
+      <call method="addListener">
+        <argument>kernel.controller</argument>
+        <argument type="collection">
+          <argument type="service" id="easyadmin.listener.controller"/>
+          <argument>onKernelController</argument>
+        </argument>
+        <argument>0</argument>
+      </call>
+      <call method="addListener">
+        <argument>easy_admin.post_initialize</argument>
+        <argument type="collection">
+          <argument type="service" id="easyadmin.listener.request_post_initialize"/>
+          <argument>initializeRequest</argument>
         </argument>
         <argument>0</argument>
       </call>
@@ -2420,6 +2582,14 @@
       </call>
       <call method="addListener">
         <argument>kernel.request</argument>
+        <argument type="collection">
+          <argument type="service" id="debug.debug_handlers_listener"/>
+          <argument>configure</argument>
+        </argument>
+        <argument>2048</argument>
+      </call>
+      <call method="addListener">
+        <argument>console.command</argument>
         <argument type="collection">
           <argument type="service" id="debug.debug_handlers_listener"/>
           <argument>configure</argument>
@@ -3667,6 +3837,9 @@
         <argument type="service" id="doctrine.twig.doctrine_extension"/>
       </call>
       <call method="addExtension">
+        <argument type="service" id="easyadmin.twig.extension"/>
+      </call>
+      <call method="addExtension">
         <argument type="service" id="twig.extension.webprofiler"/>
       </call>
       <call method="addGlobal">
@@ -3766,12 +3939,24 @@
         <argument>!gaelic</argument>
       </call>
       <call method="addPath">
+        <argument>/Applications/MAMP/htdocs/mon_projet/app/Resources/FOSUserBundle/views</argument>
+        <argument>FOSUser</argument>
+      </call>
+      <call method="addPath">
         <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/views</argument>
         <argument>FOSUser</argument>
       </call>
       <call method="addPath">
         <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/views</argument>
         <argument>!FOSUser</argument>
+      </call>
+      <call method="addPath">
+        <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/views</argument>
+        <argument>EasyAdmin</argument>
+      </call>
+      <call method="addPath">
+        <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/views</argument>
+        <argument>!EasyAdmin</argument>
       </call>
       <call method="addPath">
         <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views</argument>
@@ -3953,12 +4138,24 @@
         <argument>!gaelic</argument>
       </call>
       <call method="addPath">
+        <argument>/Applications/MAMP/htdocs/mon_projet/app/Resources/FOSUserBundle/views</argument>
+        <argument>FOSUser</argument>
+      </call>
+      <call method="addPath">
         <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/views</argument>
         <argument>FOSUser</argument>
       </call>
       <call method="addPath">
         <argument>/Applications/MAMP/htdocs/mon_projet/vendor/friendsofsymfony/user-bundle/Resources/views</argument>
         <argument>!FOSUser</argument>
+      </call>
+      <call method="addPath">
+        <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/views</argument>
+        <argument>EasyAdmin</argument>
+      </call>
+      <call method="addPath">
+        <argument>/Applications/MAMP/htdocs/mon_projet/vendor/easycorp/easyadmin-bundle/src/Resources/views</argument>
+        <argument>!EasyAdmin</argument>
       </call>
       <call method="addPath">
         <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views</argument>
@@ -4862,6 +5059,173 @@
         <argument type="service" id="service_container"/>
       </call>
     </service>
+    <service id="easyadmin.cache.manager" class="EasyCorp\Bundle\EasyAdminBundle\Cache\CacheManager" public="true">
+      <argument>/Applications/MAMP/htdocs/mon_projet/var/cache/dev/easy_admin</argument>
+    </service>
+    <service id="easyadmin.config.manager" class="EasyCorp\Bundle\EasyAdminBundle\Configuration\ConfigManager" public="true">
+      <argument type="service" id="easyadmin.cache.manager"/>
+      <argument type="service" id="property_accessor"/>
+      <argument>%easyadmin.config%</argument>
+      <argument>true</argument>
+      <call method="addConfigPass">
+        <argument type="service" id="easyadmin.configuration.normalizer_config_pass"/>
+      </call>
+      <call method="addConfigPass">
+        <argument type="service" id="easyadmin.configuration.design_config_pass"/>
+      </call>
+      <call method="addConfigPass">
+        <argument type="service" id="easyadmin.configuration.menu_config_pass"/>
+      </call>
+      <call method="addConfigPass">
+        <argument type="service" id="easyadmin.configuration.action_config_pass"/>
+      </call>
+      <call method="addConfigPass">
+        <argument type="service" id="easyadmin.configuration.metadata_config_pass"/>
+      </call>
+      <call method="addConfigPass">
+        <argument type="service" id="easyadmin.configuration.property_config_pass"/>
+      </call>
+      <call method="addConfigPass">
+        <argument type="service" id="easyadmin.configuration.view_config_pass"/>
+      </call>
+      <call method="addConfigPass">
+        <argument type="service" id="easyadmin.configuration.template_config_pass"/>
+      </call>
+      <call method="addConfigPass">
+        <argument type="service" id="easyadmin.configuration.default_config_pass"/>
+      </call>
+    </service>
+    <service id="easyadmin.query_builder" class="EasyCorp\Bundle\EasyAdminBundle\Search\QueryBuilder" public="true">
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="easyadmin.finder" class="EasyCorp\Bundle\EasyAdminBundle\Search\Finder" public="false">
+      <argument type="service" id="easyadmin.query_builder"/>
+      <argument type="service" id="easyadmin.paginator"/>
+    </service>
+    <service id="easyadmin.autocomplete" class="EasyCorp\Bundle\EasyAdminBundle\Search\Autocomplete" public="true">
+      <argument type="service" id="easyadmin.config.manager"/>
+      <argument type="service" id="easyadmin.finder"/>
+      <argument type="service" id="property_accessor"/>
+    </service>
+    <service id="easyadmin.paginator" class="EasyCorp\Bundle\EasyAdminBundle\Search\Paginator" public="true"/>
+    <service id="easyadmin.router" class="EasyCorp\Bundle\EasyAdminBundle\Router\EasyAdminRouter" public="true">
+      <argument type="service" id="easyadmin.config.manager"/>
+      <argument type="service" id="router.default"/>
+      <argument type="service" id="property_accessor"/>
+      <argument type="service" id="request_stack" on-invalid="null"/>
+    </service>
+    <service id="easyadmin.twig.extension" class="EasyCorp\Bundle\EasyAdminBundle\Twig\EasyAdminTwigExtension" public="false">
+      <tag name="twig.extension"/>
+      <argument type="service" id="easyadmin.config.manager"/>
+      <argument type="service" id="property_accessor"/>
+      <argument type="service" id="easyadmin.router"/>
+      <argument>true</argument>
+      <argument type="service" id="security.logout_url_generator" on-invalid="null"/>
+    </service>
+    <service id="easyadmin.listener.controller" class="EasyCorp\Bundle\EasyAdminBundle\EventListener\ControllerListener" public="true">
+      <tag name="kernel.event_listener" event="kernel.controller" method="onKernelController"/>
+      <tag name="container.hot_path"/>
+      <argument type="service" id="easyadmin.config.manager"/>
+      <argument type="service" id="debug.controller_resolver"/>
+    </service>
+    <service id="easyadmin.listener.request_post_initialize" class="EasyCorp\Bundle\EasyAdminBundle\EventListener\RequestPostInitializeListener" public="true">
+      <tag name="kernel.event_listener" event="easy_admin.post_initialize" method="initializeRequest"/>
+      <argument type="service" id="doctrine"/>
+      <argument type="service" id="request_stack" on-invalid="null"/>
+    </service>
+    <service id="easyadmin.data_collector" class="EasyCorp\Bundle\EasyAdminBundle\DataCollector\EasyAdminDataCollector" public="false">
+      <tag name="data_collector" template="@EasyAdmin/data_collector/easyadmin.html.twig" id="easyadmin"/>
+      <argument type="service" id="easyadmin.config.manager"/>
+    </service>
+    <service id="easyadmin.configuration.normalizer_config_pass" class="EasyCorp\Bundle\EasyAdminBundle\Configuration\NormalizerConfigPass" public="false">
+      <tag name="easyadmin.config_pass" priority="90"/>
+      <argument type="service" id="service_container"/>
+    </service>
+    <service id="easyadmin.configuration.design_config_pass" class="EasyCorp\Bundle\EasyAdminBundle\Configuration\DesignConfigPass" public="false">
+      <tag name="easyadmin.config_pass" priority="80"/>
+      <argument type="service" id="service_container"/>
+      <argument>true</argument>
+      <argument>fr</argument>
+    </service>
+    <service id="easyadmin.configuration.menu_config_pass" class="EasyCorp\Bundle\EasyAdminBundle\Configuration\MenuConfigPass" public="false">
+      <tag name="easyadmin.config_pass" priority="70"/>
+    </service>
+    <service id="easyadmin.configuration.action_config_pass" class="EasyCorp\Bundle\EasyAdminBundle\Configuration\ActionConfigPass" public="false">
+      <tag name="easyadmin.config_pass" priority="60"/>
+    </service>
+    <service id="easyadmin.configuration.metadata_config_pass" class="EasyCorp\Bundle\EasyAdminBundle\Configuration\MetadataConfigPass" public="false">
+      <tag name="easyadmin.config_pass" priority="50"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="easyadmin.configuration.property_config_pass" class="EasyCorp\Bundle\EasyAdminBundle\Configuration\PropertyConfigPass" public="false">
+      <tag name="easyadmin.config_pass" priority="40"/>
+      <argument type="service" id="form.registry"/>
+    </service>
+    <service id="easyadmin.configuration.view_config_pass" class="EasyCorp\Bundle\EasyAdminBundle\Configuration\ViewConfigPass" public="false">
+      <tag name="easyadmin.config_pass" priority="30"/>
+    </service>
+    <service id="easyadmin.configuration.template_config_pass" class="EasyCorp\Bundle\EasyAdminBundle\Configuration\TemplateConfigPass" public="false">
+      <tag name="easyadmin.config_pass" priority="20"/>
+      <argument type="service" id="twig.loader.filesystem"/>
+    </service>
+    <service id="easyadmin.configuration.default_config_pass" class="EasyCorp\Bundle\EasyAdminBundle\Configuration\DefaultConfigPass" public="false">
+      <tag name="easyadmin.config_pass" priority="10"/>
+    </service>
+    <service id="easyadmin.form.type" class="EasyCorp\Bundle\EasyAdminBundle\Form\Type\EasyAdminFormType">
+      <tag name="form.type"/>
+      <argument type="service" id="easyadmin.config.manager"/>
+      <argument type="collection">
+        <argument key="4" type="service" id="easyadmin.form.type.configurator.autocomplete"/>
+        <argument key="3" type="service" id="easyadmin.form.type.configurator.collection"/>
+        <argument key="2" type="service" id="easyadmin.form.type.configurator.checkbox"/>
+        <argument key="1" type="service" id="easyadmin.form.type.configurator.type"/>
+        <argument key="0" type="service" id="easyadmin.form.type.configurator.entity"/>
+      </argument>
+    </service>
+    <service id="easyadmin.form.type.autocomplete" class="EasyCorp\Bundle\EasyAdminBundle\Form\Type\EasyAdminAutocompleteType">
+      <tag name="form.type" alias="easyadmin_autocomplete"/>
+      <argument type="service" id="easyadmin.config.manager"/>
+    </service>
+    <service id="easyadmin.form.type.divider" class="EasyCorp\Bundle\EasyAdminBundle\Form\Type\EasyAdminDividerType">
+      <tag name="form.type" alias="easyadmin_divider"/>
+    </service>
+    <service id="easyadmin.form.type.section" class="EasyCorp\Bundle\EasyAdminBundle\Form\Type\EasyAdminSectionType">
+      <tag name="form.type" alias="easyadmin_section"/>
+    </service>
+    <service id="easyadmin.form.type.group" class="EasyCorp\Bundle\EasyAdminBundle\Form\Type\EasyAdminGroupType">
+      <tag name="form.type" alias="easyadmin_group"/>
+    </service>
+    <service id="easyadmin.form.type.extension" class="EasyCorp\Bundle\EasyAdminBundle\Form\Extension\EasyAdminExtension">
+      <tag name="form.type_extension" alias="form" extended_type="Symfony\Component\Form\Extension\Core\Type\FormType" extended-type="Symfony\Component\Form\Extension\Core\Type\FormType"/>
+      <argument type="service" id="request_stack" on-invalid="null"/>
+    </service>
+    <service id="easyadmin.form.type_guesser_chain" class="Symfony\Component\Form\FormTypeGuesserChain" public="false">
+      <argument type="collection">
+        <argument type="service" id="form.type_guesser.validator"/>
+        <argument type="service" id="form.type_guesser.doctrine"/>
+        <argument type="service" id="easyadmin.form.guesser.missing_doctrine_orm_type_guesser"/>
+      </argument>
+    </service>
+    <service id="easyadmin.form.type.configurator.autocomplete" class="EasyCorp\Bundle\EasyAdminBundle\Form\Type\Configurator\AutocompleteTypeConfigurator" public="false">
+      <tag name="easyadmin.form.type.configurator" priority="30"/>
+    </service>
+    <service id="easyadmin.form.type.configurator.collection" class="EasyCorp\Bundle\EasyAdminBundle\Form\Type\Configurator\CollectionTypeConfigurator" public="false">
+      <tag name="easyadmin.form.type.configurator" priority="20"/>
+    </service>
+    <service id="easyadmin.form.type.configurator.checkbox" class="EasyCorp\Bundle\EasyAdminBundle\Form\Type\Configurator\CheckboxTypeConfigurator" public="false">
+      <tag name="easyadmin.form.type.configurator" priority="10"/>
+    </service>
+    <service id="easyadmin.form.type.configurator.type" class="EasyCorp\Bundle\EasyAdminBundle\Form\Type\Configurator\TypeConfigurator" public="false">
+      <tag name="easyadmin.form.type.configurator" priority="0"/>
+      <argument type="service" id="easyadmin.config.manager"/>
+    </service>
+    <service id="easyadmin.form.type.configurator.entity" class="EasyCorp\Bundle\EasyAdminBundle\Form\Type\Configurator\EntityTypeConfigurator" public="false">
+      <tag name="easyadmin.form.type.configurator" priority="-20"/>
+    </service>
+    <service id="easyadmin.form.guesser.missing_doctrine_orm_type_guesser" class="EasyCorp\Bundle\EasyAdminBundle\Form\Guesser\MissingDoctrineOrmTypeGuesser" public="true">
+      <tag name="form.type_guesser"/>
+      <argument type="service" id="doctrine"/>
+    </service>
     <service id="twig.extension.dump" class="Symfony\Bridge\Twig\Extension\DumpExtension" public="false">
       <tag name="twig.extension"/>
       <argument type="service" id="var_dumper.cloner"/>
@@ -5033,9 +5397,14 @@
         <argument key="inline" type="service" id="fragment.renderer.inline"/>
       </argument>
     </service>
-    <service id="service_locator.gflhj7f" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id="service_locator.nigypai" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="EasyCorp\Bundle\EasyAdminBundle\Form\Type\EasyAdminAutocompleteType" type="service" id="easyadmin.form.type.autocomplete"/>
+        <argument key="EasyCorp\Bundle\EasyAdminBundle\Form\Type\EasyAdminDividerType" type="service" id="easyadmin.form.type.divider"/>
+        <argument key="EasyCorp\Bundle\EasyAdminBundle\Form\Type\EasyAdminFormType" type="service" id="easyadmin.form.type"/>
+        <argument key="EasyCorp\Bundle\EasyAdminBundle\Form\Type\EasyAdminGroupType" type="service" id="easyadmin.form.type.group"/>
+        <argument key="EasyCorp\Bundle\EasyAdminBundle\Form\Type\EasyAdminSectionType" type="service" id="easyadmin.form.type.section"/>
         <argument key="FOS\UserBundle\Form\Type\ChangePasswordFormType" type="service" id="fos_user.change_password.form.type"/>
         <argument key="FOS\UserBundle\Form\Type\ProfileFormType" type="service" id="fos_user.profile.form.type"/>
         <argument key="FOS\UserBundle\Form\Type\RegistrationFormType" type="service" id="fos_user.registration.form.type"/>
@@ -5549,6 +5918,7 @@
     <service id="fos_user.user_manager" alias="fos_user.user_manager.default" public="true"/>
     <service id="fos_user.mailer" alias="fos_user.mailer.default"/>
     <service id="fos_user.session" alias="session" public="false"/>
+    <service id="easy_admin.property_accessor" alias="property_accessor" public="true"/>
     <service id="Symfony\Component\Templating\EngineInterface" alias="templating.engine.twig" public="false"/>
     <service id="Symfony\Bundle\FrameworkBundle\Templating\EngineInterface" alias="templating.engine.twig" public="false"/>
     <service id="twig.loader" alias="twig.loader.filesystem"/>

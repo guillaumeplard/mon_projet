@@ -1,11 +1,35 @@
 body{
-    background-image: radial-gradient(circle, #051937, #211536, #340d2f, #410423, #470312);
+    background-image: url("../../images/bordeaux12.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height:100vh
 }
-.nav{
-    list-style-type: none;
-    color: white;
-    display: flex;
-    justify-content: space-around;
-    line-height: 50px;
-    font-size: 20px;
+.menu{
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.menu a {
+    color:darkred;
+    font-size: 2em;
+    opacity: 0.5;
+}
+
+.menu a:hover {
+    color:red;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+.bouton{
+    width:300px;
+    padding: 10px 25px;
+    border-radius: 50px;
+    background-color: darkred;
+    margin:0 auto;
+    text-align: center;
+}
+
+.accueil{
+    height:80vh;
 }

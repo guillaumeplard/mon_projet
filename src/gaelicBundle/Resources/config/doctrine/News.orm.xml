@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- src/AppBundle/Resources/config/doctrine/User.orm.xml -->
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="gaelicBundle\Entity\News" table="News">
+        <id name="id" type="integer" column="id">
+            <generator strategy="AUTO"/>
+        </id>
+        <field name="Titre" type="text" column="Titre"/>
+        <field name="Contenu" type="text" column="Contenu"/>
+        <field name="Image" type="text" column="Image"/>
+
+    </entity>
+</doctrine-mapping>

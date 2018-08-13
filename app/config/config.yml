@@ -7,13 +7,13 @@ imports:
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
-    locale: en
+    locale: fr
 
 framework:
     templating:
             engines: ['twig']
     #esi: ~
-    translator: ~ #{ fallbacks: ['%locale%'] }
+    translator: { fallbacks: [ "fr" ] }
     secret: '%secret%'
     router:
         resource: '%kernel.project_dir%/app/config/routing.yml'
@@ -76,5 +76,16 @@ fos_user:
     from_email:
         address: "guillaume.plard@lapiscine.pro"
         sender_name: "guillaume"
+
+easy_admin:
+    entities:
+        # change the following to the namespaces of your own entities
+        - gaelicBundle\Entity\User
+        - gaelicBundle\Entity\Media
+        - gaelicBundle\Entity\News
+        - gaelicBundle\Entity\Sponsors
+        - gaelicBundle\Entity\Entrainement
+        - gaelicBundle\Entity\Contact
+
 
 
