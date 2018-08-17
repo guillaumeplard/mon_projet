@@ -2,8 +2,22 @@ gaelic:
     path:     /gaelic
     defaults: { _controller: gaelicBundle:Default:gaelic }
 
-gaelic:
-    path:     /gaelic
-    defaults: { _controller: gaelicBundle:Default:gaelic }
+club_page:
+    path:     /club
+    defaults: { _controller: gaelicBundle:Default:club }
+
+media_page:
+    path:     /media
+    defaults: { _controller: gaelicBundle:Default:media }
+
+sponsors_page:
+    path:     /sponsors
+    defaults: { _controller: gaelicBundle:Default:sponsors }
+
+contact_page:
+    path:     /contact
+    defaults: { _controller: gaelicBundle:Default:contact }
+
+
 
 

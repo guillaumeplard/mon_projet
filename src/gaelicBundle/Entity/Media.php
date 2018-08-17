@@ -2,53 +2,76 @@
 
 namespace gaelicBundle\Entity;
 
+use Doctrine\ORM\Mapping as ORM;
+
 /**
  * Media
+ *
+ * @ORM\Table(name="media")
+ * @ORM\Entity(repositoryClass="gaelicBundle\Repository\MediaRepository")
  */
 class Media
 {
     /**
-     * @var string
-     */
-    private $photo;
-
-    /**
-     * @var string
-     */
-    private $video;
-
-    /**
-     * @var integer
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Images", type="string", length=255)
+     */
+    private $images;
 
     /**
-     * Set photo
+     * @var string
      *
-     * @param string $photo
+     * @ORM\Column(name="Video", type="string", length=255)
+     */
+    private $video;
+
+
+    /**
+     * Get id.
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set images.
+     *
+     * @param string $images
      *
      * @return Media
      */
-    public function setPhoto($photo)
+    public function setImages($images)
     {
-        $this->photo = $photo;
+        $this->images = $images;
 
         return $this;
     }
 
     /**
-     * Get photo
+     * Get images.
      *
      * @return string
      */
-    public function getPhoto()
+    public function getImages()
     {
-        return $this->photo;
+        return $this->images;
     }
 
     /**
-     * Set video
+     * Set video.
      *
      * @param string $video
      *
@@ -62,22 +85,12 @@ class Media
     }
 
     /**
-     * Get video
+     * Get video.
      *
      * @return string
      */
     public function getVideo()
     {
         return $this->video;
-    }
-
-    /**
-     * Get id
-     *
-     * @return integer
-     */
-    public function getId()
-    {
-        return $this->id;
     }
 }

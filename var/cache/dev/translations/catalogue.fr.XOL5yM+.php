@@ -246,6 +246,11 @@ L\'équipe
     'label.form.empty_value' => 'Aucun(e)',
     '__name__label__' => '__name__label__',
   ),
+  'VichUploaderBundle' => 
+  array (
+    'download' => 'Télécharger',
+    'form.label.delete' => 'Supprimer ?',
+  ),
 ));
 
 

@@ -2,34 +2,59 @@
 
 namespace gaelicBundle\Entity;
 
+use Doctrine\ORM\Mapping as ORM;
+
 /**
  * News
+ *
+ * @ORM\Table(name="news")
+ * @ORM\Entity(repositoryClass="gaelicBundle\Repository\NewsRepository")
  */
 class News
 {
     /**
-     * @var string
-     */
-    private $Titre;
-
-    /**
-     * @var string
-     */
-    private $Contenu;
-
-    /**
-     * @var string
-     */
-    private $Image;
-
-    /**
-     * @var integer
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Titre", type="string", length=255)
+     */
+    private $titre;
 
     /**
-     * Set titre
+     * @var string
+     *
+     * @ORM\Column(name="Contenu", type="string", length=255)
+     */
+    private $contenu;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Images", type="string", length=255)
+     */
+    private $images;
+
+
+    /**
+     * Get id.
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set titre.
      *
      * @param string $titre
      *
@@ -37,23 +62,23 @@ class News
      */
     public function setTitre($titre)
     {
-        $this->Titre = $titre;
+        $this->titre = $titre;
 
         return $this;
     }
 
     /**
-     * Get titre
+     * Get titre.
      *
      * @return string
      */
     public function getTitre()
     {
-        return $this->Titre;
+        return $this->titre;
     }
 
     /**
-     * Set contenu
+     * Set contenu.
      *
      * @param string $contenu
      *
@@ -61,53 +86,42 @@ class News
      */
     public function setContenu($contenu)
     {
-        $this->Contenu = $contenu;
+        $this->contenu = $contenu;
 
         return $this;
     }
 
     /**
-     * Get contenu
+     * Get contenu.
      *
      * @return string
      */
     public function getContenu()
     {
-        return $this->Contenu;
+        return $this->contenu;
     }
 
     /**
-     * Set image
+     * Set images.
      *
-     * @param string $image
+     * @param string $images
      *
      * @return News
      */
-    public function setImage($image)
+    public function setImages($images)
     {
-        $this->Image = $image;
+        $this->images = $images;
 
         return $this;
     }
 
     /**
-     * Get image
+     * Get images.
      *
      * @return string
      */
-    public function getImage()
+    public function getImages()
     {
-        return $this->Image;
-    }
-
-    /**
-     * Get id
-     *
-     * @return integer
-     */
-    public function getId()
-    {
-        return $this->id;
+        return $this->images;
     }
 }
-

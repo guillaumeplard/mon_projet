@@ -2,44 +2,78 @@
 
 namespace gaelicBundle\Entity;
 
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+
 /**
  * Contact
+ *
+ * @ORM\Table(name="contact")
+ * @ORM\Entity(repositoryClass="gaelicBundle\Repository\ContactRepository")
  */
 class Contact
 {
     /**
-     * @var string
-     */
-    private $Sujet;
-
-    /**
-     * @var string
-     */
-    private $Message;
-
-    /**
-     * @var string
-     */
-    private $Email;
-
-    /**
-     * @var string
-     */
-    private $Nom;
-
-    /**
-     * @var string
-     */
-    private $Prenom;
-
-    /**
-     * @var integer
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="sujet", type="string", length=255)
+     */
+    private $sujet;
 
     /**
-     * Set sujet
+     * @var string
+     *
+     * @ORM\Column(name="message", type="string", length=255)
+     */
+    private $message;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="email", type="string", length=255)
+     * @Assert\Email(
+     *     message = "The email '{{ value }}' is not a valid email.",
+     *     checkMX = true
+     * )
+     */
+    private $email;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nom", type="string", length=255)
+     */
+    private $nom;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="prenom", type="string", length=255)
+     */
+    private $prenom;
+
+
+    /**
+     * Get id.
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set sujet.
      *
      * @param string $sujet
      *
@@ -47,23 +81,23 @@ class Contact
      */
     public function setSujet($sujet)
     {
-        $this->Sujet = $sujet;
+        $this->sujet = $sujet;
 
         return $this;
     }
 
     /**
-     * Get sujet
+     * Get sujet.
      *
      * @return string
      */
     public function getSujet()
     {
-        return $this->Sujet;
+        return $this->sujet;
     }
 
     /**
-     * Set message
+     * Set message.
      *
      * @param string $message
      *
@@ -71,23 +105,23 @@ class Contact
      */
     public function setMessage($message)
     {
-        $this->Message = $message;
+        $this->message = $message;
 
         return $this;
     }
 
     /**
-     * Get message
+     * Get message.
      *
      * @return string
      */
     public function getMessage()
     {
-        return $this->Message;
+        return $this->message;
     }
 
     /**
-     * Set email
+     * Set email.
      *
      * @param string $email
      *
@@ -95,23 +129,23 @@ class Contact
      */
     public function setEmail($email)
     {
-        $this->Email = $email;
+        $this->email = $email;
 
         return $this;
     }
 
     /**
-     * Get email
+     * Get email.
      *
      * @return string
      */
     public function getEmail()
     {
-        return $this->Email;
+        return $this->email;
     }
 
     /**
-     * Set nom
+     * Set nom.
      *
      * @param string $nom
      *
@@ -119,23 +153,23 @@ class Contact
      */
     public function setNom($nom)
     {
-        $this->Nom = $nom;
+        $this->nom = $nom;
 
         return $this;
     }
 
     /**
-     * Get nom
+     * Get nom.
      *
      * @return string
      */
     public function getNom()
     {
-        return $this->Nom;
+        return $this->nom;
     }
 
     /**
-     * Set prenom
+     * Set prenom.
      *
      * @param string $prenom
      *
@@ -143,28 +177,18 @@ class Contact
      */
     public function setPrenom($prenom)
     {
-        $this->Prenom = $prenom;
+        $this->prenom = $prenom;
 
         return $this;
     }
 
     /**
-     * Get prenom
+     * Get prenom.
      *
      * @return string
      */
     public function getPrenom()
     {
-        return $this->Prenom;
-    }
-
-    /**
-     * Get id
-     *
-     * @return integer
-     */
-    public function getId()
-    {
-        return $this->id;
+        return $this->prenom;
     }
 }

@@ -112,6 +112,26 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return array (  '_controller' => 'gaelicBundle\\Controller\\DefaultController::gaelicAction',  '_route' => 'gaelic',);
         }
 
+        // club_page
+        if ('/club' === $pathinfo) {
+            return array (  '_controller' => 'gaelicBundle\\Controller\\DefaultController::clubAction',  '_route' => 'club_page',);
+        }
+
+        // contact_page
+        if ('/contact' === $pathinfo) {
+            return array (  '_controller' => 'gaelicBundle\\Controller\\DefaultController::contactAction',  '_route' => 'contact_page',);
+        }
+
+        // media_page
+        if ('/media' === $pathinfo) {
+            return array (  '_controller' => 'gaelicBundle\\Controller\\DefaultController::mediaAction',  '_route' => 'media_page',);
+        }
+
+        // sponsors_page
+        if ('/sponsors' === $pathinfo) {
+            return array (  '_controller' => 'gaelicBundle\\Controller\\DefaultController::sponsorsAction',  '_route' => 'sponsors_page',);
+        }
+
         // homepage
         if ('' === $trimmedPathinfo) {
             $ret = array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  '_route' => 'homepage',);

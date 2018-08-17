@@ -22,11 +22,11 @@
 </nav>#}
 <nav>
     <div class="d-flex align-items-center justify-content-around menu">
-        <div class="menuLink"><a href="#">Le Club</a></div>
-        <div class="menuLink"><a href="#">Média</a></div>
+        <div class="menuLink"><a href="{{ path('club_page') }}">Le Club</a></div>
+        <div class="menuLink"><a href="{{ path('media_page') }}">Média</a></div>
         <div class="logo"><img src="{{ asset('images/gaelic-football.png') }}" alt="logo"></div>
-        <div class="menuLink"><a href="#">Partenaires</a></div>
-        <div class="menuLink"><a href="#">Contact</a></div>
+        <div class="menuLink"><a href="{{ path('sponsors_page') }}">Partenaires</a></div>
+        <div class="menuLink"><a href="{{ path('contact_page') }}">Contact</a></div>
     </div>
 </nav>
 
