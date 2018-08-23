@@ -1,4 +1,4 @@
-gaelic:
+gaelic_homepage:
     path:     /gaelic
     defaults: { _controller: gaelicBundle:Default:gaelic }
 

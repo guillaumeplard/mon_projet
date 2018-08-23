@@ -10,6 +10,10 @@ imports:
 parameters:
     app.path.product_images: ../web/uploads/images/products
     app.path.entrainement_images: ../web/entrainement
+    app.path.sponsor_images: ../web/sponsor
+    app.path.new_images: ../web/new
+    app.path.media_images: ../web/media
+
     locale: fr
 
 
@@ -100,7 +104,7 @@ easy_admin:
 
         User:
             class: gaelicBundle\Entity\User
-            label: 'User'
+            label: 'Utilisateur'
             list:
               title: "changement d'utilisateur"
 
@@ -109,12 +113,12 @@ easy_admin:
             label: 'Media'
             list:
               title: "inserer un Média"
-              fields: ['id', 'photo', 'video']
+              fields: ['id',{ property: 'image', type: 'image', base_path: '%app.path.media_images%' }]
             form:
               fields:
-                     - { type: 'tab', label: 'envoyer photo ou video', icon: 'camera' }
-                     - images
-                     - Video
+                     - { type: 'tab', label: 'envoyer photo ', icon: 'camera' }
+                     - { property: 'imageFile', type: 'vich_image' }
+
 
 
         News:
@@ -122,13 +126,13 @@ easy_admin:
             label: 'News'
             list:
                 title: "Insérer une Actualité"
-                fields: ['id', 'Titre', 'Contenu', 'Image']
+                fields: ['id', 'Titre', 'Contenu',{ property: 'image', type: 'image', base_path: '%app.path.new_images%' }]
             form:
                 fields:
                        - { type: 'tab', label: 'enregistrement actualité', icon: 'newspaper-o' }
                        - titre
                        - Contenu
-                       - Images
+                       - { property: 'imageFile', type: 'vich_image' }
 
 
 
@@ -136,20 +140,29 @@ easy_admin:
             class: gaelicBundle\Entity\Sponsors
             label: 'Sponsors'
             list:
-              title: "Insérer un nouveau Sponsors"
-              fields: ['id', 'Titre', 'Contenu', 'Image']
+              title: "Sponsoring"
+              fields: ['id', 'Titre', 'Contenu',{ property: 'image', type: 'image', base_path: '%app.path.sponsor_images%' }]
+            form:
+              fields:
+                     - { type: 'tab', label: 'Ajouter sponsors', icon: 'black-tie' }
+                     - titre
+                     - Contenu
+                     - { property: 'imageFile', type: 'vich_image' }
+
+
+
 
 
         Entrainement:
             class: gaelicBundle\Entity\Entrainement
             label: 'Entrainement'
             list:
-              title: "Insérer un endroit pour l'Entrainement"
+              title: "gestion des entrainements"
               fields: ['id', 'Titre', 'Contenu',{ property: 'image', type: 'image', base_path: '%app.path.entrainement_images%' }]
 
             form:
               fields:
-                     - { type: 'tab', label: 'lieu entrainement', icon: 'dribbble' }
+                     - { type: 'tab', label: 'ajout lieu Entrainement', icon: 'dribbble' }
                      - titre
                      - Contenu
                      - { property: 'imageFile', type: 'vich_image' }
@@ -199,6 +212,19 @@ vich_uploader:
             entrainement_images:
                 uri_prefix:      '%app.path.entrainement_images%'
                 upload_destination: '%kernel.root_dir%/../web/entrainement%app.path.entrainement_images%'
+
+            sponsor_images:
+                uri_prefix:      '%app.path.sponsor_images%'
+                upload_destination: '%kernel.root_dir%/../web/sponsor'
+
+            new_images:
+                uri_prefix:      '%app.path.new_images%'
+                upload_destination: '%kernel.root_dir%/../web/new'
+
+            media_images:
+                uri_prefix:      '%app.path.media_images%'
+                upload_destination: '%kernel.root_dir%/../web/media'
+
 
 
 

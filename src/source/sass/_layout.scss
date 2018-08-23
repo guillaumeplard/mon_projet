@@ -1,0 +1,36 @@
+body{
+    margin:0;
+    padding: 0;
+
+}
+.title1{
+    color: white;
+
+}
+.logoLayout{
+    width: 150px;
+    height: 150px;
+}
+.forming {
+    background-image: linear-gradient(to left, #051937, #27183e, #44103b, #5b042e, #69071a);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+}
+.loginblock {
+    margin: 30px;
+    color: white;
+}
+.logregister {
+    margin: 30px;
+    color: white;
+}
+.mdp{
+    color: white;
+}

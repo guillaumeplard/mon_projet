@@ -1,0 +1,56 @@
+
+.fond_homepage{
+    background-image: url("../../images/Gaa.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height:100vh
+}
+.menu{
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.menu a {
+    color:darkred;
+    font-size: 1.5em;
+    opacity: 0.5;
+}
+
+.menu a:hover {
+    color:red;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+.bouton{
+    width:300px;
+    padding: 10px 25px;
+    border-radius: 50px;
+    background-color: darkred;
+    margin:auto;
+    margin-top: 50px;
+    text-align: center;
+    color: white;
+}
+
+.accueil{
+    height:80vh;
+}
+.logo1{
+    width: 80px;
+    height: 80px;
+}
+.btn{
+    background-color: #051937;
+    color: white;
+}
+.presentation{
+    margin-left: -900px;
+    color: white;
+}
+.animate{
+
+    animation-duration: 6s;
+    animation-name:bounceInDown;
+
+}

@@ -107,9 +107,9 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
-        // gaelic
+        // gaelic_homepage
         if ('/gaelic' === $pathinfo) {
-            return array (  '_controller' => 'gaelicBundle\\Controller\\DefaultController::gaelicAction',  '_route' => 'gaelic',);
+            return array (  '_controller' => 'gaelicBundle\\Controller\\DefaultController::gaelicAction',  '_route' => 'gaelic_homepage',);
         }
 
         // club_page

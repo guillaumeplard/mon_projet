@@ -36,37 +36,42 @@ class __TwigTemplate_1e97148bb079a1275f906a58c72b1c86ce7981a343b6289a0c51c6604ef
     <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css\" integrity=\"sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO\" crossorigin=\"anonymous\">
     <link rel=\"stylesheet\" href=\"";
         // line 9
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("asset/css/styles.css"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("asset/css/main.css"), "html", null, true);
         echo "\">
     <title>Document</title>
 </head>
 <body>
+<div class=\"fond_homepage\">
 ";
-        // line 23
+        // line 24
         echo "<nav>
     <div class=\"d-flex align-items-center justify-content-around menu\">
         <div class=\"menuLink\"><a href=\"";
-        // line 25
+        // line 26
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("club_page");
         echo "\">Le Club</a></div>
         <div class=\"menuLink\"><a href=\"";
-        // line 26
+        // line 27
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("media_page");
         echo "\">Média</a></div>
-        <div class=\"logo\"><img src=\"";
-        // line 27
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/gaelic-football.png"), "html", null, true);
+        <div class=\"logo\"><img class=\"logo1\" src=\"";
+        // line 28
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo-burdi.png"), "html", null, true);
         echo "\" alt=\"logo\"></div>
         <div class=\"menuLink\"><a href=\"";
-        // line 28
+        // line 29
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("sponsors_page");
         echo "\">Partenaires</a></div>
         <div class=\"menuLink\"><a href=\"";
-        // line 29
+        // line 30
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact_page");
         echo "\">Contact</a></div>
     </div>
 </nav>
+<a href=\"";
+        // line 33
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("fos_user_security_login");
+        echo "\"><button type=\"button\" class=\"btn btn-danger\">se connecter</button></a>
 
 <div class=\"d-flex flex-column justify-content-center accueil\">
     <div class=\"presentation text-center text-black pb-5\">
@@ -78,6 +83,7 @@ class __TwigTemplate_1e97148bb079a1275f906a58c72b1c86ce7981a343b6289a0c51c6604ef
         Découvrir notre sport
     </div>
 </a>
+</div>
 </div>
 
 <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
@@ -105,7 +111,7 @@ class __TwigTemplate_1e97148bb079a1275f906a58c72b1c86ce7981a343b6289a0c51c6604ef
 
     public function getDebugInfo()
     {
-        return array (  66 => 29,  62 => 28,  58 => 27,  54 => 26,  50 => 25,  46 => 23,  39 => 9,  29 => 1,);
+        return array (  73 => 33,  67 => 30,  63 => 29,  59 => 28,  55 => 27,  51 => 26,  47 => 24,  39 => 9,  29 => 1,);
     }
 
     public function getSourceContext()
@@ -118,10 +124,11 @@ class __TwigTemplate_1e97148bb079a1275f906a58c72b1c86ce7981a343b6289a0c51c6604ef
           content=\"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0\">
     <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">
     <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css\" integrity=\"sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO\" crossorigin=\"anonymous\">
-    <link rel=\"stylesheet\" href=\"{{ asset('asset/css/styles.css') }}\">
+    <link rel=\"stylesheet\" href=\"{{ asset('asset/css/main.css') }}\">
     <title>Document</title>
 </head>
 <body>
+<div class=\"fond_homepage\">
 {#<nav>
     <ul class=\"nav\">
         <li>Football Gaélique</li>
@@ -136,11 +143,12 @@ class __TwigTemplate_1e97148bb079a1275f906a58c72b1c86ce7981a343b6289a0c51c6604ef
     <div class=\"d-flex align-items-center justify-content-around menu\">
         <div class=\"menuLink\"><a href=\"{{ path('club_page') }}\">Le Club</a></div>
         <div class=\"menuLink\"><a href=\"{{ path('media_page') }}\">Média</a></div>
-        <div class=\"logo\"><img src=\"{{ asset('images/gaelic-football.png') }}\" alt=\"logo\"></div>
+        <div class=\"logo\"><img class=\"logo1\" src=\"{{ asset('images/logo-burdi.png') }}\" alt=\"logo\"></div>
         <div class=\"menuLink\"><a href=\"{{ path('sponsors_page') }}\">Partenaires</a></div>
         <div class=\"menuLink\"><a href=\"{{ path('contact_page') }}\">Contact</a></div>
     </div>
 </nav>
+<a href=\"{{ path('fos_user_security_login') }}\"><button type=\"button\" class=\"btn btn-danger\">se connecter</button></a>
 
 <div class=\"d-flex flex-column justify-content-center accueil\">
     <div class=\"presentation text-center text-black pb-5\">
@@ -152,6 +160,7 @@ class __TwigTemplate_1e97148bb079a1275f906a58c72b1c86ce7981a343b6289a0c51c6604ef
         Découvrir notre sport
     </div>
 </a>
+</div>
 </div>
 
 <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>

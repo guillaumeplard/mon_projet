@@ -1,0 +1,300 @@
+.terrainimage {
+  transform: rotate(90deg);
+  width: 120vh;
+  margin-bottom: -200px;
+  margin-top: -300px; }
+
+.titre {
+  text-align: center;
+  color: darkred; }
+
+.terrainbis {
+  margin-bottom: -60px; }
+
+.titre1 {
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: -50px; }
+
+.titre2 {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px; }
+
+.titre3 {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px; }
+
+.logohistoire {
+  width: 200px;
+  height: 200px; }
+
+.equipe {
+  width: 120vh; }
+
+.logoclub {
+  margin-top: 20px;
+  width: 100px;
+  height: 100px; }
+
+body {
+  margin: 0;
+  padding: 0; }
+
+.title1 {
+  color: white; }
+
+.logoLayout {
+  width: 150px;
+  height: 150px; }
+
+.forming {
+  background-image: linear-gradient(to left, #051937, #27183e, #44103b, #5b042e, #69071a);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px; }
+
+.loginblock {
+  margin: 30px;
+  color: white; }
+
+.logregister {
+  margin: 30px;
+  color: white; }
+
+.mdp {
+  color: white; }
+
+.logomedia {
+  margin-top: 20px;
+  width: 100px;
+  height: 100px; }
+
+.titreMedia {
+  text-align: center;
+  color: darkred;
+  margin-top: -100px;
+  margin-bottom: 100px; }
+
+.fondmedia {
+  background-image: url("../../images/bordeaux10.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh; }
+
+#slideshow {
+  background-color: #F5F5F5;
+  border: 1px solid #FFFFFF;
+  height: 540px;
+  margin-left: 150px;
+  position: relative;
+  width: 1080px;
+  -moz-box-shadow: 0 0 22px #111;
+  -webkit-box-shadow: 0 0 22px #111;
+  box-shadow: 0 0 22px #111; }
+
+#slideshow ul {
+  height: 520px;
+  left: -30px;
+  list-style: none outside none;
+  overflow: hidden;
+  position: absolute;
+  top: -7px;
+  width: 1060px; }
+
+#slideshow li {
+  position: absolute;
+  display: none;
+  z-index: 10; }
+
+#slideshow li:first-child {
+  display: block;
+  z-index: 1000; }
+
+#slideshow .slideActive {
+  z-index: 1000; }
+
+#slideshow canvas {
+  display: none;
+  position: absolute;
+  z-index: 100; }
+
+#slideshow .arrow {
+  height: 86px;
+  width: 60px;
+  position: absolute;
+  background: url("../../images/arrows.png") no-repeat;
+  top: 50%;
+  margin-top: -43px;
+  cursor: pointer;
+  z-index: 5000; }
+
+#slideshow .previous {
+  background-position: left top;
+  left: 0; }
+
+#slideshow .previous:hover {
+  background-position: left bottom; }
+
+#slideshow .next {
+  background-position: right top;
+  right: 0; }
+
+#slideshow .next:hover {
+  background-position: right bottom; }
+
+.fond_homepage {
+  background-image: url("../../images/Gaa.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh; }
+
+.menu {
+  background-color: rgba(255, 255, 255, 0.7); }
+
+.menu a {
+  color: darkred;
+  font-size: 1.5em;
+  opacity: 0.5; }
+
+.menu a:hover {
+  color: red;
+  font-size: 2em;
+  text-decoration: none; }
+
+.bouton {
+  width: 300px;
+  padding: 10px 25px;
+  border-radius: 50px;
+  background-color: darkred;
+  margin: auto;
+  margin-top: 50px;
+  text-align: center;
+  color: white; }
+
+.accueil {
+  height: 80vh; }
+
+.logo1 {
+  width: 80px;
+  height: 80px; }
+
+.btn {
+  background-color: #051937;
+  color: white; }
+
+.presentation {
+  margin-left: -900px;
+  color: white; }
+
+.animate {
+  animation-duration: 6s;
+  animation-name: bounceInDown; }
+
+.logoPartenaire {
+  width: 150px;
+  height: 150px;
+  margin-top: 20px; }
+
+.titreSponsors {
+  text-align: center;
+  color: darkred;
+  margin-top: -100px;
+  margin-bottom: 50px; }
+
+.titreConnemara {
+  margin-bottom: 50px;
+  margin-top: 100px; }
+
+.titreTeam {
+  margin-bottom: 50px;
+  margin-top: 50px; }
+
+.imgConnemara {
+  width: 600px;
+  height: 360px; }
+
+.logoMaillot {
+  width: 300px;
+  height: 300px;
+  margin-top: 100px; }
+
+.logoContact {
+  width: 100px;
+  height: 100px; }
+
+.titreContact {
+  text-align: center;
+  margin-top: -50px; }
+
+.trouver {
+  margin-left: 200px;
+  margin-top: 100px; }
+
+.day {
+  margin-left: 100px; }
+
+@-webkit-keyframes bounceInDown {
+  from,
+    60%,
+    75%,
+    90%,
+    to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+    transform: translate3d(0, -3000px, 0); }
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0); }
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0); }
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0); }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+@keyframes bounceInDown {
+  from,
+    60%,
+    75%,
+    90%,
+    to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+    transform: translate3d(0, -3000px, 0); }
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0); }
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0); }
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0); }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+.animate .bounceInDown {
+  -webkit-animation-name: bounceInDown;
+  animation-name: bounceInDown; }
+
+/*# sourceMappingURL=main.css.map */

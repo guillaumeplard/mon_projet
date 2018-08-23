@@ -3,26 +3,31 @@
 {% if error %}
     <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
 {% endif %}
-<h1 class="title1">CONNECTION</h1>
+
+<a href="{{ path('gaelic_homepage')}}"><img class="logoLayout" src="{{ asset('images/logo-burdi.png') }}" alt=""></a>
+
+<h1 class="title1">CONNEXION</h1>
+
 
 <form action="{{ path("fos_user_security_check") }}" method="post">
     {% if csrf_token %}
         <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
     {% endif %}
-    <div>
-
+    <div class="loginblock ">
         <label for="username">{{ 'security.login.username'|trans }}</label><br>
         <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" autocomplete="username" />
     </div>
-    <div>
+    <div class="loginblock ">
         <label for="password">{{ 'security.login.password'|trans }}</label><br>
         <input type="password" id="password" name="_password" required="required" autocomplete="current-password" />
     </div>
-    <div>
-        <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
-        <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
+    <div class="loginblock ">
+        <input class="check" type="checkbox" id="remember_me" name="_remember_me" value="on" />
+        <label class="remember" for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
     </div>
 
     <input class="bouton" type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
-    <a href="{{ path('fos_user_resetting_request') }}"> mot de passe oublié</a>
+
 </form>
+    <a class="mdp" href="{{ path('fos_user_resetting_request') }}"> mot de passe oublié</a>
+

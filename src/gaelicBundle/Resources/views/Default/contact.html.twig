@@ -5,9 +5,55 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset('asset/css/main.css') }}">
     <title>Document</title>
 </head>
-<body>
-<h1>formulaire de contact</h1>
-</body>
+
+<a href="{{ path('gaelic_homepage')}}"><img class="logoContact" src="{{ asset('images/logo-burdi.png') }}" alt=""></a>
+<h1 class="titreContact">Contact</h1>
+<h2 class="trouver">Ou nous trouver?</h2>
+<h3 class="day">Le lundi</h3>
+<div class="container-fluid">
+    <div class="container d-flex justify-content-between">
+        <div class="p-2 w-100 bd-highlight"><img class="imgConnemara" src="{{ asset('images/connemara.jpg') }}" alt=""></div>
+        <div class="p-2 flex-shrink-1 bd-highlight text-justify"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis auctor justo. Pellentesque ultricies dui efficitur nulla rutrum, nec dapibus augue imperdiet. Nunc id turpis fringilla, ornare felis sagittis, interdum enim. Fusce accumsan lobortis sapien, eget gravida nunc bibendum quis. Nulla eu metus ac turpis aliquet lobortis. Nam dapibus purus venenatis mauris gravida, eu pulvinar tortor feugiat. Duis augue tortor, aliquam sit amet neque vitae, pellentesque pellentesque ante. Maecenas commodo a tortor sit amet eleifend. Fusce dignissim mattis vestibulum. Maecenas laoreet, massa eget aliquet mattis, felis ante facilisis est, vitae ultrices elit dui at arcu. Pellentesque condimentum mauris neque, quis cursus odio sagittis a. Etiam dictum libero vitae mi vestibulum tempor. Phasellus facilisis augue vel massa eleifend placerat. Aliquam nec risus nisl. Cras accumsan nisi dolor, sit amet consequat tortor sodales ac.</p></div>
+
+    </div>
+</div>
+
+<h3 class="day">Le jeudi</h3>
+<div class="row"></div>
+<div class="container-fluid">
+
+    <div class="container d-flex justify-content-between">
+
+        <div class="p-2 flex-shrink-1 bd-highlight text-justify"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis auctor justo. Pellentesque ultricies dui efficitur nulla rutrum, nec dapibus augue imperdiet. Nunc id turpis fringilla, ornare felis sagittis, interdum enim. Fusce accumsan lobortis sapien, eget gravida nunc bibendum quis. Nulla eu metus ac turpis aliquet lobortis. Nam dapibus purus venenatis mauris gravida, eu pulvinar tortor feugiat. Duis augue tortor, aliquam sit amet neque vitae, pellentesque pellentesque ante. Maecenas commodo a tortor sit amet eleifend. Fusce dignissim mattis vestibulum. Maecenas laoreet, massa eget aliquet mattis, felis ante facilisis est, vitae ultrices elit dui at arcu. Pellentesque condimentum mauris neque, quis cursus odio sagittis a. Etiam dictum libero vitae mi vestibulum tempor. Phasellus facilisis augue vel massa eleifend placerat. Aliquam nec risus nisl. Cras accumsan nisi dolor, sit amet consequat tortor sodales ac.</p></div>
+        <div class="p-2 w-100 bd-highlight"><img class="imgConnemara" src="{{ asset('images/team.jpeg') }}" alt=""></div>
+
+    </div>
+</div>
+
+<form>
+    <div class="form-row">
+        <div class="form-group col-md-6 d-flex justify-content-center">
+            <label for="name">Name</label>
+            <input type="name" class="" id="name" placeholder="name">
+        </div>
+        <div class="form-group col-md-6 d-flex justify-content-center">
+            <label for="name">Prénom</label>
+            <input type="prenom" class="" id="" placeholder="Prenom">
+        </div>
+    </div>
+    <div class="form-group col-md-6 d-flex justify-content-center">
+        <label for="inputEmail4">Email</label>
+        <input class="d-inline-flex p-3 bd-highlight" type="email" class="form-control" id="inputEmail4" placeholder="Email">
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">Message</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Envoyer</button>
+</form>
+
 </html>

@@ -128,9 +128,11 @@
     <parameter key="mailer_user">smtp.gmail.com</parameter>
     <parameter key="mailer_password">votreemail@gmail.com</parameter>
     <parameter key="secret">26fec43fa84c93ef127b9d5b8378a80113576d1d</parameter>
-    <parameter key="brochures_directory">/Applications/MAMP/htdocs/mon_projet/public/uploads/brochures</parameter>
     <parameter key="app.path.product_images">../web/uploads/images/products</parameter>
     <parameter key="app.path.entrainement_images">../web/entrainement</parameter>
+    <parameter key="app.path.sponsor_images">../web/sponsor</parameter>
+    <parameter key="app.path.new_images">../web/new</parameter>
+    <parameter key="app.path.media_images">../web/media</parameter>
     <parameter key="locale">fr</parameter>
     <parameter key="fragment.renderer.hinclude.global_template">null</parameter>
     <parameter key="fragment.path">/_fragment</parameter>
@@ -431,7 +433,7 @@
       <parameter key="entities" type="collection">
         <parameter key="User" type="collection">
           <parameter key="class">gaelicBundle\Entity\User</parameter>
-          <parameter key="label">User</parameter>
+          <parameter key="label">Utilisateur</parameter>
           <parameter key="list" type="collection">
             <parameter key="title">changement d'utilisateur</parameter>
           </parameter>
@@ -444,19 +446,24 @@
             <parameter key="title">inserer un Média</parameter>
             <parameter key="fields" type="collection">
               <parameter>id</parameter>
-              <parameter>photo</parameter>
-              <parameter>video</parameter>
+              <parameter type="collection">
+                <parameter key="property">image</parameter>
+                <parameter key="type">image</parameter>
+                <parameter key="base_path">../web/media</parameter>
+              </parameter>
             </parameter>
           </parameter>
           <parameter key="form" type="collection">
             <parameter key="fields" type="collection">
               <parameter type="collection">
                 <parameter key="type">tab</parameter>
-                <parameter key="label">envoyer photo ou video</parameter>
+                <parameter key="label">envoyer photo </parameter>
                 <parameter key="icon">camera</parameter>
               </parameter>
-              <parameter>images</parameter>
-              <parameter>Video</parameter>
+              <parameter type="collection">
+                <parameter key="property">imageFile</parameter>
+                <parameter key="type">vich_image</parameter>
+              </parameter>
             </parameter>
           </parameter>
           <parameter key="name">Media</parameter>
@@ -470,7 +477,11 @@
               <parameter>id</parameter>
               <parameter>Titre</parameter>
               <parameter>Contenu</parameter>
-              <parameter>Image</parameter>
+              <parameter type="collection">
+                <parameter key="property">image</parameter>
+                <parameter key="type">image</parameter>
+                <parameter key="base_path">../web/new</parameter>
+              </parameter>
             </parameter>
           </parameter>
           <parameter key="form" type="collection">
@@ -482,7 +493,10 @@
               </parameter>
               <parameter>titre</parameter>
               <parameter>Contenu</parameter>
-              <parameter>Images</parameter>
+              <parameter type="collection">
+                <parameter key="property">imageFile</parameter>
+                <parameter key="type">vich_image</parameter>
+              </parameter>
             </parameter>
           </parameter>
           <parameter key="name">News</parameter>
@@ -491,12 +505,31 @@
           <parameter key="class">gaelicBundle\Entity\Sponsors</parameter>
           <parameter key="label">Sponsors</parameter>
           <parameter key="list" type="collection">
-            <parameter key="title">Insérer un nouveau Sponsors</parameter>
+            <parameter key="title">Sponsoring</parameter>
             <parameter key="fields" type="collection">
               <parameter>id</parameter>
               <parameter>Titre</parameter>
               <parameter>Contenu</parameter>
-              <parameter>Image</parameter>
+              <parameter type="collection">
+                <parameter key="property">image</parameter>
+                <parameter key="type">image</parameter>
+                <parameter key="base_path">../web/sponsor</parameter>
+              </parameter>
+            </parameter>
+          </parameter>
+          <parameter key="form" type="collection">
+            <parameter key="fields" type="collection">
+              <parameter type="collection">
+                <parameter key="type">tab</parameter>
+                <parameter key="label">Ajouter sponsors</parameter>
+                <parameter key="icon">black-tie</parameter>
+              </parameter>
+              <parameter>titre</parameter>
+              <parameter>Contenu</parameter>
+              <parameter type="collection">
+                <parameter key="property">imageFile</parameter>
+                <parameter key="type">vich_image</parameter>
+              </parameter>
             </parameter>
           </parameter>
           <parameter key="name">Sponsors</parameter>
@@ -505,7 +538,7 @@
           <parameter key="class">gaelicBundle\Entity\Entrainement</parameter>
           <parameter key="label">Entrainement</parameter>
           <parameter key="list" type="collection">
-            <parameter key="title">Insérer un endroit pour l'Entrainement</parameter>
+            <parameter key="title">gestion des entrainements</parameter>
             <parameter key="fields" type="collection">
               <parameter>id</parameter>
               <parameter>Titre</parameter>
@@ -521,7 +554,7 @@
             <parameter key="fields" type="collection">
               <parameter type="collection">
                 <parameter key="type">tab</parameter>
-                <parameter key="label">lieu entrainement</parameter>
+                <parameter key="label">ajout lieu Entrainement</parameter>
                 <parameter key="icon">dribbble</parameter>
               </parameter>
               <parameter>titre</parameter>
@@ -652,6 +685,54 @@
       <parameter key="entrainement_images" type="collection">
         <parameter key="uri_prefix">../web/entrainement</parameter>
         <parameter key="upload_destination">/Applications/MAMP/htdocs/mon_projet/app/../web/entrainement../web/entrainement</parameter>
+        <parameter key="namer" type="collection">
+          <parameter key="service">null</parameter>
+          <parameter key="options">null</parameter>
+        </parameter>
+        <parameter key="directory_namer" type="collection">
+          <parameter key="service">null</parameter>
+          <parameter key="options">null</parameter>
+        </parameter>
+        <parameter key="delete_on_remove">true</parameter>
+        <parameter key="delete_on_update">true</parameter>
+        <parameter key="inject_on_load">false</parameter>
+        <parameter key="db_driver">orm</parameter>
+      </parameter>
+      <parameter key="sponsor_images" type="collection">
+        <parameter key="uri_prefix">../web/sponsor</parameter>
+        <parameter key="upload_destination">/Applications/MAMP/htdocs/mon_projet/app/../web/sponsor</parameter>
+        <parameter key="namer" type="collection">
+          <parameter key="service">null</parameter>
+          <parameter key="options">null</parameter>
+        </parameter>
+        <parameter key="directory_namer" type="collection">
+          <parameter key="service">null</parameter>
+          <parameter key="options">null</parameter>
+        </parameter>
+        <parameter key="delete_on_remove">true</parameter>
+        <parameter key="delete_on_update">true</parameter>
+        <parameter key="inject_on_load">false</parameter>
+        <parameter key="db_driver">orm</parameter>
+      </parameter>
+      <parameter key="new_images" type="collection">
+        <parameter key="uri_prefix">../web/new</parameter>
+        <parameter key="upload_destination">/Applications/MAMP/htdocs/mon_projet/app/../web/new</parameter>
+        <parameter key="namer" type="collection">
+          <parameter key="service">null</parameter>
+          <parameter key="options">null</parameter>
+        </parameter>
+        <parameter key="directory_namer" type="collection">
+          <parameter key="service">null</parameter>
+          <parameter key="options">null</parameter>
+        </parameter>
+        <parameter key="delete_on_remove">true</parameter>
+        <parameter key="delete_on_update">true</parameter>
+        <parameter key="inject_on_load">false</parameter>
+        <parameter key="db_driver">orm</parameter>
+      </parameter>
+      <parameter key="media_images" type="collection">
+        <parameter key="uri_prefix">../web/media</parameter>
+        <parameter key="upload_destination">/Applications/MAMP/htdocs/mon_projet/app/../web/media</parameter>
         <parameter key="namer" type="collection">
           <parameter key="service">null</parameter>
           <parameter key="options">null</parameter>
@@ -3831,7 +3912,7 @@
       <argument type="service" id="debug.event_dispatcher" on-invalid="null"/>
       <argument type="service" id="security.authentication.trust_resolver"/>
       <call method="setLogoutOnUserChange">
-        <argument>false</argument>
+        <argument>true</argument>
       </call>
     </service>
     <service id="security.logout_listener.main" class="Symfony\Component\Security\Http\Firewall\LogoutListener" public="false">
@@ -3866,8 +3947,8 @@
       <argument type="collection"/>
       <call method="setOptions">
         <argument type="collection">
-          <argument key="always_use_default_target_path">false</argument>
-          <argument key="default_target_path">/</argument>
+          <argument key="always_use_default_target_path">true</argument>
+          <argument key="default_target_path">/admin</argument>
           <argument key="login_path">/login</argument>
           <argument key="target_path_parameter">_target_path</argument>
           <argument key="use_referer">false</argument>
@@ -4714,6 +4795,15 @@
         <argument type="service" id="vich_uploader.listener.clean.entrainement_images"/>
       </call>
       <call method="addEventSubscriber">
+        <argument type="service" id="vich_uploader.listener.clean.sponsor_images"/>
+      </call>
+      <call method="addEventSubscriber">
+        <argument type="service" id="vich_uploader.listener.clean.new_images"/>
+      </call>
+      <call method="addEventSubscriber">
+        <argument type="service" id="vich_uploader.listener.clean.media_images"/>
+      </call>
+      <call method="addEventSubscriber">
         <argument type="service" id="fos_user.user_listener"/>
       </call>
       <call method="addEventSubscriber">
@@ -4727,6 +4817,24 @@
       </call>
       <call method="addEventSubscriber">
         <argument type="service" id="vich_uploader.listener.upload.entrainement_images"/>
+      </call>
+      <call method="addEventSubscriber">
+        <argument type="service" id="vich_uploader.listener.remove.sponsor_images"/>
+      </call>
+      <call method="addEventSubscriber">
+        <argument type="service" id="vich_uploader.listener.upload.sponsor_images"/>
+      </call>
+      <call method="addEventSubscriber">
+        <argument type="service" id="vich_uploader.listener.remove.new_images"/>
+      </call>
+      <call method="addEventSubscriber">
+        <argument type="service" id="vich_uploader.listener.upload.new_images"/>
+      </call>
+      <call method="addEventSubscriber">
+        <argument type="service" id="vich_uploader.listener.remove.media_images"/>
+      </call>
+      <call method="addEventSubscriber">
+        <argument type="service" id="vich_uploader.listener.upload.media_images"/>
       </call>
       <call method="addEventListener">
         <argument type="collection">
@@ -5742,6 +5850,69 @@
     <service id="vich_uploader.listener.upload.entrainement_images" class="Vich\UploaderBundle\EventListener\Doctrine\UploadListener" public="false">
       <tag name="doctrine.event_subscriber" priority="0"/>
       <argument>entrainement_images</argument>
+      <argument type="service" id="vich_uploader.adapter.orm"/>
+      <argument type="service" id="vich_uploader.metadata_reader"/>
+      <argument type="service" id="vich_uploader.upload_handler"/>
+    </service>
+    <service id="vich_uploader.listener.clean.sponsor_images" class="Vich\UploaderBundle\EventListener\Doctrine\CleanListener" public="false">
+      <tag name="doctrine.event_subscriber" priority="50"/>
+      <argument>sponsor_images</argument>
+      <argument type="service" id="vich_uploader.adapter.orm"/>
+      <argument type="service" id="vich_uploader.metadata_reader"/>
+      <argument type="service" id="vich_uploader.upload_handler"/>
+    </service>
+    <service id="vich_uploader.listener.remove.sponsor_images" class="Vich\UploaderBundle\EventListener\Doctrine\RemoveListener" public="false">
+      <tag name="doctrine.event_subscriber" priority="0"/>
+      <argument>sponsor_images</argument>
+      <argument type="service" id="vich_uploader.adapter.orm"/>
+      <argument type="service" id="vich_uploader.metadata_reader"/>
+      <argument type="service" id="vich_uploader.upload_handler"/>
+    </service>
+    <service id="vich_uploader.listener.upload.sponsor_images" class="Vich\UploaderBundle\EventListener\Doctrine\UploadListener" public="false">
+      <tag name="doctrine.event_subscriber" priority="0"/>
+      <argument>sponsor_images</argument>
+      <argument type="service" id="vich_uploader.adapter.orm"/>
+      <argument type="service" id="vich_uploader.metadata_reader"/>
+      <argument type="service" id="vich_uploader.upload_handler"/>
+    </service>
+    <service id="vich_uploader.listener.clean.new_images" class="Vich\UploaderBundle\EventListener\Doctrine\CleanListener" public="false">
+      <tag name="doctrine.event_subscriber" priority="50"/>
+      <argument>new_images</argument>
+      <argument type="service" id="vich_uploader.adapter.orm"/>
+      <argument type="service" id="vich_uploader.metadata_reader"/>
+      <argument type="service" id="vich_uploader.upload_handler"/>
+    </service>
+    <service id="vich_uploader.listener.remove.new_images" class="Vich\UploaderBundle\EventListener\Doctrine\RemoveListener" public="false">
+      <tag name="doctrine.event_subscriber" priority="0"/>
+      <argument>new_images</argument>
+      <argument type="service" id="vich_uploader.adapter.orm"/>
+      <argument type="service" id="vich_uploader.metadata_reader"/>
+      <argument type="service" id="vich_uploader.upload_handler"/>
+    </service>
+    <service id="vich_uploader.listener.upload.new_images" class="Vich\UploaderBundle\EventListener\Doctrine\UploadListener" public="false">
+      <tag name="doctrine.event_subscriber" priority="0"/>
+      <argument>new_images</argument>
+      <argument type="service" id="vich_uploader.adapter.orm"/>
+      <argument type="service" id="vich_uploader.metadata_reader"/>
+      <argument type="service" id="vich_uploader.upload_handler"/>
+    </service>
+    <service id="vich_uploader.listener.clean.media_images" class="Vich\UploaderBundle\EventListener\Doctrine\CleanListener" public="false">
+      <tag name="doctrine.event_subscriber" priority="50"/>
+      <argument>media_images</argument>
+      <argument type="service" id="vich_uploader.adapter.orm"/>
+      <argument type="service" id="vich_uploader.metadata_reader"/>
+      <argument type="service" id="vich_uploader.upload_handler"/>
+    </service>
+    <service id="vich_uploader.listener.remove.media_images" class="Vich\UploaderBundle\EventListener\Doctrine\RemoveListener" public="false">
+      <tag name="doctrine.event_subscriber" priority="0"/>
+      <argument>media_images</argument>
+      <argument type="service" id="vich_uploader.adapter.orm"/>
+      <argument type="service" id="vich_uploader.metadata_reader"/>
+      <argument type="service" id="vich_uploader.upload_handler"/>
+    </service>
+    <service id="vich_uploader.listener.upload.media_images" class="Vich\UploaderBundle\EventListener\Doctrine\UploadListener" public="false">
+      <tag name="doctrine.event_subscriber" priority="0"/>
+      <argument>media_images</argument>
       <argument type="service" id="vich_uploader.adapter.orm"/>
       <argument type="service" id="vich_uploader.metadata_reader"/>
       <argument type="service" id="vich_uploader.upload_handler"/>

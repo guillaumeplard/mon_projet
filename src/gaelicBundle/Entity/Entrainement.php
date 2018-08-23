@@ -47,7 +47,7 @@ class Entrainement
 
     /**
      * @Vich\UploadableField(mapping="entrainement_images", fileNameProperty="image")
-     *@var File
+     * @var File
      */
     private $imageFile;
 
