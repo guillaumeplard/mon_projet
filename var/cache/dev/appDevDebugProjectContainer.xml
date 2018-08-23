@@ -125,9 +125,11 @@
     <parameter key="database_password">root</parameter>
     <parameter key="mailer_transport">smtp</parameter>
     <parameter key="mailer_host">465</parameter>
-    <parameter key="mailer_user">smtp.gmail.com</parameter>
-    <parameter key="mailer_password">votreemail@gmail.com</parameter>
-    <parameter key="secret">26fec43fa84c93ef127b9d5b8378a80113576d1d</parameter>
+    <parameter key="mailer_user">guiton@yahoo.fr</parameter>
+    <parameter key="mailer_password">password</parameter>
+    <parameter key="secret">Iknowididstupidthings</parameter>
+    <parameter key="encryption">ssl</parameter>
+    <parameter key="auth_mode">login</parameter>
     <parameter key="app.path.product_images">../web/uploads/images/products</parameter>
     <parameter key="app.path.entrainement_images">../web/entrainement</parameter>
     <parameter key="app.path.sponsor_images">../web/sponsor</parameter>
@@ -136,7 +138,7 @@
     <parameter key="locale">fr</parameter>
     <parameter key="fragment.renderer.hinclude.global_template">null</parameter>
     <parameter key="fragment.path">/_fragment</parameter>
-    <parameter key="kernel.secret">26fec43fa84c93ef127b9d5b8378a80113576d1d</parameter>
+    <parameter key="kernel.secret">Iknowididstupidthings</parameter>
     <parameter key="kernel.http_method_override">true</parameter>
     <parameter key="kernel.trusted_hosts" type="collection"/>
     <parameter key="kernel.default_locale">fr</parameter>
@@ -242,8 +244,8 @@
     <parameter key="swiftmailer.mailer.default.transport.smtp.encryption">null</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.port">25</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.host">465</parameter>
-    <parameter key="swiftmailer.mailer.default.transport.smtp.username">smtp.gmail.com</parameter>
-    <parameter key="swiftmailer.mailer.default.transport.smtp.password">votreemail@gmail.com</parameter>
+    <parameter key="swiftmailer.mailer.default.transport.smtp.username">guiton@yahoo.fr</parameter>
+    <parameter key="swiftmailer.mailer.default.transport.smtp.password">password</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.auth_mode">null</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.timeout">30</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.source_ip">null</parameter>
@@ -1041,7 +1043,7 @@
       </argument>
     </service>
     <service id="uri_signer" class="Symfony\Component\HttpKernel\UriSigner">
-      <argument>26fec43fa84c93ef127b9d5b8378a80113576d1d</argument>
+      <argument>Iknowididstupidthings</argument>
     </service>
     <service id="config_cache_factory" class="Symfony\Component\Config\ResourceCheckerConfigCacheFactory">
       <argument type="tagged" tag="config_cache.resource_checker"/>
@@ -4626,10 +4628,10 @@
         <argument type="service" id="3_Swift_Transport_Esmtp_Auth_PlainAuthenticator~4udoae1"/>
       </argument>
       <call method="setUsername">
-        <argument>smtp.gmail.com</argument>
+        <argument>guiton@yahoo.fr</argument>
       </call>
       <call method="setPassword">
-        <argument>votreemail@gmail.com</argument>
+        <argument>password</argument>
       </call>
       <call method="setAuthMode">
         <argument>null</argument>

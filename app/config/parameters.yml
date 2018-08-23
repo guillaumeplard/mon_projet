@@ -7,6 +7,9 @@ parameters:
     database_password: root
     mailer_transport: smtp
     mailer_host: 465
-    mailer_user: smtp.gmail.com
-    mailer_password: votreemail@gmail.com
-    secret: 26fec43fa84c93ef127b9d5b8378a80113576d1d
+    mailer_host: mail.yahoo.fr
+    mailer_user: guiton@yahoo.fr
+    mailer_password: password
+    secret: Iknowididstupidthings
+    encryption: ssl
+    auth_mode: login

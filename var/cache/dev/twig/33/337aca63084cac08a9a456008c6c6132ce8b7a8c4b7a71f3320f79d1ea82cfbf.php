@@ -76,28 +76,81 @@ class __TwigTemplate_1d614147ee14d2410d7a79190d6edc96a1f1afb5c29dd9d59a28fb02a1c
     </div>
 </div>
 
-<form>
-    <div class=\"form-row\">
-        <div class=\"form-group col-md-6 d-flex justify-content-center\">
-            <label for=\"name\">Name</label>
-            <input type=\"name\" class=\"\" id=\"name\" placeholder=\"name\">
-        </div>
-        <div class=\"form-group col-md-6 d-flex justify-content-center\">
-            <label for=\"name\">Prénom</label>
-            <input type=\"prenom\" class=\"\" id=\"\" placeholder=\"Prenom\">
-        </div>
+<div class=\"container\">
+    <div class=\"row\">
+        <div class=\"col-sm-4\">
+    ";
+        // line 40
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formView"]) || array_key_exists("formView", $context) ? $context["formView"] : (function () { throw new Twig_Error_Runtime('Variable "formView" does not exist.', 40, $this->source); })()), 'form_start');
+        echo "
+    <div>
+";
+        // line 42
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formView"]) || array_key_exists("formView", $context) ? $context["formView"] : (function () { throw new Twig_Error_Runtime('Variable "formView" does not exist.', 42, $this->source); })()), "nom", array()), 'label');
+        echo "
+";
+        // line 43
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formView"]) || array_key_exists("formView", $context) ? $context["formView"] : (function () { throw new Twig_Error_Runtime('Variable "formView" does not exist.', 43, $this->source); })()), "nom", array()), 'widget');
+        echo "
     </div>
-    <div class=\"form-group col-md-6 d-flex justify-content-center\">
-        <label for=\"inputEmail4\">Email</label>
-        <input class=\"d-inline-flex p-3 bd-highlight\" type=\"email\" class=\"form-control\" id=\"inputEmail4\" placeholder=\"Email\">
+    <div>
+";
+        // line 46
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formView"]) || array_key_exists("formView", $context) ? $context["formView"] : (function () { throw new Twig_Error_Runtime('Variable "formView" does not exist.', 46, $this->source); })()), "prenom", array()), 'label');
+        echo "
+";
+        // line 47
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formView"]) || array_key_exists("formView", $context) ? $context["formView"] : (function () { throw new Twig_Error_Runtime('Variable "formView" does not exist.', 47, $this->source); })()), "prenom", array()), 'widget');
+        echo "
     </div>
-    <div class=\"form-group\">
-        <label for=\"exampleFormControlTextarea1\">Message</label>
-        <textarea class=\"form-control\" id=\"exampleFormControlTextarea1\" rows=\"3\"></textarea>
+    <div>
+";
+        // line 50
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formView"]) || array_key_exists("formView", $context) ? $context["formView"] : (function () { throw new Twig_Error_Runtime('Variable "formView" does not exist.', 50, $this->source); })()), "email", array()), 'label');
+        echo "
+";
+        // line 51
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formView"]) || array_key_exists("formView", $context) ? $context["formView"] : (function () { throw new Twig_Error_Runtime('Variable "formView" does not exist.', 51, $this->source); })()), "email", array()), 'widget');
+        echo "
     </div>
-    <button type=\"submit\" class=\"btn btn-primary\">Envoyer</button>
-</form>
+    <div>
+";
+        // line 54
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formView"]) || array_key_exists("formView", $context) ? $context["formView"] : (function () { throw new Twig_Error_Runtime('Variable "formView" does not exist.', 54, $this->source); })()), "sujet", array()), 'label');
+        echo "
+";
+        // line 55
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formView"]) || array_key_exists("formView", $context) ? $context["formView"] : (function () { throw new Twig_Error_Runtime('Variable "formView" does not exist.', 55, $this->source); })()), "sujet", array()), 'widget');
+        echo "
+    </div>
+    <div>
+";
+        // line 58
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formView"]) || array_key_exists("formView", $context) ? $context["formView"] : (function () { throw new Twig_Error_Runtime('Variable "formView" does not exist.', 58, $this->source); })()), "message", array()), 'label');
+        echo "
+";
+        // line 59
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formView"]) || array_key_exists("formView", $context) ? $context["formView"] : (function () { throw new Twig_Error_Runtime('Variable "formView" does not exist.', 59, $this->source); })()), "message", array()), 'widget');
+        echo "
+    </div>
+    <div>
 
+";
+        // line 63
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formView"]) || array_key_exists("formView", $context) ? $context["formView"] : (function () { throw new Twig_Error_Runtime('Variable "formView" does not exist.', 63, $this->source); })()), "submit", array()), 'label');
+        echo "
+";
+        // line 64
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formView"]) || array_key_exists("formView", $context) ? $context["formView"] : (function () { throw new Twig_Error_Runtime('Variable "formView" does not exist.', 64, $this->source); })()), "submit", array()), 'widget');
+        echo "
+    </div>
+    ";
+        // line 66
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formView"]) || array_key_exists("formView", $context) ? $context["formView"] : (function () { throw new Twig_Error_Runtime('Variable "formView" does not exist.', 66, $this->source); })()), 'form_end');
+        echo "
+</div>
+    </div>
+</div>
 </html>";
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -119,7 +172,7 @@ class __TwigTemplate_1d614147ee14d2410d7a79190d6edc96a1f1afb5c29dd9d59a28fb02a1c
 
     public function getDebugInfo()
     {
-        return array (  73 => 32,  57 => 19,  46 => 13,  39 => 9,  29 => 1,);
+        return array (  149 => 66,  144 => 64,  140 => 63,  133 => 59,  129 => 58,  123 => 55,  119 => 54,  113 => 51,  109 => 50,  103 => 47,  99 => 46,  93 => 43,  89 => 42,  84 => 40,  73 => 32,  57 => 19,  46 => 13,  39 => 9,  29 => 1,);
     }
 
     public function getSourceContext()
@@ -160,28 +213,39 @@ class __TwigTemplate_1d614147ee14d2410d7a79190d6edc96a1f1afb5c29dd9d59a28fb02a1c
     </div>
 </div>
 
-<form>
-    <div class=\"form-row\">
-        <div class=\"form-group col-md-6 d-flex justify-content-center\">
-            <label for=\"name\">Name</label>
-            <input type=\"name\" class=\"\" id=\"name\" placeholder=\"name\">
-        </div>
-        <div class=\"form-group col-md-6 d-flex justify-content-center\">
-            <label for=\"name\">Prénom</label>
-            <input type=\"prenom\" class=\"\" id=\"\" placeholder=\"Prenom\">
-        </div>
+<div class=\"container\">
+    <div class=\"row\">
+        <div class=\"col-sm-4\">
+    {{ form_start(formView) }}
+    <div>
+{{ form_label(formView.nom) }}
+{{ form_widget(formView.nom) }}
     </div>
-    <div class=\"form-group col-md-6 d-flex justify-content-center\">
-        <label for=\"inputEmail4\">Email</label>
-        <input class=\"d-inline-flex p-3 bd-highlight\" type=\"email\" class=\"form-control\" id=\"inputEmail4\" placeholder=\"Email\">
+    <div>
+{{ form_label(formView.prenom) }}
+{{ form_widget(formView.prenom) }}
     </div>
-    <div class=\"form-group\">
-        <label for=\"exampleFormControlTextarea1\">Message</label>
-        <textarea class=\"form-control\" id=\"exampleFormControlTextarea1\" rows=\"3\"></textarea>
+    <div>
+{{ form_label(formView.email) }}
+{{ form_widget(formView.email) }}
     </div>
-    <button type=\"submit\" class=\"btn btn-primary\">Envoyer</button>
-</form>
+    <div>
+{{ form_label(formView.sujet) }}
+{{ form_widget(formView.sujet) }}
+    </div>
+    <div>
+{{ form_label(formView.message) }}
+{{ form_widget(formView.message) }}
+    </div>
+    <div>
 
+{{ form_label(formView.submit) }}
+{{ form_widget(formView.submit) }}
+    </div>
+    {{ form_end(formView) }}
+</div>
+    </div>
+</div>
 </html>", "@gaelic/Default/contact.html.twig", "/Applications/MAMP/htdocs/mon_projet/src/gaelicBundle/Resources/views/Default/contact.html.twig");
     }
 }
