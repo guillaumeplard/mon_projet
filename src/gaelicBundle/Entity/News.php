@@ -104,6 +104,7 @@ class News
         return $this->image;
     }
 
+
     /**
      * Set titre.
      *

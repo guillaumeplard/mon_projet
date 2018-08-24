@@ -76,6 +76,10 @@ class DefaultController extends Controller
             'formView' => $formView
         ));
     }
+    public function footballgaelicAction()
+    {
+        return $this->render('@gaelic/Default/footballgaelic.html.twig');
+    }
 
 
 }

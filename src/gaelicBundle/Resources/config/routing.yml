@@ -18,6 +18,10 @@ contact_page:
     path:     /contact
     defaults: { _controller: gaelicBundle:Default:contact }
 
+footballgaelic_page:
+    path:     /footballgaelic
+    defaults: { _controller: gaelicBundle:Default:footballgaelic}
+
 
 
 

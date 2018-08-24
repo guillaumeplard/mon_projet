@@ -96,10 +96,14 @@ fos_user:
 #        - gaelicBundle\Entity\Contact
 
 easy_admin:
+    list:
+        actions: ['new', 'show', 'myAction', 'myOtherAction']
     list_max_results: 20
     site_name: 'Burdigaela'
     design:
         brand_color: '#770808'
+        assets:
+            favicon: 'images/favicons/favicon.png'
     entities:
 
         User:
@@ -126,12 +130,12 @@ easy_admin:
             label: 'News'
             list:
                 title: "Insérer une Actualité"
-                fields: ['id', 'Titre', 'Contenu',{ property: 'image', type: 'image', base_path: '%app.path.new_images%' }]
+                fields: ['id', 'Titre', 'Contenu',{ property: 'Online', type: 'toggle' },{ property: 'image', type: 'image', base_path: '%app.path.new_images%' }]
             form:
                 fields:
                        - { type: 'tab', label: 'enregistrement actualité', icon: 'newspaper-o' }
                        - titre
-                       - Contenu
+                       - { property: 'contenu', type: 'ckeditor' }
                        - { property: 'imageFile', type: 'vich_image' }
 
 
@@ -146,7 +150,7 @@ easy_admin:
               fields:
                      - { type: 'tab', label: 'Ajouter sponsors', icon: 'black-tie' }
                      - titre
-                     - Contenu
+                     - { property: 'contenu', type: 'ckeditor' }
                      - { property: 'imageFile', type: 'vich_image' }
 
 
@@ -164,7 +168,7 @@ easy_admin:
               fields:
                      - { type: 'tab', label: 'ajout lieu Entrainement', icon: 'dribbble' }
                      - titre
-                     - Contenu
+                     - { property: 'contenu', type: 'ckeditor' }
                      - { property: 'imageFile', type: 'vich_image' }
 
         Contact:
@@ -224,6 +228,16 @@ vich_uploader:
             media_images:
                 uri_prefix:      '%app.path.media_images%'
                 upload_destination: '%kernel.root_dir%/../web/media'
+
+ivory_ck_editor:
+    default_config: 'my_custom_config'
+    configs:
+        my_custom_config:
+            uiColor:  '#770808'
+            toolbar:  full
+            height: '900px'
+            language: fr
+
 
 
 

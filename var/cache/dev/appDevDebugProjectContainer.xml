@@ -21,6 +21,7 @@
       <parameter key="FOSUserBundle">FOS\UserBundle\FOSUserBundle</parameter>
       <parameter key="EasyAdminBundle">EasyCorp\Bundle\EasyAdminBundle\EasyAdminBundle</parameter>
       <parameter key="VichUploaderBundle">Vich\UploaderBundle\VichUploaderBundle</parameter>
+      <parameter key="IvoryCKEditorBundle">Ivory\CKEditorBundle\IvoryCKEditorBundle</parameter>
       <parameter key="DebugBundle">Symfony\Bundle\DebugBundle\DebugBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
@@ -87,6 +88,11 @@
         <parameter key="parent">null</parameter>
         <parameter key="path">/Applications/MAMP/htdocs/mon_projet/vendor/vich/uploader-bundle</parameter>
         <parameter key="namespace">Vich\UploaderBundle</parameter>
+      </parameter>
+      <parameter key="IvoryCKEditorBundle" type="collection">
+        <parameter key="parent">null</parameter>
+        <parameter key="path">/Applications/MAMP/htdocs/mon_projet/vendor/egeloen/ckeditor-bundle</parameter>
+        <parameter key="namespace">Ivory\CKEditorBundle</parameter>
       </parameter>
       <parameter key="DebugBundle" type="collection">
         <parameter key="parent">null</parameter>
@@ -201,6 +207,7 @@
     <parameter key="security.authentication.hide_user_not_found">true</parameter>
     <parameter key="twig.exception_listener.controller">twig.controller.exception:showAction</parameter>
     <parameter key="twig.form.resources" type="collection">
+      <parameter>@IvoryCKEditor/Form/ckeditor_widget.html.twig</parameter>
       <parameter>@VichUploader/Form/fields.html.twig</parameter>
       <parameter>form_div_layout.html.twig</parameter>
     </parameter>
@@ -412,21 +419,30 @@
       <parameter>Default</parameter>
     </parameter>
     <parameter key="easyadmin.config" type="collection">
+      <parameter key="list" type="collection">
+        <parameter key="actions" type="collection">
+          <parameter>new</parameter>
+          <parameter>show</parameter>
+          <parameter>myAction</parameter>
+          <parameter>myOtherAction</parameter>
+        </parameter>
+        <parameter key="max_results">20</parameter>
+      </parameter>
       <parameter key="site_name">Burdigaela</parameter>
       <parameter key="design" type="collection">
         <parameter key="brand_color">#770808</parameter>
+        <parameter key="assets" type="collection">
+          <parameter key="favicon" type="collection">
+            <parameter key="path">images/favicons/favicon.png</parameter>
+            <parameter key="mime_type">image/png</parameter>
+          </parameter>
+          <parameter key="css" type="collection"/>
+          <parameter key="js" type="collection"/>
+        </parameter>
         <parameter key="theme">default</parameter>
         <parameter key="color_scheme">dark</parameter>
         <parameter key="form_theme" type="collection">
           <parameter>@EasyAdmin/form/bootstrap_3_horizontal_layout.html.twig</parameter>
-        </parameter>
-        <parameter key="assets" type="collection">
-          <parameter key="css" type="collection"/>
-          <parameter key="js" type="collection"/>
-          <parameter key="favicon" type="collection">
-            <parameter key="path">favicon.ico</parameter>
-            <parameter key="mime_type">image/x-icon</parameter>
-          </parameter>
         </parameter>
         <parameter key="menu" type="collection"/>
       </parameter>
@@ -478,6 +494,10 @@
               <parameter>Titre</parameter>
               <parameter>Contenu</parameter>
               <parameter type="collection">
+                <parameter key="property">Online</parameter>
+                <parameter key="type">toggle</parameter>
+              </parameter>
+              <parameter type="collection">
                 <parameter key="property">image</parameter>
                 <parameter key="type">image</parameter>
                 <parameter key="base_path">../web/new</parameter>
@@ -492,7 +512,10 @@
                 <parameter key="icon">newspaper-o</parameter>
               </parameter>
               <parameter>titre</parameter>
-              <parameter>Contenu</parameter>
+              <parameter type="collection">
+                <parameter key="property">contenu</parameter>
+                <parameter key="type">ckeditor</parameter>
+              </parameter>
               <parameter type="collection">
                 <parameter key="property">imageFile</parameter>
                 <parameter key="type">vich_image</parameter>
@@ -525,7 +548,10 @@
                 <parameter key="icon">black-tie</parameter>
               </parameter>
               <parameter>titre</parameter>
-              <parameter>Contenu</parameter>
+              <parameter type="collection">
+                <parameter key="property">contenu</parameter>
+                <parameter key="type">ckeditor</parameter>
+              </parameter>
               <parameter type="collection">
                 <parameter key="property">imageFile</parameter>
                 <parameter key="type">vich_image</parameter>
@@ -558,7 +584,10 @@
                 <parameter key="icon">dribbble</parameter>
               </parameter>
               <parameter>titre</parameter>
-              <parameter>Contenu</parameter>
+              <parameter type="collection">
+                <parameter key="property">contenu</parameter>
+                <parameter key="type">ckeditor</parameter>
+              </parameter>
               <parameter type="collection">
                 <parameter key="property">imageFile</parameter>
                 <parameter key="type">vich_image</parameter>
@@ -639,10 +668,6 @@
           </parameter>
           <parameter key="name">Image</parameter>
         </parameter>
-      </parameter>
-      <parameter key="list" type="collection">
-        <parameter key="max_results">20</parameter>
-        <parameter key="actions" type="collection"/>
       </parameter>
       <parameter key="formats" type="collection">
         <parameter key="date">Y-m-d</parameter>
@@ -884,6 +909,7 @@
       <parameter key="console.command.vich_uploaderbundle_command_mappingdebugclasscommand">vich_uploader.command.mapping_debug_class</parameter>
       <parameter key="console.command.vich_uploaderbundle_command_mappingdebugcommand">vich_uploader.command.mapping_debug</parameter>
       <parameter key="console.command.vich_uploaderbundle_command_mappinglistclassescommand">vich_uploader.command.mapping_list_classes</parameter>
+      <parameter key="console.command.ivory_ckeditorbundle_command_ckeditorinstallercommand">console.command.ivory_ckeditorbundle_command_ckeditorinstallercommand</parameter>
       <parameter key="console.command.sensiolabs_security_command_securitycheckercommand">sensio_distribution.security_checker.command</parameter>
       <parameter key="console.command.symfony_bundle_webserverbundle_command_serverruncommand">web_server.command.server_run</parameter>
       <parameter key="console.command.symfony_bundle_webserverbundle_command_serverstartcommand">web_server.command.server_start</parameter>
@@ -1228,6 +1254,7 @@
         <argument>FOS\UserBundle\Form\Type</argument>
         <argument>EasyCorp\Bundle\EasyAdminBundle\Form\Type</argument>
         <argument>Vich\UploaderBundle\Form\Type</argument>
+        <argument>Ivory\CKEditorBundle\Form\Type</argument>
       </argument>
       <argument type="collection">
         <argument>Symfony\Component\Form\Extension\Core\Type\FormType</argument>
@@ -1245,6 +1272,7 @@
         <argument>EasyCorp\Bundle\EasyAdminBundle\Form\Type\EasyAdminGroupType</argument>
         <argument>Vich\UploaderBundle\Form\Type\VichFileType</argument>
         <argument>Vich\UploaderBundle\Form\Type\VichImageType</argument>
+        <argument>Ivory\CKEditorBundle\Form\Type\CKEditorType</argument>
       </argument>
       <argument type="collection">
         <argument>Symfony\Component\Form\Extension\HttpFoundation\Type\FormTypeHttpFoundationExtension</argument>
@@ -1453,7 +1481,7 @@
       <argument type="service" id="form.resolved_type_factory"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
-      <argument type="service" id="service_locator.jiymv.b"/>
+      <argument type="service" id="service_locator.fjkevdr"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.http_foundation"/>
@@ -4138,6 +4166,9 @@
         <argument type="service" id="vich_uploader.twig.extension.uploader"/>
       </call>
       <call method="addExtension">
+        <argument type="service" id="ivory_ck_editor.twig_extension"/>
+      </call>
+      <call method="addExtension">
         <argument type="service" id="twig.extension.webprofiler"/>
       </call>
       <call method="addGlobal">
@@ -4263,6 +4294,14 @@
       <call method="addPath">
         <argument>/Applications/MAMP/htdocs/mon_projet/vendor/vich/uploader-bundle/Resources/views</argument>
         <argument>!VichUploader</argument>
+      </call>
+      <call method="addPath">
+        <argument>/Applications/MAMP/htdocs/mon_projet/vendor/egeloen/ckeditor-bundle/Resources/views</argument>
+        <argument>IvoryCKEditor</argument>
+      </call>
+      <call method="addPath">
+        <argument>/Applications/MAMP/htdocs/mon_projet/vendor/egeloen/ckeditor-bundle/Resources/views</argument>
+        <argument>!IvoryCKEditor</argument>
       </call>
       <call method="addPath">
         <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views</argument>
@@ -4470,6 +4509,14 @@
       <call method="addPath">
         <argument>/Applications/MAMP/htdocs/mon_projet/vendor/vich/uploader-bundle/Resources/views</argument>
         <argument>!VichUploader</argument>
+      </call>
+      <call method="addPath">
+        <argument>/Applications/MAMP/htdocs/mon_projet/vendor/egeloen/ckeditor-bundle/Resources/views</argument>
+        <argument>IvoryCKEditor</argument>
+      </call>
+      <call method="addPath">
+        <argument>/Applications/MAMP/htdocs/mon_projet/vendor/egeloen/ckeditor-bundle/Resources/views</argument>
+        <argument>!IvoryCKEditor</argument>
       </call>
       <call method="addPath">
         <argument>/Applications/MAMP/htdocs/mon_projet/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views</argument>
@@ -5917,6 +5964,48 @@
       <argument type="service" id="vich_uploader.metadata_reader"/>
       <argument type="service" id="vich_uploader.upload_handler"/>
     </service>
+    <service id="ivory_ck_editor.command.installer" class="Ivory\CKEditorBundle\Command\CKEditorInstallerCommand">
+      <tag name="console.command"/>
+      <argument type="service" id="ivory_ck_editor.installer"/>
+    </service>
+    <service id="ivory_ck_editor.form.type" class="Ivory\CKEditorBundle\Form\Type\CKEditorType">
+      <tag name="form.type"/>
+      <argument type="service" id="ivory_ck_editor.config_manager"/>
+      <argument type="service" id="ivory_ck_editor.plugin_manager"/>
+      <argument type="service" id="ivory_ck_editor.styles_set_manager"/>
+      <argument type="service" id="ivory_ck_editor.template_manager"/>
+      <argument type="service" id="ivory_ck_editor.toolbar_manager"/>
+    </service>
+    <service id="ivory_ck_editor.config_manager" class="Ivory\CKEditorBundle\Model\ConfigManager">
+      <call method="setConfigs">
+        <argument type="collection">
+          <argument key="my_custom_config" type="collection">
+            <argument key="uiColor">#770808</argument>
+            <argument key="toolbar">full</argument>
+            <argument key="height">900px</argument>
+            <argument key="language">fr</argument>
+          </argument>
+        </argument>
+      </call>
+      <call method="setDefaultConfig">
+        <argument>my_custom_config</argument>
+      </call>
+    </service>
+    <service id="ivory_ck_editor.plugin_manager" class="Ivory\CKEditorBundle\Model\PluginManager"/>
+    <service id="ivory_ck_editor.styles_set_manager" class="Ivory\CKEditorBundle\Model\StylesSetManager"/>
+    <service id="ivory_ck_editor.template_manager" class="Ivory\CKEditorBundle\Model\TemplateManager"/>
+    <service id="ivory_ck_editor.toolbar_manager" class="Ivory\CKEditorBundle\Model\ToolbarManager"/>
+    <service id="ivory_ck_editor.installer" class="Ivory\CKEditorBundle\Installer\CKEditorInstaller"/>
+    <service id="ivory_ck_editor.renderer" class="Ivory\CKEditorBundle\Renderer\CKEditorRenderer">
+      <argument type="service" id="service_container"/>
+    </service>
+    <service id="ivory_ck_editor.renderer.json_builder" class="Ivory\JsonBuilder\JsonBuilder">
+      <argument type="service" id="property_accessor" on-invalid="null"/>
+    </service>
+    <service id="ivory_ck_editor.twig_extension" class="Ivory\CKEditorBundle\Twig\CKEditorExtension">
+      <tag name="twig.extension"/>
+      <argument type="service" id="ivory_ck_editor.renderer"/>
+    </service>
     <service id="twig.extension.dump" class="Symfony\Bridge\Twig\Extension\DumpExtension" public="false">
       <tag name="twig.extension"/>
       <argument type="service" id="var_dumper.cloner"/>
@@ -6088,7 +6177,7 @@
         <argument key="inline" type="service" id="fragment.renderer.inline"/>
       </argument>
     </service>
-    <service id="service_locator.jiymv.b" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id="service_locator.fjkevdr" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="EasyCorp\Bundle\EasyAdminBundle\Form\Type\EasyAdminAutocompleteType" type="service" id="easyadmin.form.type.autocomplete"/>
@@ -6101,6 +6190,7 @@
         <argument key="FOS\UserBundle\Form\Type\RegistrationFormType" type="service" id="fos_user.registration.form.type"/>
         <argument key="FOS\UserBundle\Form\Type\ResettingFormType" type="service" id="fos_user.resetting.form.type"/>
         <argument key="FOS\UserBundle\Form\Type\UsernameFormType" type="service" id="fos_user.username_form_type"/>
+        <argument key="Ivory\CKEditorBundle\Form\Type\CKEditorType" type="service" id="ivory_ck_editor.form.type"/>
         <argument key="Symfony\Bridge\Doctrine\Form\Type\EntityType" type="service" id="form.type.entity"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\ChoiceType" type="service" id="form.type.choice"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="service" id="form.type.form"/>
@@ -6653,5 +6743,6 @@
     <service id="console.command.doctrine_bundle_doctrinecachebundle_command_deletecommand" alias="doctrine_cache.delete_command" public="true"/>
     <service id="console.command.doctrine_bundle_doctrinecachebundle_command_flushcommand" alias="doctrine_cache.flush_command" public="true"/>
     <service id="console.command.doctrine_bundle_doctrinecachebundle_command_statscommand" alias="doctrine_cache.stats_command" public="true"/>
+    <service id="console.command.ivory_ckeditorbundle_command_ckeditorinstallercommand" alias="ivory_ck_editor.command.installer" public="true"/>
   </services>
 </container>

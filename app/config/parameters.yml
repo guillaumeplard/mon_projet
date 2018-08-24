@@ -7,8 +7,6 @@ parameters:
     database_password: root
     mailer_transport: gmail
     mailer_host: 465
-    mailer_host: smtp.gmail.com
     mailer_user: guillaume.plard@lapiscine.pro
     mailer_password: 0105Plard@
     secret: Iknowididstupidthings
-
