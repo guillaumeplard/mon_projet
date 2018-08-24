@@ -45,31 +45,33 @@ class __TwigTemplate_d5f2acc5baa68a9a4a64eba0d6d1144363c09bc8394310b4b30cff52df0
 </head>
 
 <body>
+
 <div class=\"fondmedia\">
     <a href=\"";
-        // line 15
+        // line 16
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("gaelic_homepage");
         echo "\"><img class=\"logomedia\" src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo-burdi.png"), "html", null, true);
         echo "\" alt=\"\"></a>
+    <h1 class=\"titreMedia\">Media</h1>
 
     <div id=\"slideshow\">
 
         <ul class=\"slides\">
             <li><img src=\"";
-        // line 20
+        // line 22
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/bordeaux11.jpg"), "html", null, true);
         echo "\" alt=\"Marsa Alam\" /></li>
             <li><img src=\"";
-        // line 21
+        // line 23
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/bordeaux3.jpg"), "html", null, true);
         echo "\" alt=\"Turrimetta Beach\" /></li>
             <li><img src=\"";
-        // line 22
+        // line 24
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/bordeaux4.jpg"), "html", null, true);
         echo "\" alt=\"Power Station\" /></li>
             <li><img src=\"";
-        // line 23
+        // line 25
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/bordeaux6.jpg"), "html", null, true);
         echo "\" alt=\"Colors of Nature\" /></li>
         </ul>
@@ -159,7 +161,7 @@ class __TwigTemplate_d5f2acc5baa68a9a4a64eba0d6d1144363c09bc8394310b4b30cff52df0
 
     public function getDebugInfo()
     {
-        return array (  73 => 23,  69 => 22,  65 => 21,  61 => 20,  51 => 15,  42 => 9,  37 => 7,  29 => 1,);
+        return array (  75 => 25,  71 => 24,  67 => 23,  63 => 22,  52 => 16,  42 => 9,  37 => 7,  29 => 1,);
     }
 
     public function getSourceContext()
@@ -177,8 +179,10 @@ class __TwigTemplate_d5f2acc5baa68a9a4a64eba0d6d1144363c09bc8394310b4b30cff52df0
 </head>
 
 <body>
+
 <div class=\"fondmedia\">
     <a href=\"{{ path('gaelic_homepage')}}\"><img class=\"logomedia\" src=\"{{ asset('images/logo-burdi.png') }}\" alt=\"\"></a>
+    <h1 class=\"titreMedia\">Media</h1>
 
     <div id=\"slideshow\">
 

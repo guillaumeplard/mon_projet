@@ -5,11 +5,10 @@ parameters:
     database_name: gaelic_football
     database_user: root
     database_password: root
-    mailer_transport: smtp
+    mailer_transport: gmail
     mailer_host: 465
-    mailer_host: mail.yahoo.fr
-    mailer_user: guiton@yahoo.fr
-    mailer_password: password
+    mailer_host: smtp.gmail.com
+    mailer_user: guillaume.plard@lapiscine.pro
+    mailer_password: 0105Plard@
     secret: Iknowididstupidthings
-    encryption: ssl
-    auth_mode: login
+

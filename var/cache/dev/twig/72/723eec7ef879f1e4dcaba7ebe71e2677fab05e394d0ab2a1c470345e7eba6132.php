@@ -49,12 +49,47 @@ class __TwigTemplate_dcf5a5c73c514367f1448adbc88a5c66a89569c336f352c37031900c858
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo-burdi.png"), "html", null, true);
         echo "\" alt=\"\"></a>
 <h1 class=\"titreSponsors\">sponsors</h1>
+<div class=\"col-lg-12 text-center titreConnemara\"><h2>Connemara</h2></div>
+<div class=\"row\"></div>
 <div class=\"container-fluid\">
-    <div class=\"container\">
-        <div class=\"col-lg-6\"><img src=\"\" alt=\"\"></div>
-        div-col-lg-6
+
+    <div class=\"container d-flex justify-content-between\">
+        <div class=\"p-2 w-100 bd-highlight\"><img class=\"imgConnemara\" src=\"";
+        // line 21
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/connemara.jpg"), "html", null, true);
+        echo "\" alt=\"\"></div>
+        <div class=\"p-2 flex-shrink-1 bd-highlight text-justify\"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis auctor justo. Pellentesque ultricies dui efficitur nulla rutrum, nec dapibus augue imperdiet. Nunc id turpis fringilla, ornare felis sagittis, interdum enim. Fusce accumsan lobortis sapien, eget gravida nunc bibendum quis. Nulla eu metus ac turpis aliquet lobortis. Nam dapibus purus venenatis mauris gravida, eu pulvinar tortor feugiat. Duis augue tortor, aliquam sit amet neque vitae, pellentesque pellentesque ante. Maecenas commodo a tortor sit amet eleifend. Fusce dignissim mattis vestibulum. Maecenas laoreet, massa eget aliquet mattis, felis ante facilisis est, vitae ultrices elit dui at arcu. Pellentesque condimentum mauris neque, quis cursus odio sagittis a. Etiam dictum libero vitae mi vestibulum tempor. Phasellus facilisis augue vel massa eleifend placerat. Aliquam nec risus nisl. Cras accumsan nisi dolor, sit amet consequat tortor sodales ac.</p></div>
+
     </div>
 </div>
+
+<div class=\"col-lg-12 text-center titreTeam\"><h2>Team 4 it</h2></div>
+<div class=\"row\"></div>
+<div class=\"container-fluid\">
+
+    <div class=\"container d-flex justify-content-between\">
+
+        <div class=\"p-2 flex-shrink-1 bd-highlight text-justify\"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis auctor justo. Pellentesque ultricies dui efficitur nulla rutrum, nec dapibus augue imperdiet. Nunc id turpis fringilla, ornare felis sagittis, interdum enim. Fusce accumsan lobortis sapien, eget gravida nunc bibendum quis. Nulla eu metus ac turpis aliquet lobortis. Nam dapibus purus venenatis mauris gravida, eu pulvinar tortor feugiat. Duis augue tortor, aliquam sit amet neque vitae, pellentesque pellentesque ante. Maecenas commodo a tortor sit amet eleifend. Fusce dignissim mattis vestibulum. Maecenas laoreet, massa eget aliquet mattis, felis ante facilisis est, vitae ultrices elit dui at arcu. Pellentesque condimentum mauris neque, quis cursus odio sagittis a. Etiam dictum libero vitae mi vestibulum tempor. Phasellus facilisis augue vel massa eleifend placerat. Aliquam nec risus nisl. Cras accumsan nisi dolor, sit amet consequat tortor sodales ac.</p></div>
+        <div class=\"p-2 w-100 bd-highlight\"><img class=\"imgConnemara\" src=\"";
+        // line 34
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/team.jpeg"), "html", null, true);
+        echo "\" alt=\"\"></div>
+
+    </div>
+</div>
+<nav>
+    <div class=\"d-flex align-items-center justify-content-around menu\">
+        <div><img class=\"logoMaillot\" src=\"";
+        // line 40
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/bordeaux.jpg"), "html", null, true);
+        echo "\" alt=\"logo\"></div>
+        <div><h1>Photo du maillot</h1></div>
+        <div><img class=\"logoMaillot\" src=\"";
+        // line 42
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/bordeaux17.jpg"), "html", null, true);
+        echo "\" alt=\"logo\"></div>
+    </div>
+</nav>
 
 
 
@@ -93,7 +128,7 @@ class __TwigTemplate_dcf5a5c73c514367f1448adbc88a5c66a89569c336f352c37031900c858
 
     public function getDebugInfo()
     {
-        return array (  47 => 14,  40 => 10,  29 => 1,);
+        return array (  89 => 42,  84 => 40,  75 => 34,  59 => 21,  47 => 14,  40 => 10,  29 => 1,);
     }
 
     public function getSourceContext()
@@ -113,12 +148,35 @@ class __TwigTemplate_dcf5a5c73c514367f1448adbc88a5c66a89569c336f352c37031900c858
 <body>
 <a href=\"{{ path('gaelic_homepage')}}\"><img class=\"logoPartenaire\" src=\"{{ asset('images/logo-burdi.png') }}\" alt=\"\"></a>
 <h1 class=\"titreSponsors\">sponsors</h1>
+<div class=\"col-lg-12 text-center titreConnemara\"><h2>Connemara</h2></div>
+<div class=\"row\"></div>
 <div class=\"container-fluid\">
-    <div class=\"container\">
-        <div class=\"col-lg-6\"><img src=\"\" alt=\"\"></div>
-        div-col-lg-6
+
+    <div class=\"container d-flex justify-content-between\">
+        <div class=\"p-2 w-100 bd-highlight\"><img class=\"imgConnemara\" src=\"{{ asset('images/connemara.jpg') }}\" alt=\"\"></div>
+        <div class=\"p-2 flex-shrink-1 bd-highlight text-justify\"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis auctor justo. Pellentesque ultricies dui efficitur nulla rutrum, nec dapibus augue imperdiet. Nunc id turpis fringilla, ornare felis sagittis, interdum enim. Fusce accumsan lobortis sapien, eget gravida nunc bibendum quis. Nulla eu metus ac turpis aliquet lobortis. Nam dapibus purus venenatis mauris gravida, eu pulvinar tortor feugiat. Duis augue tortor, aliquam sit amet neque vitae, pellentesque pellentesque ante. Maecenas commodo a tortor sit amet eleifend. Fusce dignissim mattis vestibulum. Maecenas laoreet, massa eget aliquet mattis, felis ante facilisis est, vitae ultrices elit dui at arcu. Pellentesque condimentum mauris neque, quis cursus odio sagittis a. Etiam dictum libero vitae mi vestibulum tempor. Phasellus facilisis augue vel massa eleifend placerat. Aliquam nec risus nisl. Cras accumsan nisi dolor, sit amet consequat tortor sodales ac.</p></div>
+
     </div>
 </div>
+
+<div class=\"col-lg-12 text-center titreTeam\"><h2>Team 4 it</h2></div>
+<div class=\"row\"></div>
+<div class=\"container-fluid\">
+
+    <div class=\"container d-flex justify-content-between\">
+
+        <div class=\"p-2 flex-shrink-1 bd-highlight text-justify\"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis auctor justo. Pellentesque ultricies dui efficitur nulla rutrum, nec dapibus augue imperdiet. Nunc id turpis fringilla, ornare felis sagittis, interdum enim. Fusce accumsan lobortis sapien, eget gravida nunc bibendum quis. Nulla eu metus ac turpis aliquet lobortis. Nam dapibus purus venenatis mauris gravida, eu pulvinar tortor feugiat. Duis augue tortor, aliquam sit amet neque vitae, pellentesque pellentesque ante. Maecenas commodo a tortor sit amet eleifend. Fusce dignissim mattis vestibulum. Maecenas laoreet, massa eget aliquet mattis, felis ante facilisis est, vitae ultrices elit dui at arcu. Pellentesque condimentum mauris neque, quis cursus odio sagittis a. Etiam dictum libero vitae mi vestibulum tempor. Phasellus facilisis augue vel massa eleifend placerat. Aliquam nec risus nisl. Cras accumsan nisi dolor, sit amet consequat tortor sodales ac.</p></div>
+        <div class=\"p-2 w-100 bd-highlight\"><img class=\"imgConnemara\" src=\"{{ asset('images/team.jpeg') }}\" alt=\"\"></div>
+
+    </div>
+</div>
+<nav>
+    <div class=\"d-flex align-items-center justify-content-around menu\">
+        <div><img class=\"logoMaillot\" src=\"{{ asset('images/bordeaux.jpg') }}\" alt=\"logo\"></div>
+        <div><h1>Photo du maillot</h1></div>
+        <div><img class=\"logoMaillot\" src=\"{{ asset('images/bordeaux17.jpg') }}\" alt=\"logo\"></div>
+    </div>
+</nav>
 
 
 

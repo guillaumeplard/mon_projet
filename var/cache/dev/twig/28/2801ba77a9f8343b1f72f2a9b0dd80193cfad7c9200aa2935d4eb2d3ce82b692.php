@@ -33,9 +33,11 @@ class __TwigTemplate_1e97148bb079a1275f906a58c72b1c86ce7981a343b6289a0c51c6604ef
     <meta name=\"viewport\"
           content=\"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0\">
     <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">
+    <link rel=\"stylesheet\"
+          href=\"https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css\">
     <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css\" integrity=\"sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO\" crossorigin=\"anonymous\">
     <link rel=\"stylesheet\" href=\"";
-        // line 9
+        // line 11
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("asset/css/main.css"), "html", null, true);
         echo "\">
     <title>Document</title>
@@ -43,52 +45,57 @@ class __TwigTemplate_1e97148bb079a1275f906a58c72b1c86ce7981a343b6289a0c51c6604ef
 <body>
 <div class=\"fond_homepage\">
 ";
-        // line 24
+        // line 26
         echo "<nav>
     <div class=\"d-flex align-items-center justify-content-around menu\">
         <div class=\"menuLink\"><a href=\"";
-        // line 26
+        // line 28
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("club_page");
         echo "\">Le Club</a></div>
         <div class=\"menuLink\"><a href=\"";
-        // line 27
+        // line 29
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("media_page");
         echo "\">Média</a></div>
         <div class=\"logo\"><img class=\"logo1\" src=\"";
-        // line 28
+        // line 30
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo-burdi.png"), "html", null, true);
         echo "\" alt=\"logo\"></div>
         <div class=\"menuLink\"><a href=\"";
-        // line 29
+        // line 31
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("sponsors_page");
         echo "\">Partenaires</a></div>
         <div class=\"menuLink\"><a href=\"";
-        // line 30
+        // line 32
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact_page");
         echo "\">Contact</a></div>
     </div>
 </nav>
 <a href=\"";
-        // line 33
+        // line 35
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("fos_user_security_login");
-        echo "\"><button type=\"button\" class=\"btn btn-danger\">se connecter</button></a>
+        echo "\"><button type=\"button\" class=\"btn\">se connecter</button></a>
 
 <div class=\"d-flex flex-column justify-content-center accueil\">
-    <div class=\"presentation text-center text-black pb-5\">
-        <p>Retrouvez nous le lundi au stade du Breillan à Blanquefort et le jeudi au stade Colette Besson (terrain 16) à Bordeaux Lac</p>
+    <div class=\"presentation animate text-center text-black pb-5\">
+        <p>Retrouvez nous</p>
+        <p>le lundi au stade du Breillan à Blanquefort </p>
+        <p>le jeudi au stade Colette Besson (terrain 16) à Bordeaux Lac</p>
     </div>
 
 <a href=\"#\" target=\"_blank\">
     <div class=\"bouton\">
         Découvrir notre sport
     </div>
-</a>
+
+
 </div>
 </div>
 
 <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
 <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js\" integrity=\"sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49\" crossorigin=\"anonymous\"></script>
 <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js\" integrity=\"sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy\" crossorigin=\"anonymous\"></script>
+
+
 </body>
 </html>";
         
@@ -111,7 +118,7 @@ class __TwigTemplate_1e97148bb079a1275f906a58c72b1c86ce7981a343b6289a0c51c6604ef
 
     public function getDebugInfo()
     {
-        return array (  73 => 33,  67 => 30,  63 => 29,  59 => 28,  55 => 27,  51 => 26,  47 => 24,  39 => 9,  29 => 1,);
+        return array (  75 => 35,  69 => 32,  65 => 31,  61 => 30,  57 => 29,  53 => 28,  49 => 26,  41 => 11,  29 => 1,);
     }
 
     public function getSourceContext()
@@ -123,6 +130,8 @@ class __TwigTemplate_1e97148bb079a1275f906a58c72b1c86ce7981a343b6289a0c51c6604ef
     <meta name=\"viewport\"
           content=\"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0\">
     <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">
+    <link rel=\"stylesheet\"
+          href=\"https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css\">
     <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css\" integrity=\"sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO\" crossorigin=\"anonymous\">
     <link rel=\"stylesheet\" href=\"{{ asset('asset/css/main.css') }}\">
     <title>Document</title>
@@ -148,24 +157,29 @@ class __TwigTemplate_1e97148bb079a1275f906a58c72b1c86ce7981a343b6289a0c51c6604ef
         <div class=\"menuLink\"><a href=\"{{ path('contact_page') }}\">Contact</a></div>
     </div>
 </nav>
-<a href=\"{{ path('fos_user_security_login') }}\"><button type=\"button\" class=\"btn btn-danger\">se connecter</button></a>
+<a href=\"{{ path('fos_user_security_login') }}\"><button type=\"button\" class=\"btn\">se connecter</button></a>
 
 <div class=\"d-flex flex-column justify-content-center accueil\">
-    <div class=\"presentation text-center text-black pb-5\">
-        <p>Retrouvez nous le lundi au stade du Breillan à Blanquefort et le jeudi au stade Colette Besson (terrain 16) à Bordeaux Lac</p>
+    <div class=\"presentation animate text-center text-black pb-5\">
+        <p>Retrouvez nous</p>
+        <p>le lundi au stade du Breillan à Blanquefort </p>
+        <p>le jeudi au stade Colette Besson (terrain 16) à Bordeaux Lac</p>
     </div>
 
 <a href=\"#\" target=\"_blank\">
     <div class=\"bouton\">
         Découvrir notre sport
     </div>
-</a>
+
+
 </div>
 </div>
 
 <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
 <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js\" integrity=\"sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49\" crossorigin=\"anonymous\"></script>
 <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js\" integrity=\"sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy\" crossorigin=\"anonymous\"></script>
+
+
 </body>
 </html>", "gaelicBundle:Default:base.html.twig", "/Applications/MAMP/htdocs/mon_projet/src/gaelicBundle/Resources/views/Default/base.html.twig");
     }

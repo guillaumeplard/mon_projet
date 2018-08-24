@@ -49,6 +49,25 @@ class DefaultController extends Controller
             $entityManager->flush();
 
 
+
+            $Contact = 'contact';
+
+
+            $message = (new \Swift_Message('Burdigaela'))
+                ->setFrom('guillaume.plard@lapiscine.pro')
+                ->setTo('guillaume.plard@lapiscine.pro')
+                ->setBody($this->renderView(
+                // app/Resources/views/Emails/registration.html.twig
+                    '@gaelic/Default/sendmail.html.twig',
+                    array('formView' => $formView)
+                ),
+                    'text/html');
+
+            $this->get('mailer')->send($message);
+
+            $request->getSession()->getFlashBag()->add('notice', "Votre message a bien été envoyé.");
+
+
         }
 
 
@@ -57,40 +76,6 @@ class DefaultController extends Controller
             'formView' => $formView
         ));
     }
-    public function mailAction($nom, \Swift_Mailer $mailer)
-    {
-        $nom = 'nom';
 
-        $message = (new \Swift_Message('Hello Email'))
-            ->setFrom('guiton@yahoo.fr')
-            ->setTo('guiton@yahoo.fr')
-            ->setBody(
-                $this->renderView(
-                // app/Resources/views/Emails/registration.html.twig
-                    'default/sendmail.html.twig',
-                    array('nom' => $nom)
-                ),
-                'text/html'
-            )
-            /*
-             * If you also want to include a plaintext version of the message
-            ->addPart(
-                $this->renderView(
-                    'Emails/registration.txt.twig',
-                    array('name' => $name)
-                ),
-                'text/plain'
-            )
-            */
-        ;
-
-        $mailer->send($message);
-
-        // or, you can also fetch the mailer service this way
-        $this->get('mailer')->send($message);
-
-        return $this->render('@gaelic/Default/contact.html.twig'
-        );
-    }
 
 }
