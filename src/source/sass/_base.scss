@@ -1,0 +1,53 @@
+.fond{
+  background-image: url("../../images/bordeaux10.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+}
+.menu{
+  background-color: rgba(255, 255, 255, 0.7);
+  height: 15vh;
+}
+
+.menu a {
+  color:#aa0b0b;
+  font-size: 1.5em;
+  opacity: 0.5;
+  transition: all ease 0.6s;
+}
+
+.menu a:hover {
+  color:red;
+  font-size: 1.6em;
+  text-decoration: none;
+}
+
+
+.btn{
+  background-color: #051937;
+  color: white;
+}
+.presentation{
+  margin-left: -900px;
+  color: white;
+}
+.animate{
+
+  animation-duration: 6s;
+  animation-name:bounceInDown;
+
+}
+.accueil{
+  margin-top: 100px;
+  font-size: 20px;
+
+}
+.burdigaelaFooter{
+  background-image: url("../../images/footer2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  line-height: 20px;
+
+}

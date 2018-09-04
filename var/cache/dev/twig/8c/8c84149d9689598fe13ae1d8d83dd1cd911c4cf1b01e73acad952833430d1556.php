@@ -11,10 +11,17 @@ class __TwigTemplate_fb7809e2078a4af905e1af307bdbd7603419c637faac0af9c79126c0cbf
 
         $this->source = $this->getSourceContext();
 
-        $this->parent = false;
-
+        // line 1
+        $this->parent = $this->loadTemplate("@gaelic/Default/base.html.twig", "@gaelic/Default/contact.html.twig", 1);
         $this->blocks = array(
+            'title' => array($this, 'block_title'),
+            'content' => array($this, 'block_content'),
         );
+    }
+
+    protected function doGetParent(array $context)
+    {
+        return "@gaelic/Default/base.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
@@ -25,158 +32,147 @@ class __TwigTemplate_fb7809e2078a4af905e1af307bdbd7603419c637faac0af9c79126c0cbf
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@gaelic/Default/contact.html.twig"));
 
-        // line 1
-        echo "<!doctype html>
-<html lang=\"fr\">
-<head>
-    <meta charset=\"UTF-8\">
-    <meta name=\"viewport\"
-          content=\"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0\">
-    <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">
-    <link rel=\"shortcut icon\" href=\"";
-        // line 8
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/favicon/favicon.ico"), "html", null, true);
-        echo "\" type=\"image/x-icon\">
-    <link rel=\"icon\" href=\"";
-        // line 9
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/favicon/favicon.png"), "html", null, true);
-        echo "\" type=\"image/png\">
-    <link rel=\"icon\" sizes=\"32x32\" href=\"";
-        // line 10
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/favicons/favicon-32.png"), "html", null, true);
-        echo "\" type=\"image/png\">
-    <link rel=\"icon\" sizes=\"64x64\" href=\"";
-        // line 11
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/favicons/favicon-64.png"), "html", null, true);
-        echo "\" type=\"image/png\">
-    <link rel=\"icon\" sizes=\"96x96\" href=\"";
-        // line 12
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/favicons/favicon-96.png"), "html", null, true);
-        echo "\" type=\"image/png\"><meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">
-    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css\" integrity=\"sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO\" crossorigin=\"anonymous\">
-    <link rel=\"stylesheet\" href=\"";
-        // line 14
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("asset/css/main.css"), "html", null, true);
-        echo "\">
-    <title>Document</title>
-</head>
-
-<a href=\"";
-        // line 18
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("gaelic_homepage");
-        echo "\"><img class=\"logoContact\" src=\"";
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo-burdi.png"), "html", null, true);
-        echo "\" alt=\"\"></a>
-<h1 class=\"titreContact\">Contact</h1>
-<h2 class=\"trouver\">Ou nous trouver?</h2>
-<h3 class=\"day\">Le lundi</h3>
-<div class=\"container-fluid\">
-    <div class=\"container d-flex justify-content-between\">
-        <div class=\"p-2 w-100 bd-highlight\"><img class=\"imgConnemara\" src=\"";
-        // line 24
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/connemara.jpg"), "html", null, true);
-        echo "\" alt=\"\"></div>
-        <div class=\"p-2 flex-shrink-1 bd-highlight text-justify\"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis auctor justo. Pellentesque ultricies dui efficitur nulla rutrum, nec dapibus augue imperdiet. Nunc id turpis fringilla, ornare felis sagittis, interdum enim. Fusce accumsan lobortis sapien, eget gravida nunc bibendum quis. Nulla eu metus ac turpis aliquet lobortis. Nam dapibus purus venenatis mauris gravida, eu pulvinar tortor feugiat. Duis augue tortor, aliquam sit amet neque vitae, pellentesque pellentesque ante. Maecenas commodo a tortor sit amet eleifend. Fusce dignissim mattis vestibulum. Maecenas laoreet, massa eget aliquet mattis, felis ante facilisis est, vitae ultrices elit dui at arcu. Pellentesque condimentum mauris neque, quis cursus odio sagittis a. Etiam dictum libero vitae mi vestibulum tempor. Phasellus facilisis augue vel massa eleifend placerat. Aliquam nec risus nisl. Cras accumsan nisi dolor, sit amet consequat tortor sodales ac.</p></div>
-
-    </div>
-</div>
-
-<h3 class=\"day\">Le jeudi</h3>
-<div class=\"row\"></div>
-<div class=\"container-fluid\">
-
-    <div class=\"container d-flex justify-content-between\">
-
-        <div class=\"p-2 flex-shrink-1 bd-highlight text-justify\"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis auctor justo. Pellentesque ultricies dui efficitur nulla rutrum, nec dapibus augue imperdiet. Nunc id turpis fringilla, ornare felis sagittis, interdum enim. Fusce accumsan lobortis sapien, eget gravida nunc bibendum quis. Nulla eu metus ac turpis aliquet lobortis. Nam dapibus purus venenatis mauris gravida, eu pulvinar tortor feugiat. Duis augue tortor, aliquam sit amet neque vitae, pellentesque pellentesque ante. Maecenas commodo a tortor sit amet eleifend. Fusce dignissim mattis vestibulum. Maecenas laoreet, massa eget aliquet mattis, felis ante facilisis est, vitae ultrices elit dui at arcu. Pellentesque condimentum mauris neque, quis cursus odio sagittis a. Etiam dictum libero vitae mi vestibulum tempor. Phasellus facilisis augue vel massa eleifend placerat. Aliquam nec risus nisl. Cras accumsan nisi dolor, sit amet consequat tortor sodales ac.</p></div>
-        <div class=\"p-2 w-100 bd-highlight\"><img class=\"imgConnemara\" src=\"";
-        // line 37
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/team.jpeg"), "html", null, true);
-        echo "\" alt=\"\"></div>
-
-    </div>
-</div>
-
-<div class=\"container\">
-    <div class=\"row\">
-        <div class=\"col-sm-4\">
-    ";
-        // line 45
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formView"]) || array_key_exists("formView", $context) ? $context["formView"] : (function () { throw new Twig_Error_Runtime('Variable "formView" does not exist.', 45, $this->source); })()), 'form_start');
-        echo "
-    <div>
-";
-        // line 47
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formView"]) || array_key_exists("formView", $context) ? $context["formView"] : (function () { throw new Twig_Error_Runtime('Variable "formView" does not exist.', 47, $this->source); })()), "nom", array()), 'label');
-        echo "
-";
-        // line 48
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formView"]) || array_key_exists("formView", $context) ? $context["formView"] : (function () { throw new Twig_Error_Runtime('Variable "formView" does not exist.', 48, $this->source); })()), "nom", array()), 'widget');
-        echo "
-    </div>
-    <div>
-";
-        // line 51
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formView"]) || array_key_exists("formView", $context) ? $context["formView"] : (function () { throw new Twig_Error_Runtime('Variable "formView" does not exist.', 51, $this->source); })()), "prenom", array()), 'label');
-        echo "
-";
-        // line 52
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formView"]) || array_key_exists("formView", $context) ? $context["formView"] : (function () { throw new Twig_Error_Runtime('Variable "formView" does not exist.', 52, $this->source); })()), "prenom", array()), 'widget');
-        echo "
-    </div>
-    <div>
-";
-        // line 55
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formView"]) || array_key_exists("formView", $context) ? $context["formView"] : (function () { throw new Twig_Error_Runtime('Variable "formView" does not exist.', 55, $this->source); })()), "email", array()), 'label');
-        echo "
-";
-        // line 56
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formView"]) || array_key_exists("formView", $context) ? $context["formView"] : (function () { throw new Twig_Error_Runtime('Variable "formView" does not exist.', 56, $this->source); })()), "email", array()), 'widget');
-        echo "
-    </div>
-    <div>
-";
-        // line 59
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formView"]) || array_key_exists("formView", $context) ? $context["formView"] : (function () { throw new Twig_Error_Runtime('Variable "formView" does not exist.', 59, $this->source); })()), "sujet", array()), 'label');
-        echo "
-";
-        // line 60
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formView"]) || array_key_exists("formView", $context) ? $context["formView"] : (function () { throw new Twig_Error_Runtime('Variable "formView" does not exist.', 60, $this->source); })()), "sujet", array()), 'widget');
-        echo "
-    </div>
-    <div>
-";
-        // line 63
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formView"]) || array_key_exists("formView", $context) ? $context["formView"] : (function () { throw new Twig_Error_Runtime('Variable "formView" does not exist.', 63, $this->source); })()), "message", array()), 'label');
-        echo "
-";
-        // line 64
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formView"]) || array_key_exists("formView", $context) ? $context["formView"] : (function () { throw new Twig_Error_Runtime('Variable "formView" does not exist.', 64, $this->source); })()), "message", array()), 'widget');
-        echo "
-    </div>
-    <div>
-
-";
-        // line 68
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formView"]) || array_key_exists("formView", $context) ? $context["formView"] : (function () { throw new Twig_Error_Runtime('Variable "formView" does not exist.', 68, $this->source); })()), "submit", array()), 'label');
-        echo "
-";
-        // line 69
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formView"]) || array_key_exists("formView", $context) ? $context["formView"] : (function () { throw new Twig_Error_Runtime('Variable "formView" does not exist.', 69, $this->source); })()), "submit", array()), 'widget');
-        echo "
-    </div>
-    ";
-        // line 71
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formView"]) || array_key_exists("formView", $context) ? $context["formView"] : (function () { throw new Twig_Error_Runtime('Variable "formView" does not exist.', 71, $this->source); })()), 'form_end');
-        echo "
-</div>
-    </div>
-</div>
-</html>";
+        $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
 
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+    }
+
+    // line 3
+    public function block_title($context, array $blocks = array())
+    {
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+
+        // line 4
+        echo "
+    Contact
+
+";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 9
+    public function block_content($context, array $blocks = array())
+    {
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+
+        // line 10
+        echo "    <div class=\"fondContact\">
+        <div class=\"fondEntrainement\">
+            <h2 class=\"trouver\">Où nous trouver?</h2>
+            <h3 class=\"day\">Le lundi</h3>
+            <div class=\"container-fluid\">
+                <div class=\"container d-flex justify-content-between entrainement1\">
+                    <div class=\"p-2 w-100 bd-highlight\"><img class=\"imgConnemara\" src=\"";
+        // line 16
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/connemara.jpg"), "html", null, true);
+        echo "\" alt=\"\"></div>
+                    <div class=\"p-2 flex-shrink-1 bd-highlight text-justify\"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis auctor justo. Pellentesque ultricies dui efficitur nulla rutrum, nec dapibus augue imperdiet. Nunc id turpis fringilla, ornare felis sagittis, interdum enim. Fusce accumsan lobortis sapien, eget gravida nunc bibendum quis. Nulla eu metus ac turpis aliquet lobortis. Nam dapibus purus venenatis mauris gravida, eu pulvinar tortor feugiat. Duis augue tortor, aliquam sit amet neque vitae, pellentesque pellentesque ante. Maecenas commodo a tortor sit amet eleifend. Fusce dignissim mattis vestibulum. Maecenas laoreet, massa eget aliquet mattis, felis ante facilisis est, vitae ultrices elit dui at arcu. Pellentesque condimentum mauris neque, quis cursus odio sagittis a. Etiam dictum libero vitae mi vestibulum tempor. Phasellus facilisis augue vel massa eleifend placerat. Aliquam nec risus nisl. Cras accumsan nisi dolor, sit amet consequat tortor sodales ac.</p></div>
+
+                </div>
+            </div>
+
+            <h3 class=\"day\">Le jeudi</h3>
+            <div class=\"row\"></div>
+            <div class=\"container-fluid\">
+                <div class=\"container d-flex justify-content-between entrainement\">
+                    <div class=\"p-2 flex-shrink-1 bd-highlight text-justify\"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis auctor justo. Pellentesque ultricies dui efficitur nulla rutrum, nec dapibus augue imperdiet. Nunc id turpis fringilla, ornare felis sagittis, interdum enim. Fusce accumsan lobortis sapien, eget gravida nunc bibendum quis. Nulla eu metus ac turpis aliquet lobortis. Nam dapibus purus venenatis mauris gravida, eu pulvinar tortor feugiat. Duis augue tortor, aliquam sit amet neque vitae, pellentesque pellentesque ante. Maecenas commodo a tortor sit amet eleifend. Fusce dignissim mattis vestibulum. Maecenas laoreet, massa eget aliquet mattis, felis ante facilisis est, vitae ultrices elit dui at arcu. Pellentesque condimentum mauris neque, quis cursus odio sagittis a. Etiam dictum libero vitae mi vestibulum tempor. Phasellus facilisis augue vel massa eleifend placerat. Aliquam nec risus nisl. Cras accumsan nisi dolor, sit amet consequat tortor sodales ac.</p></div>
+                    <div class=\"p-2 w-100 bd-highlight\"><img class=\"imgConnemara\" src=\"";
+        // line 27
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/team.jpeg"), "html", null, true);
+        echo "\" alt=\"\"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class=\"bgContact\">
+
+            <p class=\"infoContact\">formulaire de contact!</p>
+
+            ";
+        // line 36
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formView"]) || array_key_exists("formView", $context) ? $context["formView"] : (function () { throw new Twig_Error_Runtime('Variable "formView" does not exist.', 36, $this->source); })()), 'form_start');
+        echo "
+
+            <p class=\"labelContactForm\">";
+        // line 38
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formView"]) || array_key_exists("formView", $context) ? $context["formView"] : (function () { throw new Twig_Error_Runtime('Variable "formView" does not exist.', 38, $this->source); })()), "nom", array()), 'label', array("label" => "Nom"));
+        echo "</p>
+            ";
+        // line 39
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formView"]) || array_key_exists("formView", $context) ? $context["formView"] : (function () { throw new Twig_Error_Runtime('Variable "formView" does not exist.', 39, $this->source); })()), "nom", array()), 'widget', array("attr" => array("class" => "widgetContactForm")));
+        echo "
+
+            <p class=\"labelContactForm\">";
+        // line 41
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formView"]) || array_key_exists("formView", $context) ? $context["formView"] : (function () { throw new Twig_Error_Runtime('Variable "formView" does not exist.', 41, $this->source); })()), "prenom", array()), 'label', array("label" => "Prénom"));
+        echo "</p>
+            ";
+        // line 42
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formView"]) || array_key_exists("formView", $context) ? $context["formView"] : (function () { throw new Twig_Error_Runtime('Variable "formView" does not exist.', 42, $this->source); })()), "prenom", array()), 'widget', array("attr" => array("class" => "widgetContactForm")));
+        echo "
+
+            <p class=\"labelContactForm\">";
+        // line 44
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formView"]) || array_key_exists("formView", $context) ? $context["formView"] : (function () { throw new Twig_Error_Runtime('Variable "formView" does not exist.', 44, $this->source); })()), "email", array()), 'label', array("label" => "Email"));
+        echo "</p>
+            ";
+        // line 45
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formView"]) || array_key_exists("formView", $context) ? $context["formView"] : (function () { throw new Twig_Error_Runtime('Variable "formView" does not exist.', 45, $this->source); })()), "email", array()), 'widget', array("attr" => array("class" => "widgetContactForm")));
+        echo "
+
+            <p class=\"labelContactForm\">";
+        // line 47
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formView"]) || array_key_exists("formView", $context) ? $context["formView"] : (function () { throw new Twig_Error_Runtime('Variable "formView" does not exist.', 47, $this->source); })()), "sujet", array()), 'label', array("label" => "Sujet"));
+        echo "</p>
+            ";
+        // line 48
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formView"]) || array_key_exists("formView", $context) ? $context["formView"] : (function () { throw new Twig_Error_Runtime('Variable "formView" does not exist.', 48, $this->source); })()), "sujet", array()), 'widget', array("attr" => array("class" => "widgetContactForm")));
+        echo "
+
+            <p class=\"labelContactForm\">";
+        // line 50
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formView"]) || array_key_exists("formView", $context) ? $context["formView"] : (function () { throw new Twig_Error_Runtime('Variable "formView" does not exist.', 50, $this->source); })()), "message", array()), 'label', array("label" => "Votre message"));
+        echo "</p>
+            ";
+        // line 51
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formView"]) || array_key_exists("formView", $context) ? $context["formView"] : (function () { throw new Twig_Error_Runtime('Variable "formView" does not exist.', 51, $this->source); })()), "message", array()), 'widget', array("attr" => array("class" => "messageContactForm")));
+        echo "
+
+            <p class=\"labelContactForm\">";
+        // line 53
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formView"]) || array_key_exists("formView", $context) ? $context["formView"] : (function () { throw new Twig_Error_Runtime('Variable "formView" does not exist.', 53, $this->source); })()), "submit", array()), 'row', array("label" => "Envoyer", "attr" => array("class" => "boutonEnvoyer")));
+        echo "</p>
+
+            ";
+        // line 55
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formView"]) || array_key_exists("formView", $context) ? $context["formView"] : (function () { throw new Twig_Error_Runtime('Variable "formView" does not exist.', 55, $this->source); })()), 'form_end');
+        echo "
+
+        </div>
+    </div>
+";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
 
     }
 
@@ -192,85 +188,69 @@ class __TwigTemplate_fb7809e2078a4af905e1af307bdbd7603419c637faac0af9c79126c0cbf
 
     public function getDebugInfo()
     {
-        return array (  169 => 71,  164 => 69,  160 => 68,  153 => 64,  149 => 63,  143 => 60,  139 => 59,  133 => 56,  129 => 55,  123 => 52,  119 => 51,  113 => 48,  109 => 47,  104 => 45,  93 => 37,  77 => 24,  66 => 18,  59 => 14,  54 => 12,  50 => 11,  46 => 10,  42 => 9,  38 => 8,  29 => 1,);
+        return array (  165 => 55,  160 => 53,  155 => 51,  151 => 50,  146 => 48,  142 => 47,  137 => 45,  133 => 44,  128 => 42,  124 => 41,  119 => 39,  115 => 38,  110 => 36,  98 => 27,  84 => 16,  76 => 10,  67 => 9,  54 => 4,  45 => 3,  15 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Twig_Source("<!doctype html>
-<html lang=\"fr\">
-<head>
-    <meta charset=\"UTF-8\">
-    <meta name=\"viewport\"
-          content=\"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0\">
-    <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">
-    <link rel=\"shortcut icon\" href=\"{{ asset('images/favicon/favicon.ico') }}\" type=\"image/x-icon\">
-    <link rel=\"icon\" href=\"{{ asset('images/favicon/favicon.png') }}\" type=\"image/png\">
-    <link rel=\"icon\" sizes=\"32x32\" href=\"{{ asset('images/favicons/favicon-32.png') }}\" type=\"image/png\">
-    <link rel=\"icon\" sizes=\"64x64\" href=\"{{ asset('images/favicons/favicon-64.png') }}\" type=\"image/png\">
-    <link rel=\"icon\" sizes=\"96x96\" href=\"{{ asset('images/favicons/favicon-96.png') }}\" type=\"image/png\"><meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">
-    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css\" integrity=\"sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO\" crossorigin=\"anonymous\">
-    <link rel=\"stylesheet\" href=\"{{ asset('asset/css/main.css') }}\">
-    <title>Document</title>
-</head>
+        return new Twig_Source("{% extends '@gaelic/Default/base.html.twig' %}
 
-<a href=\"{{ path('gaelic_homepage')}}\"><img class=\"logoContact\" src=\"{{ asset('images/logo-burdi.png') }}\" alt=\"\"></a>
-<h1 class=\"titreContact\">Contact</h1>
-<h2 class=\"trouver\">Ou nous trouver?</h2>
-<h3 class=\"day\">Le lundi</h3>
-<div class=\"container-fluid\">
-    <div class=\"container d-flex justify-content-between\">
-        <div class=\"p-2 w-100 bd-highlight\"><img class=\"imgConnemara\" src=\"{{ asset('images/connemara.jpg') }}\" alt=\"\"></div>
-        <div class=\"p-2 flex-shrink-1 bd-highlight text-justify\"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis auctor justo. Pellentesque ultricies dui efficitur nulla rutrum, nec dapibus augue imperdiet. Nunc id turpis fringilla, ornare felis sagittis, interdum enim. Fusce accumsan lobortis sapien, eget gravida nunc bibendum quis. Nulla eu metus ac turpis aliquet lobortis. Nam dapibus purus venenatis mauris gravida, eu pulvinar tortor feugiat. Duis augue tortor, aliquam sit amet neque vitae, pellentesque pellentesque ante. Maecenas commodo a tortor sit amet eleifend. Fusce dignissim mattis vestibulum. Maecenas laoreet, massa eget aliquet mattis, felis ante facilisis est, vitae ultrices elit dui at arcu. Pellentesque condimentum mauris neque, quis cursus odio sagittis a. Etiam dictum libero vitae mi vestibulum tempor. Phasellus facilisis augue vel massa eleifend placerat. Aliquam nec risus nisl. Cras accumsan nisi dolor, sit amet consequat tortor sodales ac.</p></div>
+{% block title %}
 
-    </div>
-</div>
+    Contact
 
-<h3 class=\"day\">Le jeudi</h3>
-<div class=\"row\"></div>
-<div class=\"container-fluid\">
+{% endblock %}
 
-    <div class=\"container d-flex justify-content-between\">
+{% block content %}
+    <div class=\"fondContact\">
+        <div class=\"fondEntrainement\">
+            <h2 class=\"trouver\">Où nous trouver?</h2>
+            <h3 class=\"day\">Le lundi</h3>
+            <div class=\"container-fluid\">
+                <div class=\"container d-flex justify-content-between entrainement1\">
+                    <div class=\"p-2 w-100 bd-highlight\"><img class=\"imgConnemara\" src=\"{{ asset('images/connemara.jpg') }}\" alt=\"\"></div>
+                    <div class=\"p-2 flex-shrink-1 bd-highlight text-justify\"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis auctor justo. Pellentesque ultricies dui efficitur nulla rutrum, nec dapibus augue imperdiet. Nunc id turpis fringilla, ornare felis sagittis, interdum enim. Fusce accumsan lobortis sapien, eget gravida nunc bibendum quis. Nulla eu metus ac turpis aliquet lobortis. Nam dapibus purus venenatis mauris gravida, eu pulvinar tortor feugiat. Duis augue tortor, aliquam sit amet neque vitae, pellentesque pellentesque ante. Maecenas commodo a tortor sit amet eleifend. Fusce dignissim mattis vestibulum. Maecenas laoreet, massa eget aliquet mattis, felis ante facilisis est, vitae ultrices elit dui at arcu. Pellentesque condimentum mauris neque, quis cursus odio sagittis a. Etiam dictum libero vitae mi vestibulum tempor. Phasellus facilisis augue vel massa eleifend placerat. Aliquam nec risus nisl. Cras accumsan nisi dolor, sit amet consequat tortor sodales ac.</p></div>
 
-        <div class=\"p-2 flex-shrink-1 bd-highlight text-justify\"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis auctor justo. Pellentesque ultricies dui efficitur nulla rutrum, nec dapibus augue imperdiet. Nunc id turpis fringilla, ornare felis sagittis, interdum enim. Fusce accumsan lobortis sapien, eget gravida nunc bibendum quis. Nulla eu metus ac turpis aliquet lobortis. Nam dapibus purus venenatis mauris gravida, eu pulvinar tortor feugiat. Duis augue tortor, aliquam sit amet neque vitae, pellentesque pellentesque ante. Maecenas commodo a tortor sit amet eleifend. Fusce dignissim mattis vestibulum. Maecenas laoreet, massa eget aliquet mattis, felis ante facilisis est, vitae ultrices elit dui at arcu. Pellentesque condimentum mauris neque, quis cursus odio sagittis a. Etiam dictum libero vitae mi vestibulum tempor. Phasellus facilisis augue vel massa eleifend placerat. Aliquam nec risus nisl. Cras accumsan nisi dolor, sit amet consequat tortor sodales ac.</p></div>
-        <div class=\"p-2 w-100 bd-highlight\"><img class=\"imgConnemara\" src=\"{{ asset('images/team.jpeg') }}\" alt=\"\"></div>
+                </div>
+            </div>
 
-    </div>
-</div>
+            <h3 class=\"day\">Le jeudi</h3>
+            <div class=\"row\"></div>
+            <div class=\"container-fluid\">
+                <div class=\"container d-flex justify-content-between entrainement\">
+                    <div class=\"p-2 flex-shrink-1 bd-highlight text-justify\"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis auctor justo. Pellentesque ultricies dui efficitur nulla rutrum, nec dapibus augue imperdiet. Nunc id turpis fringilla, ornare felis sagittis, interdum enim. Fusce accumsan lobortis sapien, eget gravida nunc bibendum quis. Nulla eu metus ac turpis aliquet lobortis. Nam dapibus purus venenatis mauris gravida, eu pulvinar tortor feugiat. Duis augue tortor, aliquam sit amet neque vitae, pellentesque pellentesque ante. Maecenas commodo a tortor sit amet eleifend. Fusce dignissim mattis vestibulum. Maecenas laoreet, massa eget aliquet mattis, felis ante facilisis est, vitae ultrices elit dui at arcu. Pellentesque condimentum mauris neque, quis cursus odio sagittis a. Etiam dictum libero vitae mi vestibulum tempor. Phasellus facilisis augue vel massa eleifend placerat. Aliquam nec risus nisl. Cras accumsan nisi dolor, sit amet consequat tortor sodales ac.</p></div>
+                    <div class=\"p-2 w-100 bd-highlight\"><img class=\"imgConnemara\" src=\"{{ asset('images/team.jpeg') }}\" alt=\"\"></div>
+                </div>
+            </div>
+        </div>
 
-<div class=\"container\">
-    <div class=\"row\">
-        <div class=\"col-sm-4\">
-    {{ form_start(formView) }}
-    <div>
-{{ form_label(formView.nom) }}
-{{ form_widget(formView.nom) }}
-    </div>
-    <div>
-{{ form_label(formView.prenom) }}
-{{ form_widget(formView.prenom) }}
-    </div>
-    <div>
-{{ form_label(formView.email) }}
-{{ form_widget(formView.email) }}
-    </div>
-    <div>
-{{ form_label(formView.sujet) }}
-{{ form_widget(formView.sujet) }}
-    </div>
-    <div>
-{{ form_label(formView.message) }}
-{{ form_widget(formView.message) }}
-    </div>
-    <div>
+        <div class=\"bgContact\">
 
-{{ form_label(formView.submit) }}
-{{ form_widget(formView.submit) }}
+            <p class=\"infoContact\">formulaire de contact!</p>
+
+            {{ form_start(formView) }}
+
+            <p class=\"labelContactForm\">{{ form_label(formView.nom, 'Nom') }}</p>
+            {{ form_widget(formView.nom, { 'attr': {'class': 'widgetContactForm'} }) }}
+
+            <p class=\"labelContactForm\">{{ form_label(formView.prenom, 'Prénom') }}</p>
+            {{ form_widget(formView.prenom, { 'attr': {'class': 'widgetContactForm'} }) }}
+
+            <p class=\"labelContactForm\">{{ form_label(formView.email, 'Email') }}</p>
+            {{ form_widget(formView.email, { 'attr': {'class': 'widgetContactForm'} }) }}
+
+            <p class=\"labelContactForm\">{{ form_label(formView.sujet, 'Sujet') }}</p>
+            {{ form_widget(formView.sujet, { 'attr': {'class': 'widgetContactForm'} }) }}
+
+            <p class=\"labelContactForm\">{{ form_label(formView.message, 'Votre message') }}</p>
+            {{ form_widget(formView.message, { 'attr': {'class': 'messageContactForm'} }) }}
+
+            <p class=\"labelContactForm\">{{ form_row(formView.submit, { 'label': 'Envoyer', 'attr': {'class': 'boutonEnvoyer'} }) }}</p>
+
+            {{ form_end(formView) }}
+
+        </div>
     </div>
-    {{ form_end(formView) }}
-</div>
-    </div>
-</div>
-</html>", "@gaelic/Default/contact.html.twig", "/Applications/MAMP/htdocs/mon_projet/src/gaelicBundle/Resources/views/Default/contact.html.twig");
+{% endblock %}", "@gaelic/Default/contact.html.twig", "/Applications/MAMP/htdocs/mon_projet/src/gaelicBundle/Resources/views/Default/contact.html.twig");
     }
 }

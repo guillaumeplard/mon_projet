@@ -2,6 +2,10 @@
 
 namespace gaelicBundle\Controller;
 
+use gaelicBundle\Entity\Entrainement;
+use gaelicBundle\Entity\Media;
+use gaelicBundle\Entity\News;
+use gaelicBundle\Entity\Sponsors;
 use gaelicBundle\Form\ContactType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
@@ -14,15 +18,26 @@ class DefaultController extends Controller
 {
     public function gaelicAction()
     {
-        return $this->render('@gaelic/Default/base.html.twig');
+        $repository = $this->getDoctrine()->getRepository(News::class);
+        $news=$repository->findAll();
+
+        return $this->render('@gaelic/Default/gaelic.html.twig',array(
+            'news'=>$news
+        ));
     }
     public function clubAction()
     {
         return $this->render('@gaelic/Default/club.html.twig');
     }
     public function mediaAction()
+
     {
-        return $this->render('@gaelic/Default/media.html.twig');
+        $repository = $this->getDoctrine()->getRepository(Media::class);
+        $medias=$repository->findAll();
+
+        return $this->render('@gaelic/Default/media.html.twig',array(
+            'medias'=>$medias
+        ));
     }
     public function sponsorsAction()
     {
@@ -50,8 +65,6 @@ class DefaultController extends Controller
 
 
 
-            $Contact = 'contact';
-
 
             $message = (new \Swift_Message('Burdigaela'))
                 ->setFrom('guillaume.plard@lapiscine.pro')
@@ -70,16 +83,30 @@ class DefaultController extends Controller
 
         }
 
+        $repository = $this->getDoctrine()->getRepository(Entrainement::class);
+        $entrainements=$repository->findAll();
+
+
 
         return $this->render('@gaelic/Default/contact.html.twig',array(
 
-            'formView' => $formView
+            'formView' => $formView, 'entrainements' => $entrainements
         ));
     }
+
+
     public function footballgaelicAction()
     {
         return $this->render('@gaelic/Default/footballgaelic.html.twig');
     }
+
+
+    public function footerAction()
+    {
+        return $this->render('@gaelic/Default/footer.html.twig');
+    }
+
+
 
 
 }

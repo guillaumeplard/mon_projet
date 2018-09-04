@@ -137,6 +137,11 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return array (  '_controller' => 'gaelicBundle\\Controller\\DefaultController::footballgaelicAction',  '_route' => 'footballgaelic_page',);
         }
 
+        // footer_page
+        if ('/footer' === $pathinfo) {
+            return array (  '_controller' => 'gaelicBundle\\Controller\\DefaultController::footerAction',  '_route' => 'footer_page',);
+        }
+
         // homepage
         if ('' === $trimmedPathinfo) {
             $ret = array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  '_route' => 'homepage',);

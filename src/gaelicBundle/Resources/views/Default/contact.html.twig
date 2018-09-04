@@ -1,75 +1,59 @@
-<!doctype html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="{{ asset('images/favicon/favicon.ico') }}" type="image/x-icon">
-    <link rel="icon" href="{{ asset('images/favicon/favicon.png') }}" type="image/png">
-    <link rel="icon" sizes="32x32" href="{{ asset('images/favicons/favicon-32.png') }}" type="image/png">
-    <link rel="icon" sizes="64x64" href="{{ asset('images/favicons/favicon-64.png') }}" type="image/png">
-    <link rel="icon" sizes="96x96" href="{{ asset('images/favicons/favicon-96.png') }}" type="image/png"><meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ asset('asset/css/main.css') }}">
-    <title>Document</title>
-</head>
+{% extends '@gaelic/Default/base.html.twig' %}
 
-<a href="{{ path('gaelic_homepage')}}"><img class="logoContact" src="{{ asset('images/logo-burdi.png') }}" alt=""></a>
-<h1 class="titreContact">Contact</h1>
-<h2 class="trouver">Ou nous trouver?</h2>
-<h3 class="day">Le lundi</h3>
-<div class="container-fluid">
-    <div class="container d-flex justify-content-between">
-        <div class="p-2 w-100 bd-highlight"><img class="imgConnemara" src="{{ asset('images/connemara.jpg') }}" alt=""></div>
-        <div class="p-2 flex-shrink-1 bd-highlight text-justify"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis auctor justo. Pellentesque ultricies dui efficitur nulla rutrum, nec dapibus augue imperdiet. Nunc id turpis fringilla, ornare felis sagittis, interdum enim. Fusce accumsan lobortis sapien, eget gravida nunc bibendum quis. Nulla eu metus ac turpis aliquet lobortis. Nam dapibus purus venenatis mauris gravida, eu pulvinar tortor feugiat. Duis augue tortor, aliquam sit amet neque vitae, pellentesque pellentesque ante. Maecenas commodo a tortor sit amet eleifend. Fusce dignissim mattis vestibulum. Maecenas laoreet, massa eget aliquet mattis, felis ante facilisis est, vitae ultrices elit dui at arcu. Pellentesque condimentum mauris neque, quis cursus odio sagittis a. Etiam dictum libero vitae mi vestibulum tempor. Phasellus facilisis augue vel massa eleifend placerat. Aliquam nec risus nisl. Cras accumsan nisi dolor, sit amet consequat tortor sodales ac.</p></div>
+{% block title %}
 
-    </div>
-</div>
+    Contact
 
-<h3 class="day">Le jeudi</h3>
-<div class="row"></div>
-<div class="container-fluid">
+{% endblock %}
 
-    <div class="container d-flex justify-content-between">
+{% block content %}
+    <div class="fondContact">
+        <div class="fondEntrainement">
+            <h2 class="trouver">Où nous trouver?</h2>
+            <h3 class="day">Le lundi</h3>
+            <div class="container-fluid">
+                <div class="container d-flex justify-content-between entrainement1">
+                    <div class="p-2 w-100 bd-highlight"><img class="imgConnemara" src="{{ asset('images/connemara.jpg') }}" alt=""></div>
+                    <div class="p-2 flex-shrink-1 bd-highlight text-justify"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis auctor justo. Pellentesque ultricies dui efficitur nulla rutrum, nec dapibus augue imperdiet. Nunc id turpis fringilla, ornare felis sagittis, interdum enim. Fusce accumsan lobortis sapien, eget gravida nunc bibendum quis. Nulla eu metus ac turpis aliquet lobortis. Nam dapibus purus venenatis mauris gravida, eu pulvinar tortor feugiat. Duis augue tortor, aliquam sit amet neque vitae, pellentesque pellentesque ante. Maecenas commodo a tortor sit amet eleifend. Fusce dignissim mattis vestibulum. Maecenas laoreet, massa eget aliquet mattis, felis ante facilisis est, vitae ultrices elit dui at arcu. Pellentesque condimentum mauris neque, quis cursus odio sagittis a. Etiam dictum libero vitae mi vestibulum tempor. Phasellus facilisis augue vel massa eleifend placerat. Aliquam nec risus nisl. Cras accumsan nisi dolor, sit amet consequat tortor sodales ac.</p></div>
 
-        <div class="p-2 flex-shrink-1 bd-highlight text-justify"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis auctor justo. Pellentesque ultricies dui efficitur nulla rutrum, nec dapibus augue imperdiet. Nunc id turpis fringilla, ornare felis sagittis, interdum enim. Fusce accumsan lobortis sapien, eget gravida nunc bibendum quis. Nulla eu metus ac turpis aliquet lobortis. Nam dapibus purus venenatis mauris gravida, eu pulvinar tortor feugiat. Duis augue tortor, aliquam sit amet neque vitae, pellentesque pellentesque ante. Maecenas commodo a tortor sit amet eleifend. Fusce dignissim mattis vestibulum. Maecenas laoreet, massa eget aliquet mattis, felis ante facilisis est, vitae ultrices elit dui at arcu. Pellentesque condimentum mauris neque, quis cursus odio sagittis a. Etiam dictum libero vitae mi vestibulum tempor. Phasellus facilisis augue vel massa eleifend placerat. Aliquam nec risus nisl. Cras accumsan nisi dolor, sit amet consequat tortor sodales ac.</p></div>
-        <div class="p-2 w-100 bd-highlight"><img class="imgConnemara" src="{{ asset('images/team.jpeg') }}" alt=""></div>
+                </div>
+            </div>
 
-    </div>
-</div>
+            <h3 class="day">Le jeudi</h3>
+            <div class="row"></div>
+            <div class="container-fluid">
+                <div class="container d-flex justify-content-between entrainement">
+                    <div class="p-2 flex-shrink-1 bd-highlight text-justify"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis auctor justo. Pellentesque ultricies dui efficitur nulla rutrum, nec dapibus augue imperdiet. Nunc id turpis fringilla, ornare felis sagittis, interdum enim. Fusce accumsan lobortis sapien, eget gravida nunc bibendum quis. Nulla eu metus ac turpis aliquet lobortis. Nam dapibus purus venenatis mauris gravida, eu pulvinar tortor feugiat. Duis augue tortor, aliquam sit amet neque vitae, pellentesque pellentesque ante. Maecenas commodo a tortor sit amet eleifend. Fusce dignissim mattis vestibulum. Maecenas laoreet, massa eget aliquet mattis, felis ante facilisis est, vitae ultrices elit dui at arcu. Pellentesque condimentum mauris neque, quis cursus odio sagittis a. Etiam dictum libero vitae mi vestibulum tempor. Phasellus facilisis augue vel massa eleifend placerat. Aliquam nec risus nisl. Cras accumsan nisi dolor, sit amet consequat tortor sodales ac.</p></div>
+                    <div class="p-2 w-100 bd-highlight"><img class="imgConnemara" src="{{ asset('images/team.jpeg') }}" alt=""></div>
+                </div>
+            </div>
+        </div>
 
-<div class="container">
-    <div class="row">
-        <div class="col-sm-4">
-    {{ form_start(formView) }}
-    <div>
-{{ form_label(formView.nom) }}
-{{ form_widget(formView.nom) }}
-    </div>
-    <div>
-{{ form_label(formView.prenom) }}
-{{ form_widget(formView.prenom) }}
-    </div>
-    <div>
-{{ form_label(formView.email) }}
-{{ form_widget(formView.email) }}
-    </div>
-    <div>
-{{ form_label(formView.sujet) }}
-{{ form_widget(formView.sujet) }}
-    </div>
-    <div>
-{{ form_label(formView.message) }}
-{{ form_widget(formView.message) }}
-    </div>
-    <div>
+        <div class="bgContact">
 
-{{ form_label(formView.submit) }}
-{{ form_widget(formView.submit) }}
+            <p class="infoContact">formulaire de contact!</p>
+
+            {{ form_start(formView) }}
+
+            <p class="labelContactForm">{{ form_label(formView.nom, 'Nom') }}</p>
+            {{ form_widget(formView.nom, { 'attr': {'class': 'widgetContactForm'} }) }}
+
+            <p class="labelContactForm">{{ form_label(formView.prenom, 'Prénom') }}</p>
+            {{ form_widget(formView.prenom, { 'attr': {'class': 'widgetContactForm'} }) }}
+
+            <p class="labelContactForm">{{ form_label(formView.email, 'Email') }}</p>
+            {{ form_widget(formView.email, { 'attr': {'class': 'widgetContactForm'} }) }}
+
+            <p class="labelContactForm">{{ form_label(formView.sujet, 'Sujet') }}</p>
+            {{ form_widget(formView.sujet, { 'attr': {'class': 'widgetContactForm'} }) }}
+
+            <p class="labelContactForm">{{ form_label(formView.message, 'Votre message') }}</p>
+            {{ form_widget(formView.message, { 'attr': {'class': 'messageContactForm'} }) }}
+
+            <p class="labelContactForm">{{ form_row(formView.submit, { 'label': 'Envoyer', 'attr': {'class': 'boutonEnvoyer'} }) }}</p>
+
+            {{ form_end(formView) }}
+
+        </div>
     </div>
-    {{ form_end(formView) }}
-</div>
-    </div>
-</div>
-</html>
+{% endblock %}

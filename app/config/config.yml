@@ -8,20 +8,21 @@ imports:
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 
 parameters:
+    locale: fr
     app.path.product_images: ../web/uploads/images/products
     app.path.entrainement_images: ../web/entrainement
     app.path.sponsor_images: ../web/sponsor
     app.path.new_images: ../web/new
     app.path.media_images: ../web/media
 
-    locale: fr
+
 
 
 framework:
     templating:
             engines: ['twig']
     #esi: ~
-    translator: { fallbacks: [ "fr" ] }
+    translator: { fallbacks: ["%locale%"] }
     secret: '%secret%'
     router:
         resource: '%kernel.project_dir%/app/config/routing.yml'
@@ -46,6 +47,8 @@ framework:
 twig:
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
+    form_themes:
+            - 'bootstrap_3_layout.html.twig'
 
 # Doctrine Configuration
 doctrine:
@@ -97,7 +100,7 @@ fos_user:
 
 easy_admin:
     list:
-        actions: ['new', 'show', 'myAction', 'myOtherAction']
+        actions: ['new', 'show']
     list_max_results: 20
     site_name: 'Burdigaela'
     design:
@@ -117,11 +120,14 @@ easy_admin:
             label: 'Media'
             list:
               title: "inserer un Média"
-              fields: ['id',{ property: 'image', type: 'image', base_path: '%app.path.media_images%' }]
+              fields: [ { property: 'image', type: 'image', base_path: '%app.path.media_images%' },'alt']
+            show:
+              fields: [{ property: 'image', type: 'image', base_path: '%app.path.media_images%' }, 'alt']
             form:
               fields:
                      - { type: 'tab', label: 'envoyer photo ', icon: 'camera' }
                      - { property: 'imageFile', type: 'vich_image' }
+                     - alt
 
 
 
@@ -130,7 +136,10 @@ easy_admin:
             label: 'News'
             list:
                 title: "Insérer une Actualité"
-                fields: ['id', 'Titre', 'Contenu',{ property: 'Online', type: 'toggle' },{ property: 'image', type: 'image', base_path: '%app.path.new_images%' }]
+                fields: ['Titre', 'Contenu',{ property: 'image', type: 'image', base_path: '%app.path.new_images%' }]
+
+            show:
+                fields: ['Titre', 'Contenu',{ property: 'image', type: 'image', base_path: '%app.path.new_images%' }]
             form:
                 fields:
                        - { type: 'tab', label: 'enregistrement actualité', icon: 'newspaper-o' }
@@ -145,7 +154,9 @@ easy_admin:
             label: 'Sponsors'
             list:
               title: "Sponsoring"
-              fields: ['id', 'Titre', 'Contenu',{ property: 'image', type: 'image', base_path: '%app.path.sponsor_images%' }]
+              fields: ['Titre', 'Contenu',{ property: 'image', type: 'image', base_path: '%app.path.sponsor_images%' }]
+            show:
+              fields: ['Titre', 'Contenu',{ property: 'image', type: 'image', base_path: '%app.path.sponsor_images%' }]
             form:
               fields:
                      - { type: 'tab', label: 'Ajouter sponsors', icon: 'black-tie' }
@@ -162,7 +173,9 @@ easy_admin:
             label: 'Entrainement'
             list:
               title: "gestion des entrainements"
-              fields: ['id', 'Titre', 'Contenu',{ property: 'image', type: 'image', base_path: '%app.path.entrainement_images%' }]
+              fields: ['Titre', 'Contenu',{ property: 'image', type: 'image', base_path: '%app.path.entrainement_images%' }]
+            show:
+              fields: ['Titre', 'Contenu',{ property: 'image', type: 'image', base_path: '%app.path.entrainement_images%' }]
 
             form:
               fields:
@@ -175,12 +188,12 @@ easy_admin:
             class: gaelicBundle\Entity\Contact
             list:
               title: "Insérer un Contact"
-              fields: ['id',{ property: 'sujet', label: 'sujet' },'Message',{ property: 'email', label: 'email' },{ property: 'nom', label: 'nom' },{ property: 'prenom', label: 'prenom' }]
+              fields: [{ property: 'sujet', label: 'sujet' },'Message',{ property: 'email', label: 'email' },{ property: 'nom', label: 'nom' },{ property: 'prenom', label: 'prenom' }]
             form:
               fields:
                      - { type: 'tab', label: 'Contact Information', icon: 'envelope-o' }
                      - sujet
-                     - Message
+                     - { property: 'message', type: 'ckeditor' }
                      - email
                      - nom
                      - prenom
@@ -211,23 +224,24 @@ vich_uploader:
     mappings:
             product_images:
                 uri_prefix:      '%app.path.product_images%'
-                upload_destination: '%kernel.root_dir%/../web%app.path.product_images%'
+                upload_destination: '%kernel.root_dir%/../web/%app.path.product_images%'
 
             entrainement_images:
                 uri_prefix:      '%app.path.entrainement_images%'
-                upload_destination: '%kernel.root_dir%/../web/entrainement%app.path.entrainement_images%'
+                upload_destination: '%kernel.root_dir%/../web/%app.path.entrainement_images%'
 
             sponsor_images:
                 uri_prefix:      '%app.path.sponsor_images%'
-                upload_destination: '%kernel.root_dir%/../web/sponsor'
+                upload_destination: '%kernel.root_dir%/../web/%app.path.sponsor_images%'
 
             new_images:
                 uri_prefix:      '%app.path.new_images%'
-                upload_destination: '%kernel.root_dir%/../web/new'
+                upload_destination: '%kernel.root_dir%/../web/%app.path.new_images%'
 
             media_images:
                 uri_prefix:      '%app.path.media_images%'
-                upload_destination: '%kernel.root_dir%/../web/media'
+                upload_destination: '%kernel.root_dir%/../web/%app.path.media_images%'
+
 
 ivory_ck_editor:
     default_config: 'my_custom_config'

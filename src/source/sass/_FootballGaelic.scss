@@ -8,6 +8,16 @@
 }
 .titreFootballGaelic{
   text-align: center;
-  color: darkred;
+  background: -webkit-linear-gradient( #09295b, #3e245d, #611754, #7b0541, #890c27);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin:50px;
 
+}
+.regle {
+  background-color: #051937;
+  color: white;
+}
+.arbitre{
+  margin-bottom: 200px;
 }

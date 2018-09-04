@@ -1,13 +1,18 @@
-.logomedia{
-    margin-top: 20px;
-    width: 100px;
-    height: 100px;
+.menumedia{
+    background-color: rgba(255, 255, 255, 0.7);
 }
-.titreMedia{
-    text-align: center;
-    color: darkred;
-    margin-top: -100px;
-    margin-bottom: 100px;
+
+.menumedia a {
+    color:darkred;
+    font-size: 1.5em;
+    opacity: 0.5;
+    transition: all ease 0.6s;
+}
+
+.menumedia a:hover {
+    color:red;
+    font-size: 1.6em;
+    text-decoration: none;
 }
 
 .fondmedia{
@@ -20,10 +25,12 @@
 #slideshow{
     background-color:#F5F5F5;
     border:1px solid #FFFFFF;
-    height:540px;
+    height:550px;
     margin-left: 150px;
     position:relative;
     width:1080px;
+    margin-top: 40px;
+    margin-bottom: 150px;
 
     -moz-box-shadow:0 0 22px #111;
     -webkit-box-shadow:0 0 22px #111;
@@ -31,19 +38,21 @@
 }
 
 #slideshow ul{
-    height:520px;
+    height:530px;
     left:-30px;
     list-style:none outside none;
     overflow:hidden;
     position:absolute;
-    top:-7px;
-    width:1060px;
+    top:-5px;
+    width:1090px;
 }
 
 #slideshow li{
     position:absolute;
     display:none;
     z-index:10;
+    margin-left: 10px;
+    margin-top: 20px;
 }
 
 #slideshow li:first-child{

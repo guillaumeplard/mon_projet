@@ -13,52 +13,39 @@
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="jquery.slides.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script src="{{ asset('asset/js/script.js') }}"></script>
     <link rel="stylesheet" href="{{ asset('asset/css/main.css') }}">
-    <title>Document</title>
+
+    <title>{% block title %} {% endblock %}</title>
+
 </head>
 <body>
-<div class="fond_homepage">
-{#<nav>
-    <ul class="nav">
-        <li>Football Gaélique</li>
-        <li>Le club</li>
-        <li><img src="{{ asset('images/gaelic-football.png') }}" alt=""></li>
-        <li>Média</li>
-        <li>Partenaire</li>
-        <li>Contact</li>
-    </ul>
-</nav>#}
+<div class="fond">
+
 <nav>
     <div class="d-flex align-items-center justify-content-around menu">
         <div class="menuLink"><a href="{{ path('club_page') }}">Le Club</a></div>
         <div class="menuLink"><a href="{{ path('media_page') }}">Média</a></div>
-        <div class="logo"><img class="logo1" src="{{ asset('images/logo-burdi.png') }}" alt="logo"></div>
+        <div class="logo"><a href="{{ path('gaelic_homepage') }}"><img class="logo1" src="{{ asset('images/logo-burdi.png') }}" alt="Accueil"></a></div>
         <div class="menuLink"><a href="{{ path('sponsors_page') }}">Partenaires</a></div>
         <div class="menuLink"><a href="{{ path('contact_page') }}">Contact</a></div>
     </div>
 </nav>
-<a href="{{ path('fos_user_security_login') }}"><button type="button" class="btn">se connecter</button></a>
 
-<div class="d-flex flex-column justify-content-center accueil">
-    <div class="presentation animate text-center text-black pb-5">
-        <p>Retrouvez nous</p>
-        <p>le lundi au stade du Breillan à Blanquefort </p>
-        <p>le jeudi au stade Colette Besson (terrain 16) à Bordeaux Lac</p>
-    </div>
 
-<a href="{{ path('footballgaelic_page') }}" target="_blank">
-    <div class="bouton">
-        Découvrir notre sport
-    </div>
-</a>
+{% block content %}
+
+
+{% endblock %}
+
+    {% include 'gaelicBundle:Default:footer.html.twig' %}
 
 </div>
-</div>
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
-
 </body>
 </html>

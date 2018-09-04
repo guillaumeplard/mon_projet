@@ -22,6 +22,8 @@ footballgaelic_page:
     path:     /footballgaelic
     defaults: { _controller: gaelicBundle:Default:footballgaelic}
 
-
+footer_page:
+    path:     /footer
+    defaults: { _controller: gaelicBundle:Default:footer}
 
 

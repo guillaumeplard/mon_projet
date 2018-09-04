@@ -1,38 +1,23 @@
-<!doctype html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="{{ asset('images/favicon/favicon.ico') }}" type="image/x-icon">
-    <link rel="icon" href="{{ asset('images/favicon/favicon.png') }}" type="image/png">
-    <link rel="icon" sizes="32x32" href="{{ asset('images/favicons/favicon-32.png') }}" type="image/png">
-    <link rel="icon" sizes="64x64" href="{{ asset('images/favicons/favicon-64.png') }}" type="image/png">
-    <link rel="icon" sizes="96x96" href="{{ asset('images/favicons/favicon-96.png') }}" type="image/png"><meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ asset('asset/css/main.css') }}">
-    <title class="titre">Club</title>
-</head>
-<body>
-<a href="{{ path('gaelic_homepage')}}"><img class="logoclub" src="{{ asset('images/logo-burdi.png') }}" alt=""></a>
-<h1 class="titre">Club</h1>
-<div class="container-fuid">
+{% extends '@gaelic/Default/base.html.twig' %}
+
+{% block title %}
+
+    Club
+
+{% endblock %}
+
+{% block content %}
+
+<div class="container-fuid fondTerrain">
     <h2 class="text-center terrainbis">(terrain de football gaélique)</h2>
-   {# <div class="container d-flex flex-row align-items-center justify-content-center">
-        <img class="terrainimage" src="{{ asset('images/terrain.png') }}" alt="">
-    </div>#}
     <div class="container">
         <div class="row relat">
-            <img src="{{ asset('images/stadev2.png') }}" alt="stade football gaelique" class="img-fluid w-100">
-            <div class="col-8 font-italic text-muted legende text-center   "> Le stade de football gaélique fait 100m de long et 70m de large</div>
-
+            <img src="{{ asset('images/1.png') }}" alt="stade football gaelique" class="img-fluid w-100">
+            <div class="col-8 font-italic legende text-center   "> Le stade de football gaélique fait 140m de long et 90m de large</div>
         </div>
-
-
     </div>
 </div>
-<div class="container-fluid">
+<div class="container-fluid fondHistoire">
     <h1 class="titre1"> Histoire du Club</h1>
     <div class="container">
         <div class="row">
@@ -41,7 +26,7 @@
         </div>
     </div>
 </div>
-<div class="container-fluid">
+<div class="container-fluid fondBureau">
     <div class="container">
         <h1 class="titre2">Le bureau du club</h1>
         <div class="row">
@@ -69,7 +54,7 @@
         </div>
     </div>
 </div>
-<div class="container-fluid">
+<div class="container-fluid fondEquipe">
     <div class="container">
         <h1 class="titre3"> Photo de l'equipe</h1>
         <div class="container d-flex flex-row align-items-center justify-content-center">
@@ -77,18 +62,5 @@
         </div>
         </div>
     </div>
-</div>
 
-
-
-
-
-
-
-
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-</body>
-</html>
+{% endblock %}

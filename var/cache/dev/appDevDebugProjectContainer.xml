@@ -134,12 +134,12 @@
     <parameter key="mailer_user">guillaume.plard@lapiscine.pro</parameter>
     <parameter key="mailer_password">0105Plard@</parameter>
     <parameter key="secret">Iknowididstupidthings</parameter>
+    <parameter key="locale">fr</parameter>
     <parameter key="app.path.product_images">../web/uploads/images/products</parameter>
     <parameter key="app.path.entrainement_images">../web/entrainement</parameter>
     <parameter key="app.path.sponsor_images">../web/sponsor</parameter>
     <parameter key="app.path.new_images">../web/new</parameter>
     <parameter key="app.path.media_images">../web/media</parameter>
-    <parameter key="locale">fr</parameter>
     <parameter key="fragment.renderer.hinclude.global_template">null</parameter>
     <parameter key="fragment.path">/_fragment</parameter>
     <parameter key="kernel.secret">Iknowididstupidthings</parameter>
@@ -210,6 +210,7 @@
       <parameter>@IvoryCKEditor/Form/ckeditor_widget.html.twig</parameter>
       <parameter>@VichUploader/Form/fields.html.twig</parameter>
       <parameter>form_div_layout.html.twig</parameter>
+      <parameter>bootstrap_3_layout.html.twig</parameter>
     </parameter>
     <parameter key="twig.default_path">/Applications/MAMP/htdocs/mon_projet/templates</parameter>
     <parameter key="monolog.use_microseconds">true</parameter>
@@ -423,8 +424,6 @@
         <parameter key="actions" type="collection">
           <parameter>new</parameter>
           <parameter>show</parameter>
-          <parameter>myAction</parameter>
-          <parameter>myOtherAction</parameter>
         </parameter>
         <parameter key="max_results">20</parameter>
       </parameter>
@@ -461,12 +460,22 @@
           <parameter key="list" type="collection">
             <parameter key="title">inserer un Média</parameter>
             <parameter key="fields" type="collection">
-              <parameter>id</parameter>
               <parameter type="collection">
                 <parameter key="property">image</parameter>
                 <parameter key="type">image</parameter>
                 <parameter key="base_path">../web/media</parameter>
               </parameter>
+              <parameter>alt</parameter>
+            </parameter>
+          </parameter>
+          <parameter key="show" type="collection">
+            <parameter key="fields" type="collection">
+              <parameter type="collection">
+                <parameter key="property">image</parameter>
+                <parameter key="type">image</parameter>
+                <parameter key="base_path">../web/media</parameter>
+              </parameter>
+              <parameter>alt</parameter>
             </parameter>
           </parameter>
           <parameter key="form" type="collection">
@@ -480,6 +489,7 @@
                 <parameter key="property">imageFile</parameter>
                 <parameter key="type">vich_image</parameter>
               </parameter>
+              <parameter>alt</parameter>
             </parameter>
           </parameter>
           <parameter key="name">Media</parameter>
@@ -490,13 +500,19 @@
           <parameter key="list" type="collection">
             <parameter key="title">Insérer une Actualité</parameter>
             <parameter key="fields" type="collection">
-              <parameter>id</parameter>
               <parameter>Titre</parameter>
               <parameter>Contenu</parameter>
               <parameter type="collection">
-                <parameter key="property">Online</parameter>
-                <parameter key="type">toggle</parameter>
+                <parameter key="property">image</parameter>
+                <parameter key="type">image</parameter>
+                <parameter key="base_path">../web/new</parameter>
               </parameter>
+            </parameter>
+          </parameter>
+          <parameter key="show" type="collection">
+            <parameter key="fields" type="collection">
+              <parameter>Titre</parameter>
+              <parameter>Contenu</parameter>
               <parameter type="collection">
                 <parameter key="property">image</parameter>
                 <parameter key="type">image</parameter>
@@ -530,7 +546,17 @@
           <parameter key="list" type="collection">
             <parameter key="title">Sponsoring</parameter>
             <parameter key="fields" type="collection">
-              <parameter>id</parameter>
+              <parameter>Titre</parameter>
+              <parameter>Contenu</parameter>
+              <parameter type="collection">
+                <parameter key="property">image</parameter>
+                <parameter key="type">image</parameter>
+                <parameter key="base_path">../web/sponsor</parameter>
+              </parameter>
+            </parameter>
+          </parameter>
+          <parameter key="show" type="collection">
+            <parameter key="fields" type="collection">
               <parameter>Titre</parameter>
               <parameter>Contenu</parameter>
               <parameter type="collection">
@@ -566,7 +592,17 @@
           <parameter key="list" type="collection">
             <parameter key="title">gestion des entrainements</parameter>
             <parameter key="fields" type="collection">
-              <parameter>id</parameter>
+              <parameter>Titre</parameter>
+              <parameter>Contenu</parameter>
+              <parameter type="collection">
+                <parameter key="property">image</parameter>
+                <parameter key="type">image</parameter>
+                <parameter key="base_path">../web/entrainement</parameter>
+              </parameter>
+            </parameter>
+          </parameter>
+          <parameter key="show" type="collection">
+            <parameter key="fields" type="collection">
               <parameter>Titre</parameter>
               <parameter>Contenu</parameter>
               <parameter type="collection">
@@ -601,7 +637,6 @@
           <parameter key="list" type="collection">
             <parameter key="title">Insérer un Contact</parameter>
             <parameter key="fields" type="collection">
-              <parameter>id</parameter>
               <parameter type="collection">
                 <parameter key="property">sujet</parameter>
                 <parameter key="label">sujet</parameter>
@@ -629,7 +664,10 @@
                 <parameter key="icon">envelope-o</parameter>
               </parameter>
               <parameter>sujet</parameter>
-              <parameter>Message</parameter>
+              <parameter type="collection">
+                <parameter key="property">message</parameter>
+                <parameter key="type">ckeditor</parameter>
+              </parameter>
               <parameter>email</parameter>
               <parameter>nom</parameter>
               <parameter>prenom</parameter>
@@ -693,7 +731,7 @@
     <parameter key="vich_uploader.mappings" type="collection">
       <parameter key="product_images" type="collection">
         <parameter key="uri_prefix">../web/uploads/images/products</parameter>
-        <parameter key="upload_destination">/Applications/MAMP/htdocs/mon_projet/app/../web../web/uploads/images/products</parameter>
+        <parameter key="upload_destination">/Applications/MAMP/htdocs/mon_projet/app/../web/../web/uploads/images/products</parameter>
         <parameter key="namer" type="collection">
           <parameter key="service">null</parameter>
           <parameter key="options">null</parameter>
@@ -709,7 +747,7 @@
       </parameter>
       <parameter key="entrainement_images" type="collection">
         <parameter key="uri_prefix">../web/entrainement</parameter>
-        <parameter key="upload_destination">/Applications/MAMP/htdocs/mon_projet/app/../web/entrainement../web/entrainement</parameter>
+        <parameter key="upload_destination">/Applications/MAMP/htdocs/mon_projet/app/../web/../web/entrainement</parameter>
         <parameter key="namer" type="collection">
           <parameter key="service">null</parameter>
           <parameter key="options">null</parameter>
@@ -725,7 +763,7 @@
       </parameter>
       <parameter key="sponsor_images" type="collection">
         <parameter key="uri_prefix">../web/sponsor</parameter>
-        <parameter key="upload_destination">/Applications/MAMP/htdocs/mon_projet/app/../web/sponsor</parameter>
+        <parameter key="upload_destination">/Applications/MAMP/htdocs/mon_projet/app/../web/../web/sponsor</parameter>
         <parameter key="namer" type="collection">
           <parameter key="service">null</parameter>
           <parameter key="options">null</parameter>
@@ -741,7 +779,7 @@
       </parameter>
       <parameter key="new_images" type="collection">
         <parameter key="uri_prefix">../web/new</parameter>
-        <parameter key="upload_destination">/Applications/MAMP/htdocs/mon_projet/app/../web/new</parameter>
+        <parameter key="upload_destination">/Applications/MAMP/htdocs/mon_projet/app/../web/../web/new</parameter>
         <parameter key="namer" type="collection">
           <parameter key="service">null</parameter>
           <parameter key="options">null</parameter>
@@ -757,7 +795,7 @@
       </parameter>
       <parameter key="media_images" type="collection">
         <parameter key="uri_prefix">../web/media</parameter>
-        <parameter key="upload_destination">/Applications/MAMP/htdocs/mon_projet/app/../web/media</parameter>
+        <parameter key="upload_destination">/Applications/MAMP/htdocs/mon_projet/app/../web/../web/media</parameter>
         <parameter key="namer" type="collection">
           <parameter key="service">null</parameter>
           <parameter key="options">null</parameter>
@@ -4094,10 +4132,11 @@
       <argument type="collection">
         <argument key="debug">true</argument>
         <argument key="strict_variables">true</argument>
-        <argument key="exception_controller">twig.controller.exception:showAction</argument>
         <argument key="form_themes" type="collection">
           <argument>form_div_layout.html.twig</argument>
+          <argument>bootstrap_3_layout.html.twig</argument>
         </argument>
+        <argument key="exception_controller">twig.controller.exception:showAction</argument>
         <argument key="autoescape">name</argument>
         <argument key="cache">/Applications/MAMP/htdocs/mon_projet/var/cache/dev/twig</argument>
         <argument key="charset">UTF-8</argument>

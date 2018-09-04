@@ -1,19 +1,23 @@
+.fondTerrain{
+  background-color: #6C0118;
+  color: white;
+  margin-bottom: 100px;
 
+}
 .terrainimage{
   transform: rotate(90deg);
   width: 120vh;
   margin-bottom: -200px;
   margin-top: -300px;
 }
-
 .titre{
   text-align: center;
   color:darkred;
 
-
 }
 .terrainbis{
-  margin-bottom: -60px;
+  margin-top: 100px;
+  margin-bottom: -50px;
 
 }
 .titre1{
@@ -33,15 +37,12 @@
 .logohistoire {
   width: 200px;
   height: 200px;
+  margin-top: -30px;
+  margin-bottom: 50px;
 }
 .equipe{
-  width: 120vh;
-
-}
-.logoclub{
-  margin-top: 20px;
-  width: 100px;
-  height: 100px;
+  height: 800px;
+  margin-bottom: 200px;
 }
 
 .relat{
@@ -53,5 +54,20 @@
   position:absolute;
   bottom: 5%;
   left: 18%;
+}
+.fondHistoire{
+  background-color: #051937;
+  color: white;
+
+
+}
+.fondBureau{
+  background-color: #6C0118;
+  color: white;
+}
+
+.fondEquipe{
+  background-color: #051937;
+  color: white;
 
 }
