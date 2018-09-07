@@ -1,3 +1,13 @@
+/*************
+*
+*  Contact css
+*
+/************/
+
+.accueilContact{
+  display: none;
+}
+
 .fondContact{
   background-image: url("../../images/bordeaux10.jpg");
   background-size: cover;
@@ -41,14 +51,15 @@
 .widgetContactForm{
   height: 30px;
   width: 300px;
-  margin-left: 560px;
-  color: #B0413E;
+  margin-left: 570px;
+
 }
 
 .messageContactForm{
   height: 200px;
   width: 300px;
-  margin-left: 560px;
+  margin-left: 570px;
+
 
 }
 
@@ -71,5 +82,152 @@
 .entrainement1{
   margin-bottom: 100px;
 
+}
+.imgConnemara1{
+  width: 800px;
+  height: 500px;
+
+}
+.imgConnemara{
+  width: 800px;
+  height: 500px;
+}
+@media screen and (max-width: 1024px){
+
+  .widgetContactForm{
+    margin-left: 360px;
+
+  }
+  .messageContactForm{
+    margin-left: 360px;
+  }
+
+
+}
+
+@media screen and (max-width: 768px) {
+
+
+  .accueilContact{
+    display: flex;
+    color: darkred;
+    font-weight: bold;
+    margin-left: 300px;
+    margin-top: -60px;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+    font-family: 'Rakkas', cursive;
+
+  }
+  .fondEntrainement{
+    margin-top: 100px;
+  }
+  .trouver{
+    margin-right: 50px;
+    margin: 0px;
+  }
+  .imgConnemara1{
+    width: 400px;
+    height: 300px;
+
+  }
+  .imgConnemara{
+    width: 400px;
+    height: 300px;
+  }
+  .connemaraText1{
+    margin-top: 60px;
+    margin-right: 80px;
+  }
+  .connemaraText{
+    margin-top: 100px;
+
+  }
+  .day{
+    margin-right: 60px;
+  }
+  .widgetContactForm{
+    margin-left: 230px;
+
+  }
+  .messageContactForm{
+    margin-left: 230px;
+  }
+
+
+
+
+}
+@media screen and (max-width: 425px){
+
+
+
+  .accueilContact {
+    display: flex;
+    color: darkred;
+    margin-left: 120px;
+    margin-top: -100px;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+    font-family: 'Rakkas', cursive;
+  }
+  .widgetContactForm{
+    margin-left: 70px;
+
+  }
+  .messageContactForm{
+    margin-left: 70px;
+  }
+  .connemaraText1{
+    margin-top: 200px;
+    margin-left: -250px;
+
+  }
+  .imgConnemara1{
+    width: 400px;
+    height: 200px;
+    margin-left: -24px;
+
+  }
+  .imgConnemara{
+    width: 400px;
+    height: 200px;
+    margin-left: -255px;
+  }
+  .connemaraText{
+    margin-top: 190px;
+    margin-left: 120px;
+
+  }
+}
+
+@media screen and (max-width: 425px){
+
+  .widgetContactForm{
+    margin-left: 40px;
+
+  }
+  .messageContactForm{
+    margin-left: 40px;
+  }
+  .connemaraText1{
+    margin-top: 200px;
+    margin-left: -210px;
+
+  }
+  .imgConnemara1{
+    width: 300px;
+    height: 200px;
+    margin-left: -5px;
+
+  }
+  .imgConnemara{
+    width: 300px;
+    height: 200px;
+    margin-left: -220px;
+  }
+  .connemaraText{
+    margin-top: 190px;
+    margin-left: 120px;
+
+  }
 }
 

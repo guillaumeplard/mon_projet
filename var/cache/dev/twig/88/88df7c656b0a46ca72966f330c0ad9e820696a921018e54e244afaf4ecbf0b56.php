@@ -76,7 +76,7 @@ class __TwigTemplate_a3c541edf28265f5cfa03f0b40fc46b37d728ab076347b517fd4d297340
         echo "
 <h1 class=\"titreFootballGaelic\">Football Gaélic (les règles)</h1>
          <div class=\"container regle\">
-                   <div class=\"col-lg-12 text-center p-5\"><h2>le terrain</h2></div>
+                   <div class=\"col-lg-12 text-center p-5\"><h2>Le terrain</h2></div>
                    <div class=\"col-lg-12 \"><p>Le terrain est de forme rectangulaire, aux mesures réglementaires de 140 x 90 m pour 15 joueurs par équipe. En Europe Continentale, en l’absence de terrain approprié, il correspond à un terrain de football ou rugby et n’oppose que 11 joueurs dans chaque équipe.
 
                              Les poteaux de l’en-but ont une forme de H avec la partie basse fermée par un filet. Des lignes sont dessinées au sol à une distance de 13m, 20m et 45 m de la ligne de fonds du terrain.
@@ -184,7 +184,7 @@ class __TwigTemplate_a3c541edf28265f5cfa03f0b40fc46b37d728ab076347b517fd4d297340
 
 <h1 class=\"titreFootballGaelic\">Football Gaélic (les règles)</h1>
          <div class=\"container regle\">
-                   <div class=\"col-lg-12 text-center p-5\"><h2>le terrain</h2></div>
+                   <div class=\"col-lg-12 text-center p-5\"><h2>Le terrain</h2></div>
                    <div class=\"col-lg-12 \"><p>Le terrain est de forme rectangulaire, aux mesures réglementaires de 140 x 90 m pour 15 joueurs par équipe. En Europe Continentale, en l’absence de terrain approprié, il correspond à un terrain de football ou rugby et n’oppose que 11 joueurs dans chaque équipe.
 
                              Les poteaux de l’en-but ont une forme de H avec la partie basse fermée par un filet. Des lignes sont dessinées au sol à une distance de 13m, 20m et 45 m de la ligne de fonds du terrain.

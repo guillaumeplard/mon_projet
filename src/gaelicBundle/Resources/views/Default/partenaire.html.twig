@@ -7,31 +7,35 @@
 {% endblock %}
 
 {% block content %}
-<div class="fondPartenaire">
+    <h1 class="accueilPartenaire">Nos partenaires</h1>
+    <div class="fondPartenaire">
     {% set i = 0 %}
-    {% for entrainement in entrainements %}
-    <div class="col-lg-12 text-center titreConnemara"><h2>C{{ entrainement.titre }}</h2></div>
-    <div class="container-fluid">
-        <div class="container d-flex justify-content-between align-items-center">
-            <div class="p-2 w-100 bd-highlight"><img class="imgConnemara" src="{{ asset('entrainement/'~entrainement.image~'') }}" alt="lundi entrainement"></div>
-            <div class="p-5 flex-shrink-1 bd-highlight text-right"><p>{{ entrainement.contenu|raw }}</p></div>
-        </div>
-    </div>
-    <div class="col-lg-12 text-center titreTeam"><h2>{{ entrainement.titre }}</h2></div>
-    <div class="container-fluid">
-        <div class="container d-flex justify-content-between align-items-center">
-            <div class="p-5 flex-shrink-1 bd-highlight text-left"><p>{{ entrainement.contenu|raw }}</p></div>
-            <div class="p-2 w-100 bd-highlight"><img class="imgConnemara" src="{{ asset('entrainement/'~entrainement.image~'') }}" alt=" jeudi entrainement"></div>
-        </div>
-    </div>
+    {% for partenaire in partenaires %}
+        {% if i < 3 %}
+            {% if i % 2 == 0 %}
+                <div class="col-lg-12 text-center titreConnemara"><h2>{{ partenaire.titre }}</h2></div>
+                <div class="container-fluid d-flex align-items-center">
+                        <div class="p-2 w-100 bd-highlight"><img class="imgConnemara2" src="{{ asset('sponsor/'~partenaire.image~'') }}" alt=""></div>
+                        <div class="p-2 flex-shrink-1 bd-highlight text-justify texteConnemara2"><p>{{ partenaire.contenu|raw }}</p></div>
+                </div>
+            {% else %}
+                <div class="col-lg-12 text-center titreTeam"><h2>{{ partenaire.titre }}</h2></div>
+                <div class="container-fluid d-flex align-items-center">
+                        <div class="p-2text-justify texteConnemara3"><p>{{ partenaire.contenu|raw }}</p></div>
+                        <div class="p-2 w-100 bd-highlight"><img class="imgConnemara3" src="{{ asset('sponsor/'~partenaire.image~'') }}" alt=""></div>
+                </div>
+                </div>
+            {% endif %}
+        {% endif %}
+        {% set i = i + 1 %}
     {% endfor %}
-</div>
+
     <nav>
         <div class="d-flex align-items-center justify-content-around menuMaillot">
             <div><img class="logoMaillot" src="{{ asset('images/bordeaux.jpg') }}" alt="logo"></div>
-            <div><h1>Nos maillots</h1></div>
-            <div><img class="logoMaillot" src="{{ asset('images/bordeaux17.jpg') }}" alt="logo"></div>
+            <div class="text-center"><h1>Nos maillots</h1></div>
+            <div><img class="logoMaillot1" src="{{ asset('images/bordeaux17.jpg') }}" alt="logo"></div>
         </div>
     </nav>
 
-    {% endblock %}
+{% endblock %}

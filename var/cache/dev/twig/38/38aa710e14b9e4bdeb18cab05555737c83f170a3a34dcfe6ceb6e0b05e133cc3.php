@@ -82,28 +82,62 @@ class __TwigTemplate_10c6e3c8e6500044773fba71ef8df3da75cb8e2b3a5b33145af88ed4790
 <body>
 <div class=\"fond\">
 
+    <div class=\"input-group mb-3 dismedia\">
+        <div class=\"input-group-prepend\">
+            <button class=\"btn btn-outline-secondary dropdown-toggle\" type=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\"><a href=\"";
+        // line 33
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("gaelic_homepage");
+        echo "\">
+                    <img class=\"logoDisMedia\" src=\"";
+        // line 34
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo-burdi.png"), "html", null, true);
+        echo "\" alt=\"logo\"></a></button>
+            <div class=\"dropdown-menu\">
+                <a class=\"dropdown-item\" href=\"";
+        // line 36
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("gaelic_homepage");
+        echo "\">Accueil</a>
+                <a class=\"dropdown-item\" href=\"";
+        // line 37
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("club_page");
+        echo "\">Le club</a>
+                <a class=\"dropdown-item\" href=\"";
+        // line 38
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("sponsors_page");
+        echo "\">partenaire</a>
+                <a class=\"dropdown-item\" href=\"";
+        // line 39
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact_page");
+        echo "\">Contact</a>
+                <a class=\"dropdown-item\" href=\"";
+        // line 40
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("easyadmin");
+        echo "\">Se connecter</a>
+            </div>
+        </div>
+    </div>
 <nav>
     <div class=\"d-flex align-items-center justify-content-around menu\">
         <div class=\"menuLink\"><a href=\"";
-        // line 33
+        // line 46
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("club_page");
         echo "\">Le Club</a></div>
         <div class=\"menuLink\"><a href=\"";
-        // line 34
+        // line 47
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("media_page");
         echo "\">Média</a></div>
         <div class=\"logo\"><a href=\"";
-        // line 35
+        // line 48
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("gaelic_homepage");
         echo "\"><img class=\"logo1\" src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo-burdi.png"), "html", null, true);
         echo "\" alt=\"Accueil\"></a></div>
         <div class=\"menuLink\"><a href=\"";
-        // line 36
+        // line 49
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("sponsors_page");
         echo "\">Partenaires</a></div>
         <div class=\"menuLink\"><a href=\"";
-        // line 37
+        // line 50
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact_page");
         echo "\">Contact</a></div>
     </div>
@@ -111,14 +145,14 @@ class __TwigTemplate_10c6e3c8e6500044773fba71ef8df3da75cb8e2b3a5b33145af88ed4790
 
 
 ";
-        // line 42
+        // line 55
         $this->displayBlock('content', $context, $blocks);
-        // line 46
+        // line 59
         echo "
     ";
-        // line 47
-        $this->loadTemplate("gaelicBundle:Default:footer.html.twig", "gaelicBundle:Default:base.html.twig", 47)->display($context);
-        // line 48
+        // line 60
+        $this->loadTemplate("gaelicBundle:Default:footer.html.twig", "gaelicBundle:Default:base.html.twig", 60)->display($context);
+        // line 61
         echo "
 </div>
 </body>
@@ -150,7 +184,7 @@ class __TwigTemplate_10c6e3c8e6500044773fba71ef8df3da75cb8e2b3a5b33145af88ed4790
 
     }
 
-    // line 42
+    // line 55
     public function block_content($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -159,7 +193,7 @@ class __TwigTemplate_10c6e3c8e6500044773fba71ef8df3da75cb8e2b3a5b33145af88ed4790
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
-        // line 43
+        // line 56
         echo "
 
 ";
@@ -183,7 +217,7 @@ class __TwigTemplate_10c6e3c8e6500044773fba71ef8df3da75cb8e2b3a5b33145af88ed4790
 
     public function getDebugInfo()
     {
-        return array (  163 => 43,  154 => 42,  136 => 25,  122 => 48,  120 => 47,  117 => 46,  115 => 42,  107 => 37,  103 => 36,  97 => 35,  93 => 34,  89 => 33,  78 => 25,  73 => 23,  69 => 22,  56 => 12,  52 => 11,  48 => 10,  44 => 9,  40 => 8,  31 => 1,);
+        return array (  197 => 56,  188 => 55,  170 => 25,  156 => 61,  154 => 60,  151 => 59,  149 => 55,  141 => 50,  137 => 49,  131 => 48,  127 => 47,  123 => 46,  114 => 40,  110 => 39,  106 => 38,  102 => 37,  98 => 36,  93 => 34,  89 => 33,  78 => 25,  73 => 23,  69 => 22,  56 => 12,  52 => 11,  48 => 10,  44 => 9,  40 => 8,  31 => 1,);
     }
 
     public function getSourceContext()
@@ -218,6 +252,19 @@ class __TwigTemplate_10c6e3c8e6500044773fba71ef8df3da75cb8e2b3a5b33145af88ed4790
 <body>
 <div class=\"fond\">
 
+    <div class=\"input-group mb-3 dismedia\">
+        <div class=\"input-group-prepend\">
+            <button class=\"btn btn-outline-secondary dropdown-toggle\" type=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\"><a href=\"{{ path('gaelic_homepage') }}\">
+                    <img class=\"logoDisMedia\" src=\"{{ asset('images/logo-burdi.png') }}\" alt=\"logo\"></a></button>
+            <div class=\"dropdown-menu\">
+                <a class=\"dropdown-item\" href=\"{{ path('gaelic_homepage') }}\">Accueil</a>
+                <a class=\"dropdown-item\" href=\"{{ path('club_page') }}\">Le club</a>
+                <a class=\"dropdown-item\" href=\"{{ path('sponsors_page') }}\">partenaire</a>
+                <a class=\"dropdown-item\" href=\"{{ path('contact_page') }}\">Contact</a>
+                <a class=\"dropdown-item\" href=\"{{ path('easyadmin') }}\">Se connecter</a>
+            </div>
+        </div>
+    </div>
 <nav>
     <div class=\"d-flex align-items-center justify-content-around menu\">
         <div class=\"menuLink\"><a href=\"{{ path('club_page') }}\">Le Club</a></div>

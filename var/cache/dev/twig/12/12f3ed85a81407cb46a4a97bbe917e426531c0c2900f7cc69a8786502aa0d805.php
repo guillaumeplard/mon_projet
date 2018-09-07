@@ -59,8 +59,10 @@ class __TwigTemplate_e9a8648cf123401e85c8caaeea5e0e561d82a0904bd9002c11f3e006fe4
     <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
     <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js\" integrity=\"sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49\" crossorigin=\"anonymous\"></script>
     <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js\" integrity=\"sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy\" crossorigin=\"anonymous\"></script>
+    <link href=\"https://fonts.googleapis.com/css?family=Fjalla+One\" rel=\"stylesheet\">
+    <link href=\"https://fonts.googleapis.com/css?family=Roboto\" rel=\"stylesheet\">
     <link rel=\"stylesheet\" href=\"";
-        // line 19
+        // line 21
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("asset/css/main.css"), "html", null, true);
         echo "\">
     <title>Accueil</title>
@@ -70,55 +72,92 @@ class __TwigTemplate_e9a8648cf123401e85c8caaeea5e0e561d82a0904bd9002c11f3e006fe4
 <div class=\"fond_homepage\">
 
 <!-- Menu du header-->
+    <div class=\"input-group mb-3 dismedia\">
+        <div class=\"input-group-prepend\">
+            <button class=\"btn btn-outline-secondary dropdown-toggle\" type=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\"><a href=\"";
+        // line 31
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("gaelic_homepage");
+        echo "\">
+                    <img class=\"logoDisMedia\" src=\"";
+        // line 32
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo-burdi.png"), "html", null, true);
+        echo "\" alt=\"logo\"></a></button>
+            <div class=\"dropdown-menu\">
+                <a class=\"dropdown-item\" href=\"";
+        // line 34
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("gaelic_homepage");
+        echo "\">Accueil</a>
+                <a class=\"dropdown-item\" href=\"";
+        // line 35
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("club_page");
+        echo "\">Le club</a>
+                <a class=\"dropdown-item\" href=\"";
+        // line 36
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("sponsors_page");
+        echo "\">partenaire</a>
+                <a class=\"dropdown-item\" href=\"";
+        // line 37
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact_page");
+        echo "\">Contact</a>
+                <a class=\"dropdown-item\" href=\"";
+        // line 38
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("easyadmin");
+        echo "\">Se connecter</a>
+            </div>
+        </div>
+    </div>
+
 
     <nav>
+        <h1 class=\"accueilGaelique\">Accueil</h1>
         <div class=\"d-flex align-items-center justify-content-around menu\">
             <div class=\"menuLink\"><a href=\"";
-        // line 30
+        // line 47
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("club_page");
         echo "\" alt=\"le club\">Le Club</a></div>
             <div class=\"menuLink\"><a href=\"";
-        // line 31
+        // line 48
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("media_page");
         echo "\">Média</a></div>
             <div class=\"logo\"><a href=\"";
-        // line 32
+        // line 49
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("gaelic_homepage");
         echo "\"><img class=\"logo1\" src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo-burdi.png"), "html", null, true);
         echo "\" alt=\"logo\"></a></div>
             <div class=\"menuLink\"><a href=\"";
-        // line 33
+        // line 50
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("sponsors_page");
         echo "\">Partenaires</a></div>
             <div class=\"menuLink\"><a href=\"";
-        // line 34
+        // line 51
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact_page");
         echo "\">Contact</a></div>
         </div>
     </nav>
 
+
     <!-- bouton administrateur pour aller sur l'interface d'EasyAdmin-->
 
     <a href=\"";
-        // line 40
+        // line 58
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("easyadmin");
-        echo "\"><button  class=\"btn\">Se connecter</button></a>
+        echo "\"><button  class=\"btnEasy\">Se connecter</button></a>
 
 
 
 <!-- affichage de l'animation pour le jour des entrainement-->
 
-    <div class=\"d-flex flex-column justify-content-center accueil\">
-        <div class=\"presentation animate text-center text-black pb-5\">
-            <p>Retrouvez nous</p>
-            <p>le lundi au Stade du Breillan à Blanquefort </p>
-            <p>le jeudi au Stade Colette Besson (terrain 16) à Bordeaux Lac</p>
+
+        <div class=\"animate justify-content-center accueil \">
+            <p class=\"accueilPolice\">Retrouvez nous</p>
+            <p class=\"accueilPolice\">le lundi au Stade du Breillan à Blanquefort </p>
+            <p class=\"accueilPolice\">le jeudi au Stade Colette Besson (terrain 16) à Bordeaux Lac</p>
         </div>
-    </div>
+
 
     <div class=\"bouton\"><a href=\"";
-        // line 54
+        // line 72
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("footballgaelic_page");
         echo "\" target=\"_blank\">Découvrir notre sport</a></div>
 
@@ -130,74 +169,74 @@ class __TwigTemplate_e9a8648cf123401e85c8caaeea5e0e561d82a0904bd9002c11f3e006fe4
 <div class=\"container-fluid new\">
     <div class=\"actuGaelic text-center\"><h2>Actualité</h2></div>
     ";
-        // line 63
+        // line 81
         $context["i"] = 0;
-        // line 64
+        // line 82
         echo "    ";
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_reverse_filter($this->env, (isset($context["news"]) || array_key_exists("news", $context) ? $context["news"] : (function () { throw new Twig_Error_Runtime('Variable "news" does not exist.', 64, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(twig_reverse_filter($this->env, (isset($context["news"]) || array_key_exists("news", $context) ? $context["news"] : (function () { throw new Twig_Error_Runtime('Variable "news" does not exist.', 82, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["new"]) {
-            // line 65
+            // line 83
             echo "        ";
-            if (((isset($context["i"]) || array_key_exists("i", $context) ? $context["i"] : (function () { throw new Twig_Error_Runtime('Variable "i" does not exist.', 65, $this->source); })()) < 3)) {
-                // line 66
+            if (((isset($context["i"]) || array_key_exists("i", $context) ? $context["i"] : (function () { throw new Twig_Error_Runtime('Variable "i" does not exist.', 83, $this->source); })()) < 3)) {
+                // line 84
                 echo "            ";
-                if ((((isset($context["i"]) || array_key_exists("i", $context) ? $context["i"] : (function () { throw new Twig_Error_Runtime('Variable "i" does not exist.', 66, $this->source); })()) % 2) == 0)) {
-                    // line 67
+                if ((((isset($context["i"]) || array_key_exists("i", $context) ? $context["i"] : (function () { throw new Twig_Error_Runtime('Variable "i" does not exist.', 84, $this->source); })()) % 2) == 0)) {
+                    // line 85
                     echo "
                 <div class=\"text-center titreNew\"><p>";
-                    // line 68
+                    // line 86
                     echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["new"], "titre", array()), "html", null, true);
                     echo "</p></div>
                 <div class=\"row\">
                     <div class=\"container d-flex justify-content-center m-t-4 m-b-2 blocActualite\">
                         <div class=\"col-lg-4\"><img class=\"img-fluid imgActualite\" src=\"";
-                    // line 71
+                    // line 89
                     echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl((("new/" . twig_get_attribute($this->env, $this->source, $context["new"], "image", array())) . "")), "html", null, true);
                     echo "\" alt=\"\"></div>
-                        <div class=\"col-lg-8\"><p>";
-                    // line 72
+                        <div class=\"col-lg-8 text-justify contenuNew\"><p>";
+                    // line 90
                     echo twig_get_attribute($this->env, $this->source, $context["new"], "contenu", array());
                     echo "</p></div>
                     </div>
                 </div>
             ";
                 } else {
-                    // line 76
+                    // line 94
                     echo "                <div class=\"text-center titreNew\"><p>";
                     echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["new"], "titre", array()), "html", null, true);
                     echo "</p></div>
                 <div class=\"row\">
                     <div class=\"container d-flex justify-content-center m-t-4 m-b-4 blocActualite\">
-                        <div class=\"col-lg-8\"><p>";
-                    // line 79
+                        <div class=\"col-lg-8 text-justify contenuNew\"><p>";
+                    // line 97
                     echo twig_get_attribute($this->env, $this->source, $context["new"], "contenu", array());
                     echo "</p></div>
                         <div class=\"col-lg-4\"><img class=\"img-fluid imgActualite\" src=\"";
-                    // line 80
+                    // line 98
                     echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl((("new/" . twig_get_attribute($this->env, $this->source, $context["new"], "image", array())) . "")), "html", null, true);
                     echo "\" alt=\"\"></div>
                     </div>
                 </div>
             ";
                 }
-                // line 84
+                // line 102
                 echo "        ";
             }
-            // line 85
+            // line 103
             echo "        ";
-            $context["i"] = ((isset($context["i"]) || array_key_exists("i", $context) ? $context["i"] : (function () { throw new Twig_Error_Runtime('Variable "i" does not exist.', 85, $this->source); })()) + 1);
-            // line 86
+            $context["i"] = ((isset($context["i"]) || array_key_exists("i", $context) ? $context["i"] : (function () { throw new Twig_Error_Runtime('Variable "i" does not exist.', 103, $this->source); })()) + 1);
+            // line 104
             echo "    ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['new'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 87
+        // line 105
         echo "    <div class=\"\">
 
         <div><img class=\"avantFooter\" src=\"";
-        // line 89
+        // line 107
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/bandeau.png"), "html", null, true);
         echo "\" alt=\"\"></div>
 
@@ -237,7 +276,7 @@ class __TwigTemplate_e9a8648cf123401e85c8caaeea5e0e561d82a0904bd9002c11f3e006fe4
 
     public function getDebugInfo()
     {
-        return array (  201 => 89,  197 => 87,  191 => 86,  188 => 85,  185 => 84,  178 => 80,  174 => 79,  167 => 76,  160 => 72,  156 => 71,  150 => 68,  147 => 67,  144 => 66,  141 => 65,  136 => 64,  134 => 63,  122 => 54,  105 => 40,  96 => 34,  92 => 33,  86 => 32,  82 => 31,  78 => 30,  64 => 19,  54 => 12,  50 => 11,  46 => 10,  42 => 9,  38 => 8,  29 => 1,);
+        return array (  240 => 107,  236 => 105,  230 => 104,  227 => 103,  224 => 102,  217 => 98,  213 => 97,  206 => 94,  199 => 90,  195 => 89,  189 => 86,  186 => 85,  183 => 84,  180 => 83,  175 => 82,  173 => 81,  161 => 72,  144 => 58,  134 => 51,  130 => 50,  124 => 49,  120 => 48,  116 => 47,  104 => 38,  100 => 37,  96 => 36,  92 => 35,  88 => 34,  83 => 32,  79 => 31,  66 => 21,  54 => 12,  50 => 11,  46 => 10,  42 => 9,  38 => 8,  29 => 1,);
     }
 
     public function getSourceContext()
@@ -260,6 +299,8 @@ class __TwigTemplate_e9a8648cf123401e85c8caaeea5e0e561d82a0904bd9002c11f3e006fe4
     <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
     <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js\" integrity=\"sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49\" crossorigin=\"anonymous\"></script>
     <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js\" integrity=\"sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy\" crossorigin=\"anonymous\"></script>
+    <link href=\"https://fonts.googleapis.com/css?family=Fjalla+One\" rel=\"stylesheet\">
+    <link href=\"https://fonts.googleapis.com/css?family=Roboto\" rel=\"stylesheet\">
     <link rel=\"stylesheet\" href=\"{{ asset('asset/css/main.css') }}\">
     <title>Accueil</title>
 </head>
@@ -268,8 +309,23 @@ class __TwigTemplate_e9a8648cf123401e85c8caaeea5e0e561d82a0904bd9002c11f3e006fe4
 <div class=\"fond_homepage\">
 
 <!-- Menu du header-->
+    <div class=\"input-group mb-3 dismedia\">
+        <div class=\"input-group-prepend\">
+            <button class=\"btn btn-outline-secondary dropdown-toggle\" type=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\"><a href=\"{{ path('gaelic_homepage') }}\">
+                    <img class=\"logoDisMedia\" src=\"{{ asset('images/logo-burdi.png') }}\" alt=\"logo\"></a></button>
+            <div class=\"dropdown-menu\">
+                <a class=\"dropdown-item\" href=\"{{ path('gaelic_homepage') }}\">Accueil</a>
+                <a class=\"dropdown-item\" href=\"{{ path('club_page') }}\">Le club</a>
+                <a class=\"dropdown-item\" href=\"{{ path('sponsors_page') }}\">partenaire</a>
+                <a class=\"dropdown-item\" href=\"{{ path('contact_page') }}\">Contact</a>
+                <a class=\"dropdown-item\" href=\"{{ path('easyadmin') }}\">Se connecter</a>
+            </div>
+        </div>
+    </div>
+
 
     <nav>
+        <h1 class=\"accueilGaelique\">Accueil</h1>
         <div class=\"d-flex align-items-center justify-content-around menu\">
             <div class=\"menuLink\"><a href=\"{{ path('club_page') }}\" alt=\"le club\">Le Club</a></div>
             <div class=\"menuLink\"><a href=\"{{ path('media_page') }}\">Média</a></div>
@@ -279,21 +335,22 @@ class __TwigTemplate_e9a8648cf123401e85c8caaeea5e0e561d82a0904bd9002c11f3e006fe4
         </div>
     </nav>
 
+
     <!-- bouton administrateur pour aller sur l'interface d'EasyAdmin-->
 
-    <a href=\"{{ path('easyadmin') }}\"><button  class=\"btn\">Se connecter</button></a>
+    <a href=\"{{ path('easyadmin') }}\"><button  class=\"btnEasy\">Se connecter</button></a>
 
 
 
 <!-- affichage de l'animation pour le jour des entrainement-->
 
-    <div class=\"d-flex flex-column justify-content-center accueil\">
-        <div class=\"presentation animate text-center text-black pb-5\">
-            <p>Retrouvez nous</p>
-            <p>le lundi au Stade du Breillan à Blanquefort </p>
-            <p>le jeudi au Stade Colette Besson (terrain 16) à Bordeaux Lac</p>
+
+        <div class=\"animate justify-content-center accueil \">
+            <p class=\"accueilPolice\">Retrouvez nous</p>
+            <p class=\"accueilPolice\">le lundi au Stade du Breillan à Blanquefort </p>
+            <p class=\"accueilPolice\">le jeudi au Stade Colette Besson (terrain 16) à Bordeaux Lac</p>
         </div>
-    </div>
+
 
     <div class=\"bouton\"><a href=\"{{ path('footballgaelic_page') }}\" target=\"_blank\">Découvrir notre sport</a></div>
 
@@ -313,14 +370,14 @@ class __TwigTemplate_e9a8648cf123401e85c8caaeea5e0e561d82a0904bd9002c11f3e006fe4
                 <div class=\"row\">
                     <div class=\"container d-flex justify-content-center m-t-4 m-b-2 blocActualite\">
                         <div class=\"col-lg-4\"><img class=\"img-fluid imgActualite\" src=\"{{ asset('new/'~new.image~'') }}\" alt=\"\"></div>
-                        <div class=\"col-lg-8\"><p>{{ new.contenu|raw }}</p></div>
+                        <div class=\"col-lg-8 text-justify contenuNew\"><p>{{ new.contenu|raw }}</p></div>
                     </div>
                 </div>
             {% else %}
                 <div class=\"text-center titreNew\"><p>{{ new.titre }}</p></div>
                 <div class=\"row\">
                     <div class=\"container d-flex justify-content-center m-t-4 m-b-4 blocActualite\">
-                        <div class=\"col-lg-8\"><p>{{ new.contenu|raw }}</p></div>
+                        <div class=\"col-lg-8 text-justify contenuNew\"><p>{{ new.contenu|raw }}</p></div>
                         <div class=\"col-lg-4\"><img class=\"img-fluid imgActualite\" src=\"{{ asset('new/'~new.image~'') }}\" alt=\"\"></div>
                     </div>
                 </div>

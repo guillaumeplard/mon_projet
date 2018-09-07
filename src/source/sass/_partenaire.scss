@@ -1,3 +1,15 @@
+/*************
+*
+*  Partenaire css
+*
+/************/
+
+
+.accueilPartenaire{
+  display: none;
+
+}
+
 .fondPartenaire{
   background-color: #051937;
   color: white;
@@ -5,13 +17,28 @@
 
 .titreConnemara{
   margin-top: 100px;
+  margin-bottom: 100px;
 }
-.imgConnemara{
+.titreTeam{
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.imgConnemara2{
   width: 600px;
   height: 360px;
 
 }
+.imgConnemara3{
+  width: 600px;
+  height: 360px;
+
+
+}
 .logoMaillot{
+  width: 560px;
+  height: 560px;
+}
+.logoMaillot1{
   width: 560px;
   height: 560px;
 }
@@ -20,5 +47,148 @@
   background-color: rgba(255, 255, 255, 0.7);
   margin-bottom: 300px;
   margin-top: 100px;
+
+}
+.texteConnemara2{
+  width: 1000px;
+  height: 310px;
+  text-align: justify;
+  border: 1px solid white;
+  overflow: auto;
+  margin-left: -200px;
+}
+
+
+.texteConnemara3{
+  width: 850px;
+  height: 310px;
+  text-align: justify;
+  border: 1px solid white;
+  overflow: auto;
+  margin-right: 100px;
+  margin-left: 100px;
+
+
+
+}
+
+@media screen and (max-width: 768px){
+
+  .btnEasy{
+    display: none;
+  }
+
+  .avantFooter{
+    width: 400px;
+  }
+  .imgConnemara2{
+    width: 320px;
+    height: 200px;
+    position: absolute;
+    top: 340px;
+    left: 250px;
+  }
+  .imgConnemara3 {
+    width: 320px;
+    height: 200px;
+    position: absolute;
+    right: 200px;
+    top: 1150px;
+
+  }
+  .logoMaillot{
+    width: 200px;
+    height: 200px;
+    margin-bottom: 500px;
+    margin-right: -100px;
+    margin-top: 100px;
+  }
+  .logoMaillot1{
+    width: 200px;
+    height: 200px;
+    margin-top: 400px;
+
+  }
+  .menuMaillot{
+    margin-bottom: 100px;
+  }
+  .texteConnemara2{
+
+    margin-top: 300px;
+    /* margin-left: -400px; */
+    margin-right: 190px;
+    margin-bottom: 100px;
+    /* right: -200px; */
+    width: 1000px;
+  }
+  .texteConnemara3{
+
+    margin-top: 350px;
+    margin-right: -200px;
+    margin-left: 100px;
+    width: 1400px;
+    margin-bottom: 100px;
+
+
+
+  }
+  .accueilPartenaire{
+    display: flex;
+    margin-left: 250px;
+    margin-top: -100px;
+    color: darkred;
+    text-align: center;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+    font-family: 'Rakkas', cursive;
+  }
+
+}
+@media screen and (max-width: 425px){
+  .accueilPartenaire{
+    margin-left: 50px;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+    font-family: 'Rakkas', cursive;
+  }
+
+
+  .avantFooter{
+    width: 300px;
+  }
+  .imgConnemara2{
+
+    margin-left:  -200px;
+
+  }
+  .imgConnemara3{
+
+    margin-right: -150px;
+  }
+  .texteConnemara3{
+    margin-right: -70px;
+    margin-left: 40px;
+
+  }
+  .texteConnemara2{
+    width: 600px;
+    margin-right: 50px;
+    margin-left: -150px;
+  }
+}
+@media screen and (max-width: 375px){
+  .imgConnemara3 {
+    display: flex;
+    margin-top: -50px;
+    margin-right: -170px;
+  }
+  .texteConnemara3{
+    margin-top: 300px;
+    margin-left: 30px;
+  }
+  .imgConnemara2{
+    margin-left:  -220px;
+  }
+
+
+
 
 }

@@ -7,29 +7,36 @@
 {% endblock %}
 
 {% block content %}
+    <h1 class="accueilContact">Contact</h1>
     <div class="fondContact">
         <div class="fondEntrainement">
             <h2 class="trouver">Où nous trouver?</h2>
-            <h3 class="day">Le lundi</h3>
-            <div class="container-fluid">
-                <div class="container d-flex justify-content-between entrainement1">
-                    <div class="p-2 w-100 bd-highlight"><img class="imgConnemara" src="{{ asset('images/connemara.jpg') }}" alt=""></div>
-                    <div class="p-2 flex-shrink-1 bd-highlight text-justify"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis auctor justo. Pellentesque ultricies dui efficitur nulla rutrum, nec dapibus augue imperdiet. Nunc id turpis fringilla, ornare felis sagittis, interdum enim. Fusce accumsan lobortis sapien, eget gravida nunc bibendum quis. Nulla eu metus ac turpis aliquet lobortis. Nam dapibus purus venenatis mauris gravida, eu pulvinar tortor feugiat. Duis augue tortor, aliquam sit amet neque vitae, pellentesque pellentesque ante. Maecenas commodo a tortor sit amet eleifend. Fusce dignissim mattis vestibulum. Maecenas laoreet, massa eget aliquet mattis, felis ante facilisis est, vitae ultrices elit dui at arcu. Pellentesque condimentum mauris neque, quis cursus odio sagittis a. Etiam dictum libero vitae mi vestibulum tempor. Phasellus facilisis augue vel massa eleifend placerat. Aliquam nec risus nisl. Cras accumsan nisi dolor, sit amet consequat tortor sodales ac.</p></div>
-
-                </div>
-            </div>
-
-            <h3 class="day">Le jeudi</h3>
-            <div class="row"></div>
-            <div class="container-fluid">
-                <div class="container d-flex justify-content-between entrainement">
-                    <div class="p-2 flex-shrink-1 bd-highlight text-justify"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis auctor justo. Pellentesque ultricies dui efficitur nulla rutrum, nec dapibus augue imperdiet. Nunc id turpis fringilla, ornare felis sagittis, interdum enim. Fusce accumsan lobortis sapien, eget gravida nunc bibendum quis. Nulla eu metus ac turpis aliquet lobortis. Nam dapibus purus venenatis mauris gravida, eu pulvinar tortor feugiat. Duis augue tortor, aliquam sit amet neque vitae, pellentesque pellentesque ante. Maecenas commodo a tortor sit amet eleifend. Fusce dignissim mattis vestibulum. Maecenas laoreet, massa eget aliquet mattis, felis ante facilisis est, vitae ultrices elit dui at arcu. Pellentesque condimentum mauris neque, quis cursus odio sagittis a. Etiam dictum libero vitae mi vestibulum tempor. Phasellus facilisis augue vel massa eleifend placerat. Aliquam nec risus nisl. Cras accumsan nisi dolor, sit amet consequat tortor sodales ac.</p></div>
-                    <div class="p-2 w-100 bd-highlight"><img class="imgConnemara" src="{{ asset('images/team.jpeg') }}" alt=""></div>
-                </div>
-            </div>
+            {% set i = 0 %}
+            {% for entrainement in entrainements %}
+                {% if i < 3 %}
+                    {% if i% 2 == 0 %}
+                        <h3 class="day">{{ entrainement.titre }}</h3>
+                        <div class="container-fluid">
+                            <div class="container d-flex justify-content-between entrainement1">
+                                <div class="p-2 w-100 bd-highlight"><img class="imgConnemara1" src="{{ asset('entrainement/'~entrainement.image~'') }}" alt=""></div>
+                                <div class="p-2 flex-shrink-1 bd-highlight text-center connemaraText1 "><p>{{ entrainement.contenu|raw }}</p></div>
+                            </div>
+                        </div>
+                    {% else %}
+                        <h3 class="day">{{ entrainement.titre }}</h3>
+                        <div class="container-fluid">
+                            <div class="container d-flex justify-content-between  entrainement">
+                                <div class="p-2 flex-shrink-1 bd-highlight text-center connemaraText"><p>{{ entrainement.contenu|raw }}</p></div>
+                                <div class="p-2 w-100 bd-highlight"><img class="imgConnemara" src="{{ asset('entrainement/'~entrainement.image~'') }}" alt=""></div>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endif %}
+                {% set i = i + 1 %}
+            {% endfor %}
         </div>
 
-        <div class="bgContact">
+        <div class="bgContact ">
 
             <p class="infoContact">formulaire de contact!</p>
 
@@ -49,6 +56,7 @@
 
             <p class="labelContactForm">{{ form_label(formView.message, 'Votre message') }}</p>
             {{ form_widget(formView.message, { 'attr': {'class': 'messageContactForm'} }) }}
+
 
             <p class="labelContactForm">{{ form_row(formView.submit, { 'label': 'Envoyer', 'attr': {'class': 'boutonEnvoyer'} }) }}</p>
 

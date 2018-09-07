@@ -1,3 +1,16 @@
+/*************
+*
+*  le club css
+*
+/************/
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.accueilClub{
+  display: none;
+}
+
 .fondTerrain{
   background-color: #6C0118;
   color: white;
@@ -69,5 +82,69 @@
 .fondEquipe{
   background-color: #051937;
   color: white;
+
+}
+@media screen and (max-width: 768px){
+
+
+  .btnEasy{
+    display: none;
+  }
+
+  .avantFooter{
+    width: 400px;
+  }
+  .equipe{
+    width: 600px;
+    height: 400px;
+  }
+  .accueilClub{
+    display: flex;
+    margin-left: 300px;
+    margin-top: -50px;
+    color: darkred;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+    font-family: 'Rakkas', cursive;
+  }
+  .president{
+    margin-left: 230px;
+  }
+
+}
+@media screen and (max-width: 425px){
+
+
+  .avantFooter{
+    width: 300px;
+  }
+  .accueilClub {
+    display: flex;
+    margin-left: 150px;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+    font-family: 'Rakkas', cursive;
+  }
+  .president{
+    margin-left: 70px;
+  }
+  .equipe{
+    width: 300px;
+    height: 200px;
+  }
+}
+@media screen and (max-width: 375px){
+
+  .president{
+    margin-left: 50px;
+  }
+  .accueilClub {
+    display: flex;
+    margin-left: 100px;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+    font-family: 'Rakkas', cursive;
+  }
+
+
+
+
 
 }

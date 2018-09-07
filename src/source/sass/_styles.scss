@@ -1,3 +1,10 @@
+/*************
+*
+*  Accueil page Gaélique /css
+*
+/************/
+
+
 
 .fond_homepage{
     background-image: url("../../images/Gaa.jpg");
@@ -5,6 +12,9 @@
     background-repeat: no-repeat;
     background-position: center;
     height: 100vh;
+}
+.accueilGaelique{
+    display: none;
 }
 .menu{
     background-color: rgba(255, 255, 255, 0.7);
@@ -36,7 +46,7 @@
     background-color: darkred;
     margin:auto;
     text-align: center;
-    margin-top: 70px;
+    margin-top: 150px;
     line-height: 30px;
 
 }
@@ -47,14 +57,11 @@
 .bouton a:hover{
     color: white;
 }
-.btn{
+.btnEasy{
     background-color: #051937;
     color: white;
 }
-.presentation{
-    margin-left: -900px;
-    color: white;
-}
+
 .animate{
 
     animation-duration: 6s;
@@ -62,18 +69,14 @@
 
 }
 .accueil{
+    margin-left: -900px;
     margin-top: 100px;
     font-size: 20px;
+    color: white;
+    text-align: center;
 
 }
-.burdigaelaFooter{
-    background-image: url("../../images/footer2.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
 
-
-}
 .new{
     background-color: #051937;
     color: white;
@@ -87,6 +90,9 @@
 .burdigaelaFooter p {
     color: #6C0118;
     margin-left: 20px;
+
+}
+.burdigaelaFooter{
 
 }
 .reseau{
@@ -112,3 +118,119 @@
 .follow{
     margin-top: 20px;
 }
+.dismedia{
+    display: none;
+}
+.contenuNew{
+    width: 250px;
+    height: 210px;
+    text-align: justify;
+    border: 1px solid white;
+    overflow: auto;
+}
+@media screen and (max-width: 1024px){
+    .accueil {
+        display: block;
+        align-items: center;
+        margin: 0 auto;
+        width: 200px;
+        margin-left: 100px;
+    }
+    .bouton{
+        margin-top: 100px;
+    }
+}
+
+
+@media screen and (max-width: 768px){
+    .dismedia{
+        display: flex;
+
+    }
+    .dismedia a:hover{
+        background-color:brown;
+    }
+    .logoDisMedia{
+        width: 50px;
+        height: 50px;
+    }
+    .menu{
+        background-color: transparent!important;
+    }
+    .menuLink{
+        display: none;
+    }
+    .logo1{
+        display: none;
+    }
+    .btnEasy{
+        display: none;
+    }
+
+    .accueil {
+        display: none;
+
+    }
+    .bouton{
+        margin-top: 320px;
+    }
+    .avantFooter{
+        width: 400px;
+    }
+    .accueilGaelique{
+        display: flex;
+        margin-left: 350px;
+        font-size: 50px;
+        color: darkred;
+    }
+
+}
+@media screen and (max-width: 425px){
+    .dismedia{
+        width: 50px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .bouton{
+        margin-top: -10px;
+    }
+    .avantFooter{
+        width: 300px;
+    }
+    .accueilGaelique {
+        color: darkred;
+        font-weight: bold;
+        margin-left: 150px;
+    }
+    .accueilPolice{
+        display: flex;
+        color: orange;
+        font-weight: bold;
+        text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+
+    }
+    .accueil{
+        display: block;
+        align-items: center;
+        margin: 0 auto;
+        width: 200px;
+    }
+}
+@media screen and (max-width: 300px){
+    .dismedia{
+        width: 50px;
+
+    }
+    .menu{
+        display: none;
+    }
+    .accueilGaelique {
+        color: darkred;
+        margin-left: 50px;
+    }
+}
+
+

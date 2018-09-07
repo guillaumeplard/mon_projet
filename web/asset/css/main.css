@@ -1,3 +1,13 @@
+@charset "UTF-8";
+/*************
+*
+*  le club css
+*
+/************/
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+.accueilClub {
+  display: none; }
+
 .fondTerrain {
   background-color: #6C0118;
   color: white;
@@ -62,6 +72,52 @@
   background-color: #051937;
   color: white; }
 
+@media screen and (max-width: 768px) {
+  .btnEasy {
+    display: none; }
+
+  .avantFooter {
+    width: 400px; }
+
+  .equipe {
+    width: 600px;
+    height: 400px; }
+
+  .accueilClub {
+    display: flex;
+    margin-left: 300px;
+    margin-top: -50px;
+    color: darkred;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+    font-family: 'Rakkas', cursive; }
+
+  .president {
+    margin-left: 230px; } }
+@media screen and (max-width: 425px) {
+  .avantFooter {
+    width: 300px; }
+
+  .accueilClub {
+    display: flex;
+    margin-left: 150px;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+    font-family: 'Rakkas', cursive; }
+
+  .president {
+    margin-left: 70px; }
+
+  .equipe {
+    width: 300px;
+    height: 200px; } }
+@media screen and (max-width: 375px) {
+  .president {
+    margin-left: 50px; }
+
+  .accueilClub {
+    display: flex;
+    margin-left: 100px;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+    font-family: 'Rakkas', cursive; } }
 body {
   margin: 0;
   padding: 0; }
@@ -182,12 +238,20 @@ body {
 #slideshow .next:hover {
   background-position: right bottom; }
 
+/*************
+*
+*  Accueil page Gaélique /css
+*
+/************/
 .fond_homepage {
   background-image: url("../../images/Gaa.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   height: 100vh; }
+
+.accueilGaelique {
+  display: none; }
 
 .menu {
   background-color: rgba(255, 255, 255, 0.7); }
@@ -215,7 +279,7 @@ body {
   background-color: darkred;
   margin: auto;
   text-align: center;
-  margin-top: 70px;
+  margin-top: 150px;
   line-height: 30px; }
 
 .bouton a {
@@ -225,12 +289,8 @@ body {
 .bouton a:hover {
   color: white; }
 
-.btn {
+.btnEasy {
   background-color: #051937;
-  color: white; }
-
-.presentation {
-  margin-left: -900px;
   color: white; }
 
 .animate {
@@ -238,14 +298,11 @@ body {
   animation-name: bounceInDown; }
 
 .accueil {
+  margin-left: -900px;
   margin-top: 100px;
-  font-size: 20px; }
-
-.burdigaelaFooter {
-  background-image: url("../../images/footer2.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; }
+  font-size: 20px;
+  color: white;
+  text-align: center; }
 
 .new {
   background-color: #051937;
@@ -276,14 +333,127 @@ body {
 .follow {
   margin-top: 20px; }
 
+.dismedia {
+  display: none; }
+
+.contenuNew {
+  width: 250px;
+  height: 210px;
+  text-align: justify;
+  border: 1px solid white;
+  overflow: auto; }
+
+@media screen and (max-width: 1024px) {
+  .accueil {
+    display: block;
+    align-items: center;
+    margin: 0 auto;
+    width: 200px;
+    margin-left: 100px; }
+
+  .bouton {
+    margin-top: 100px; } }
+@media screen and (max-width: 768px) {
+  .dismedia {
+    display: flex; }
+
+  .dismedia a:hover {
+    background-color: brown; }
+
+  .logoDisMedia {
+    width: 50px;
+    height: 50px; }
+
+  .menu {
+    background-color: transparent !important; }
+
+  .menuLink {
+    display: none; }
+
+  .logo1 {
+    display: none; }
+
+  .btnEasy {
+    display: none; }
+
+  .accueil {
+    display: none; }
+
+  .bouton {
+    margin-top: 320px; }
+
+  .avantFooter {
+    width: 400px; }
+
+  .accueilGaelique {
+    display: flex;
+    margin-left: 350px;
+    font-size: 50px;
+    color: darkred; } }
+@media screen and (max-width: 425px) {
+  .dismedia {
+    width: 50px; }
+
+  .menu {
+    display: none; }
+
+  .bouton {
+    margin-top: -10px; }
+
+  .avantFooter {
+    width: 300px; }
+
+  .accueilGaelique {
+    color: darkred;
+    font-weight: bold;
+    margin-left: 150px; }
+
+  .accueilPolice {
+    display: flex;
+    color: orange;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue; }
+
+  .accueil {
+    display: block;
+    align-items: center;
+    margin: 0 auto;
+    width: 200px; } }
+@media screen and (max-width: 300px) {
+  .dismedia {
+    width: 50px; }
+
+  .menu {
+    display: none; }
+
+  .accueilGaelique {
+    color: darkred;
+    margin-left: 50px; } }
+/*************
+*
+*  Partenaire css
+*
+/************/
+.accueilPartenaire {
+  display: none; }
+
 .fondPartenaire {
   background-color: #051937;
   color: white; }
 
 .titreConnemara {
-  margin-top: 100px; }
+  margin-top: 100px;
+  margin-bottom: 100px; }
 
-.imgConnemara {
+.titreTeam {
+  margin-top: 100px;
+  margin-bottom: 100px; }
+
+.imgConnemara2 {
+  width: 600px;
+  height: 360px; }
+
+.imgConnemara3 {
   width: 600px;
   height: 360px; }
 
@@ -291,10 +461,133 @@ body {
   width: 560px;
   height: 560px; }
 
+.logoMaillot1 {
+  width: 560px;
+  height: 560px; }
+
 .menuMaillot {
   background-color: rgba(255, 255, 255, 0.7);
   margin-bottom: 300px;
   margin-top: 100px; }
+
+.texteConnemara2 {
+  width: 1000px;
+  height: 310px;
+  text-align: justify;
+  border: 1px solid white;
+  overflow: auto;
+  margin-left: -200px; }
+
+.texteConnemara3 {
+  width: 850px;
+  height: 310px;
+  text-align: justify;
+  border: 1px solid white;
+  overflow: auto;
+  margin-right: 100px;
+  margin-left: 100px; }
+
+@media screen and (max-width: 768px) {
+  .btnEasy {
+    display: none; }
+
+  .avantFooter {
+    width: 400px; }
+
+  .imgConnemara2 {
+    width: 320px;
+    height: 200px;
+    position: absolute;
+    top: 340px;
+    left: 250px; }
+
+  .imgConnemara3 {
+    width: 320px;
+    height: 200px;
+    position: absolute;
+    right: 200px;
+    top: 1150px; }
+
+  .logoMaillot {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 500px;
+    margin-right: -100px;
+    margin-top: 100px; }
+
+  .logoMaillot1 {
+    width: 200px;
+    height: 200px;
+    margin-top: 400px; }
+
+  .menuMaillot {
+    margin-bottom: 100px; }
+
+  .texteConnemara2 {
+    margin-top: 300px;
+    /* margin-left: -400px; */
+    margin-right: 190px;
+    margin-bottom: 100px;
+    /* right: -200px; */
+    width: 1000px; }
+
+  .texteConnemara3 {
+    margin-top: 350px;
+    margin-right: -200px;
+    margin-left: 100px;
+    width: 1400px;
+    margin-bottom: 100px; }
+
+  .accueilPartenaire {
+    display: flex;
+    margin-left: 250px;
+    margin-top: -100px;
+    color: darkred;
+    text-align: center;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+    font-family: 'Rakkas', cursive; } }
+@media screen and (max-width: 425px) {
+  .accueilPartenaire {
+    margin-left: 50px;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+    font-family: 'Rakkas', cursive; }
+
+  .avantFooter {
+    width: 300px; }
+
+  .imgConnemara2 {
+    margin-left: -200px; }
+
+  .imgConnemara3 {
+    margin-right: -150px; }
+
+  .texteConnemara3 {
+    margin-right: -70px;
+    margin-left: 40px; }
+
+  .texteConnemara2 {
+    width: 600px;
+    margin-right: 50px;
+    margin-left: -150px; } }
+@media screen and (max-width: 375px) {
+  .imgConnemara3 {
+    display: flex;
+    margin-top: -50px;
+    margin-right: -170px; }
+
+  .texteConnemara3 {
+    margin-top: 300px;
+    margin-left: 30px; }
+
+  .imgConnemara2 {
+    margin-left: -220px; } }
+/*************
+*
+*  Contact css
+*
+/************/
+.accueilContact {
+  display: none; }
 
 .fondContact {
   background-image: url("../../images/bordeaux10.jpg");
@@ -331,13 +624,12 @@ body {
 .widgetContactForm {
   height: 30px;
   width: 300px;
-  margin-left: 560px;
-  color: #B0413E; }
+  margin-left: 570px; }
 
 .messageContactForm {
   height: 200px;
   width: 300px;
-  margin-left: 560px; }
+  margin-left: 570px; }
 
 .boutonEnvoyer {
   height: 30px;
@@ -356,6 +648,116 @@ body {
 .entrainement1 {
   margin-bottom: 100px; }
 
+.imgConnemara1 {
+  width: 800px;
+  height: 500px; }
+
+.imgConnemara {
+  width: 800px;
+  height: 500px; }
+
+@media screen and (max-width: 1024px) {
+  .widgetContactForm {
+    margin-left: 360px; }
+
+  .messageContactForm {
+    margin-left: 360px; } }
+@media screen and (max-width: 768px) {
+  .accueilContact {
+    display: flex;
+    color: darkred;
+    font-weight: bold;
+    margin-left: 300px;
+    margin-top: -60px;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+    font-family: 'Rakkas', cursive; }
+
+  .fondEntrainement {
+    margin-top: 100px; }
+
+  .trouver {
+    margin-right: 50px;
+    margin: 0px; }
+
+  .imgConnemara1 {
+    width: 400px;
+    height: 300px; }
+
+  .imgConnemara {
+    width: 400px;
+    height: 300px; }
+
+  .connemaraText1 {
+    margin-top: 60px;
+    margin-right: 80px; }
+
+  .connemaraText {
+    margin-top: 100px; }
+
+  .day {
+    margin-right: 60px; }
+
+  .widgetContactForm {
+    margin-left: 230px; }
+
+  .messageContactForm {
+    margin-left: 230px; } }
+@media screen and (max-width: 425px) {
+  .accueilContact {
+    display: flex;
+    color: darkred;
+    margin-left: 120px;
+    margin-top: -100px;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+    font-family: 'Rakkas', cursive; }
+
+  .widgetContactForm {
+    margin-left: 70px; }
+
+  .messageContactForm {
+    margin-left: 70px; }
+
+  .connemaraText1 {
+    margin-top: 200px;
+    margin-left: -250px; }
+
+  .imgConnemara1 {
+    width: 400px;
+    height: 200px;
+    margin-left: -24px; }
+
+  .imgConnemara {
+    width: 400px;
+    height: 200px;
+    margin-left: -255px; }
+
+  .connemaraText {
+    margin-top: 190px;
+    margin-left: 120px; } }
+@media screen and (max-width: 425px) {
+  .widgetContactForm {
+    margin-left: 40px; }
+
+  .messageContactForm {
+    margin-left: 40px; }
+
+  .connemaraText1 {
+    margin-top: 200px;
+    margin-left: -210px; }
+
+  .imgConnemara1 {
+    width: 300px;
+    height: 200px;
+    margin-left: -5px; }
+
+  .imgConnemara {
+    width: 300px;
+    height: 200px;
+    margin-left: -220px; }
+
+  .connemaraText {
+    margin-top: 190px;
+    margin-left: 120px; } }
 @-webkit-keyframes bounceInDown {
   from,
     60%,
@@ -419,7 +821,9 @@ body {
   background: -webkit-linear-gradient(#09295b, #3e245d, #611754, #7b0541, #890c27);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin: 50px; }
+  margin: 50px;
+  text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+  font-family: 'Rakkas', cursive; }
 
 .regle {
   background-color: #051937;
@@ -428,6 +832,11 @@ body {
 .arbitre {
   margin-bottom: 200px; }
 
+/*************
+*
+*  BASE css
+*
+/************/
 .fond {
   background-image: url("../../images/bordeaux10.jpg");
   background-size: cover;
@@ -454,23 +863,52 @@ body {
   background-color: #051937;
   color: white; }
 
-.presentation {
-  margin-left: -900px;
-  color: white; }
-
-.animate {
-  animation-duration: 6s;
-  animation-name: bounceInDown; }
-
-.accueil {
-  margin-top: 100px;
-  font-size: 20px; }
-
 .burdigaelaFooter {
   background-image: url("../../images/footer2.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   line-height: 20px; }
+
+@media screen and (max-width: 600px) {
+  .dismedia {
+    display: flex; }
+
+  .dismedia a:hover {
+    background-color: brown; }
+
+  .logoDisMedia {
+    width: 50px;
+    height: 50px; }
+
+  .menu {
+    background-color: transparent !important; }
+
+  .menuLink {
+    display: none; }
+
+  .logo1 {
+    display: none; }
+
+  .btnEasy {
+    display: none; }
+
+  .avantFooter {
+    width: 400px; } }
+@media screen and (max-width: 400px) {
+  .dismedia {
+    width: 50px; }
+
+  .menu {
+    display: none; }
+
+  .avantFooter {
+    width: 300px; } }
+@media screen and (max-width: 300px) {
+  .dismedia {
+    width: 50px; }
+
+  .menu {
+    display: none; } }
 
 /*# sourceMappingURL=main.css.map */

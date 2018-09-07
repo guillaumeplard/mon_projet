@@ -52,7 +52,7 @@ class __TwigTemplate_3eefa914ccef364229c10bdf0780eed46b61be60016a0de9c286ae48483
 
         // line 4
         echo "
-    <title> Partenaire </title>
+    Partenaire
 
 ";
         
@@ -73,23 +73,24 @@ class __TwigTemplate_3eefa914ccef364229c10bdf0780eed46b61be60016a0de9c286ae48483
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 10
-        echo "<div class=\"fondPartenaire\">
+        echo "    <h1 class=\"accueilPartenaire\">Nos partenaires</h1>
+<div class=\"fondPartenaire\">
     <div class=\"col-lg-12 text-center titreConnemara\"><h2>Connemara</h2></div>
     <div class=\"container-fluid\">
         <div class=\"container d-flex justify-content-between align-items-center\">
             <div class=\"p-2 w-100 bd-highlight\"><img class=\"imgConnemara\" src=\"";
-        // line 14
+        // line 15
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/connemara.jpg"), "html", null, true);
         echo "\" alt=\"\"></div>
-            <div class=\"p-5 flex-shrink-1 bd-highlight text-right\"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis auctor justo. Pellentesque ultricies dui efficitur nulla rutrum, nec dapibus augue imperdiet. Nunc id turpis fringilla, ornare felis sagittis, interdum enim. Fusce accumsan lobortis sapien, eget gravida nunc bibendum quis. Nulla eu metus ac turpis aliquet lobortis. Nam dapibus purus venenatis mauris gravida, eu pulvinar tortor feugiat. Duis augue tortor, aliquam sit amet neque vitae, pellentesque pellentesque ante. Maecenas commodo a tortor sit amet eleifend. Fusce dignissim mattis vestibulum. Maecenas laoreet, massa eget aliquet mattis, felis ante facilisis est, vitae ultrices elit dui at arcu. Pellentesque condimentum mauris neque, quis cursus odio sagittis a. Etiam dictum libero vitae mi vestibulum tempor. Phasellus facilisis augue vel massa eleifend placerat. Aliquam nec risus nisl. Cras accumsan nisi dolor, sit amet consequat tortor sodales ac.</p></div>
+            <div class=\"p-5 flex-shrink-1 bd-highlight text-justify texteConnemara\"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis auctor justo. Pellentesque ultricies dui efficitur nulla rutrum, nec dapibus augue imperdiet. Nunc id turpis fringilla, ornare felis sagittis, interdum enim. Fusce accumsan lobortis sapien, eget gravida nunc bibendum quis. Nulla eu metus ac turpis aliquet lobortis. Nam dapibus purus venenatis mauris gravida, eu pulvinar tortor feugiat. Duis augue tortor, aliquam sit amet neque vitae, pellentesque pellentesque ante. Maecenas commodo a tortor sit amet eleifend. Fusce dignissim mattis vestibulum. Maecenas laoreet, massa eget aliquet mattis, felis ante facilisis est, vitae ultrices elit dui at arcu. Pellentesque condimentum mauris neque, quis cursus odio sagittis a. Etiam dictum libero vitae mi vestibulum tempor. Phasellus facilisis augue vel massa eleifend placerat. Aliquam nec risus nisl. Cras accumsan nisi dolor, sit amet consequat tortor sodales ac.</p></div>
         </div>
     </div>
     <div class=\"col-lg-12 text-center titreTeam\"><h2>Team 4 it</h2></div>
     <div class=\"container-fluid\">
         <div class=\"container d-flex justify-content-between align-items-center\">
-            <div class=\"p-5 flex-shrink-1 bd-highlight text-left\"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis auctor justo. Pellentesque ultricies dui efficitur nulla rutrum, nec dapibus augue imperdiet. Nunc id turpis fringilla, ornare felis sagittis, interdum enim. Fusce accumsan lobortis sapien, eget gravida nunc bibendum quis. Nulla eu metus ac turpis aliquet lobortis. Nam dapibus purus venenatis mauris gravida, eu pulvinar tortor feugiat. Duis augue tortor, aliquam sit amet neque vitae, pellentesque pellentesque ante. Maecenas commodo a tortor sit amet eleifend. Fusce dignissim mattis vestibulum. Maecenas laoreet, massa eget aliquet mattis, felis ante facilisis est, vitae ultrices elit dui at arcu. Pellentesque condimentum mauris neque, quis cursus odio sagittis a. Etiam dictum libero vitae mi vestibulum tempor. Phasellus facilisis augue vel massa eleifend placerat. Aliquam nec risus nisl. Cras accumsan nisi dolor, sit amet consequat tortor sodales ac.</p></div>
-            <div class=\"p-2 w-100 bd-highlight\"><img class=\"imgConnemara\" src=\"";
-        // line 22
+            <div class=\"p-5 flex-shrink-1 bd-highlight text-justify texteConnemara1\"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis auctor justo. Pellentesque ultricies dui efficitur nulla rutrum, nec dapibus augue imperdiet. Nunc id turpis fringilla, ornare felis sagittis, interdum enim. Fusce accumsan lobortis sapien, eget gravida nunc bibendum quis. Nulla eu metus ac turpis aliquet lobortis. Nam dapibus purus venenatis mauris gravida, eu pulvinar tortor feugiat. Duis augue tortor, aliquam sit amet neque vitae, pellentesque pellentesque ante. Maecenas commodo a tortor sit amet eleifend. Fusce dignissim mattis vestibulum. Maecenas laoreet, massa eget aliquet mattis, felis ante facilisis est, vitae ultrices elit dui at arcu. Pellentesque condimentum mauris neque, quis cursus odio sagittis a. Etiam dictum libero vitae mi vestibulum tempor. Phasellus facilisis augue vel massa eleifend placerat. Aliquam nec risus nisl. Cras accumsan nisi dolor, sit amet consequat tortor sodales ac.</p></div>
+            <div class=\"p-2 w-100 bd-highlight\"><img class=\"imgConnemara1\" src=\"";
+        // line 23
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/team.jpeg"), "html", null, true);
         echo "\" alt=\"\"></div>
         </div>
@@ -98,12 +99,12 @@ class __TwigTemplate_3eefa914ccef364229c10bdf0780eed46b61be60016a0de9c286ae48483
     <nav>
         <div class=\"d-flex align-items-center justify-content-around menuMaillot\">
             <div><img class=\"logoMaillot\" src=\"";
-        // line 28
+        // line 29
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/bordeaux.jpg"), "html", null, true);
         echo "\" alt=\"logo\"></div>
-            <div><h1>Nos maillots</h1></div>
-            <div><img class=\"logoMaillot\" src=\"";
-        // line 30
+            <div class=\"text-center\"><h1>Nos maillots</h1></div>
+            <div><img class=\"logoMaillot1\" src=\"";
+        // line 31
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/bordeaux17.jpg"), "html", null, true);
         echo "\" alt=\"logo\"></div>
         </div>
@@ -130,7 +131,7 @@ class __TwigTemplate_3eefa914ccef364229c10bdf0780eed46b61be60016a0de9c286ae48483
 
     public function getDebugInfo()
     {
-        return array (  107 => 30,  102 => 28,  93 => 22,  82 => 14,  76 => 10,  67 => 9,  54 => 4,  45 => 3,  15 => 1,);
+        return array (  108 => 31,  103 => 29,  94 => 23,  83 => 15,  76 => 10,  67 => 9,  54 => 4,  45 => 3,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -139,32 +140,33 @@ class __TwigTemplate_3eefa914ccef364229c10bdf0780eed46b61be60016a0de9c286ae48483
 
 {% block title %}
 
-    <title> Partenaire </title>
+    Partenaire
 
 {% endblock %}
 
 {% block content %}
+    <h1 class=\"accueilPartenaire\">Nos partenaires</h1>
 <div class=\"fondPartenaire\">
     <div class=\"col-lg-12 text-center titreConnemara\"><h2>Connemara</h2></div>
     <div class=\"container-fluid\">
         <div class=\"container d-flex justify-content-between align-items-center\">
             <div class=\"p-2 w-100 bd-highlight\"><img class=\"imgConnemara\" src=\"{{ asset('images/connemara.jpg') }}\" alt=\"\"></div>
-            <div class=\"p-5 flex-shrink-1 bd-highlight text-right\"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis auctor justo. Pellentesque ultricies dui efficitur nulla rutrum, nec dapibus augue imperdiet. Nunc id turpis fringilla, ornare felis sagittis, interdum enim. Fusce accumsan lobortis sapien, eget gravida nunc bibendum quis. Nulla eu metus ac turpis aliquet lobortis. Nam dapibus purus venenatis mauris gravida, eu pulvinar tortor feugiat. Duis augue tortor, aliquam sit amet neque vitae, pellentesque pellentesque ante. Maecenas commodo a tortor sit amet eleifend. Fusce dignissim mattis vestibulum. Maecenas laoreet, massa eget aliquet mattis, felis ante facilisis est, vitae ultrices elit dui at arcu. Pellentesque condimentum mauris neque, quis cursus odio sagittis a. Etiam dictum libero vitae mi vestibulum tempor. Phasellus facilisis augue vel massa eleifend placerat. Aliquam nec risus nisl. Cras accumsan nisi dolor, sit amet consequat tortor sodales ac.</p></div>
+            <div class=\"p-5 flex-shrink-1 bd-highlight text-justify texteConnemara\"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis auctor justo. Pellentesque ultricies dui efficitur nulla rutrum, nec dapibus augue imperdiet. Nunc id turpis fringilla, ornare felis sagittis, interdum enim. Fusce accumsan lobortis sapien, eget gravida nunc bibendum quis. Nulla eu metus ac turpis aliquet lobortis. Nam dapibus purus venenatis mauris gravida, eu pulvinar tortor feugiat. Duis augue tortor, aliquam sit amet neque vitae, pellentesque pellentesque ante. Maecenas commodo a tortor sit amet eleifend. Fusce dignissim mattis vestibulum. Maecenas laoreet, massa eget aliquet mattis, felis ante facilisis est, vitae ultrices elit dui at arcu. Pellentesque condimentum mauris neque, quis cursus odio sagittis a. Etiam dictum libero vitae mi vestibulum tempor. Phasellus facilisis augue vel massa eleifend placerat. Aliquam nec risus nisl. Cras accumsan nisi dolor, sit amet consequat tortor sodales ac.</p></div>
         </div>
     </div>
     <div class=\"col-lg-12 text-center titreTeam\"><h2>Team 4 it</h2></div>
     <div class=\"container-fluid\">
         <div class=\"container d-flex justify-content-between align-items-center\">
-            <div class=\"p-5 flex-shrink-1 bd-highlight text-left\"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis auctor justo. Pellentesque ultricies dui efficitur nulla rutrum, nec dapibus augue imperdiet. Nunc id turpis fringilla, ornare felis sagittis, interdum enim. Fusce accumsan lobortis sapien, eget gravida nunc bibendum quis. Nulla eu metus ac turpis aliquet lobortis. Nam dapibus purus venenatis mauris gravida, eu pulvinar tortor feugiat. Duis augue tortor, aliquam sit amet neque vitae, pellentesque pellentesque ante. Maecenas commodo a tortor sit amet eleifend. Fusce dignissim mattis vestibulum. Maecenas laoreet, massa eget aliquet mattis, felis ante facilisis est, vitae ultrices elit dui at arcu. Pellentesque condimentum mauris neque, quis cursus odio sagittis a. Etiam dictum libero vitae mi vestibulum tempor. Phasellus facilisis augue vel massa eleifend placerat. Aliquam nec risus nisl. Cras accumsan nisi dolor, sit amet consequat tortor sodales ac.</p></div>
-            <div class=\"p-2 w-100 bd-highlight\"><img class=\"imgConnemara\" src=\"{{ asset('images/team.jpeg') }}\" alt=\"\"></div>
+            <div class=\"p-5 flex-shrink-1 bd-highlight text-justify texteConnemara1\"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis auctor justo. Pellentesque ultricies dui efficitur nulla rutrum, nec dapibus augue imperdiet. Nunc id turpis fringilla, ornare felis sagittis, interdum enim. Fusce accumsan lobortis sapien, eget gravida nunc bibendum quis. Nulla eu metus ac turpis aliquet lobortis. Nam dapibus purus venenatis mauris gravida, eu pulvinar tortor feugiat. Duis augue tortor, aliquam sit amet neque vitae, pellentesque pellentesque ante. Maecenas commodo a tortor sit amet eleifend. Fusce dignissim mattis vestibulum. Maecenas laoreet, massa eget aliquet mattis, felis ante facilisis est, vitae ultrices elit dui at arcu. Pellentesque condimentum mauris neque, quis cursus odio sagittis a. Etiam dictum libero vitae mi vestibulum tempor. Phasellus facilisis augue vel massa eleifend placerat. Aliquam nec risus nisl. Cras accumsan nisi dolor, sit amet consequat tortor sodales ac.</p></div>
+            <div class=\"p-2 w-100 bd-highlight\"><img class=\"imgConnemara1\" src=\"{{ asset('images/team.jpeg') }}\" alt=\"\"></div>
         </div>
     </div>
 </div>
     <nav>
         <div class=\"d-flex align-items-center justify-content-around menuMaillot\">
             <div><img class=\"logoMaillot\" src=\"{{ asset('images/bordeaux.jpg') }}\" alt=\"logo\"></div>
-            <div><h1>Nos maillots</h1></div>
-            <div><img class=\"logoMaillot\" src=\"{{ asset('images/bordeaux17.jpg') }}\" alt=\"logo\"></div>
+            <div class=\"text-center\"><h1>Nos maillots</h1></div>
+            <div><img class=\"logoMaillot1\" src=\"{{ asset('images/bordeaux17.jpg') }}\" alt=\"logo\"></div>
         </div>
     </nav>
 

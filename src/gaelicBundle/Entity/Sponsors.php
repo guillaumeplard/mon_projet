@@ -35,7 +35,7 @@ class Sponsors
     /**
      * @var string
      *
-     * @ORM\Column(name="Contenu", type="string", length=255)
+     * @ORM\Column(name="Contenu", type="text", length=1000)
      */
     private $contenu;
 

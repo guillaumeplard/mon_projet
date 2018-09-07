@@ -2,23 +2,39 @@
 
 {% block article %}
 
-    <h3 class="day">Le lundi</h3>
-    <div class="container-fluid">
-        <div class="container d-flex justify-content-between entrainement">
-            <div class="p-2 w-100 bd-highlight"><img class="imgConnemara" src="{{ asset('images/connemara.jpg') }}" alt=""></div>
-            <div class="p-2 flex-shrink-1 bd-highlight text-justify"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis auctor justo. Pellentesque ultricies dui efficitur nulla rutrum, nec dapibus augue imperdiet. Nunc id turpis fringilla, ornare felis sagittis, interdum enim. Fusce accumsan lobortis sapien, eget gravida nunc bibendum quis. Nulla eu metus ac turpis aliquet lobortis. Nam dapibus purus venenatis mauris gravida, eu pulvinar tortor feugiat. Duis augue tortor, aliquam sit amet neque vitae, pellentesque pellentesque ante. Maecenas commodo a tortor sit amet eleifend. Fusce dignissim mattis vestibulum. Maecenas laoreet, massa eget aliquet mattis, felis ante facilisis est, vitae ultrices elit dui at arcu. Pellentesque condimentum mauris neque, quis cursus odio sagittis a. Etiam dictum libero vitae mi vestibulum tempor. Phasellus facilisis augue vel massa eleifend placerat. Aliquam nec risus nisl. Cras accumsan nisi dolor, sit amet consequat tortor sodales ac.</p></div>
+
+    <div class="container-fluid new">
+        <div class="actuGaelic text-center"><h2>Actualité</h2></div>
+        {% set i = 0 %}
+        {% for new in news | reverse %}
+            {% if i < 3 %}
+                {% if i%2 == 0 %}
+
+                    <div class="text-center titreNew"><p>{{ new.titre }}</p></div>
+                    <div class="row">
+                        <div class="container d-flex justify-content-center m-t-4 m-b-2 blocActualite">
+                            <div class="col-lg-4"><img class="img-fluid imgActualite" src="{{ asset('new/'~new.image~'') }}" alt=""></div>
+                            <div class="col-lg-8 text-justify"><textarea>{{ new.contenu|raw }}</textarea></div>
+                        </div>
+                    </div>
+                {% else %}
+                    <div class="text-center titreNew"><p>{{ new.titre }}</p></div>
+                    <div class="row">
+                        <div class="container d-flex justify-content-center m-t-4 m-b-4 blocActualite">
+                            <div class="col-lg-8 text-justify textar"><textarea><p>{{ new.contenu|raw }}</p></textarea></div>
+                            <div class="col-lg-4"><img class="img-fluid imgActualite" src="{{ asset('new/'~new.image~'') }}" alt=""></div>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endif %}
+            {% set i = i + 1 %}
+        {% endfor %}
+        <div class="">
+
+            <div><img class="avantFooter" src="{{ asset('images/bandeau.png') }}" alt=""></div>
 
         </div>
-    </div>
 
-    <h3 class="day">Le jeudi</h3>
-    <div class="row"></div>
-    <div class="container-fluid">
-        <div class="container d-flex justify-content-between entrainement">
-            <div class="p-2 flex-shrink-1 bd-highlight text-justify"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis auctor justo. Pellentesque ultricies dui efficitur nulla rutrum, nec dapibus augue imperdiet. Nunc id turpis fringilla, ornare felis sagittis, interdum enim. Fusce accumsan lobortis sapien, eget gravida nunc bibendum quis. Nulla eu metus ac turpis aliquet lobortis. Nam dapibus purus venenatis mauris gravida, eu pulvinar tortor feugiat. Duis augue tortor, aliquam sit amet neque vitae, pellentesque pellentesque ante. Maecenas commodo a tortor sit amet eleifend. Fusce dignissim mattis vestibulum. Maecenas laoreet, massa eget aliquet mattis, felis ante facilisis est, vitae ultrices elit dui at arcu. Pellentesque condimentum mauris neque, quis cursus odio sagittis a. Etiam dictum libero vitae mi vestibulum tempor. Phasellus facilisis augue vel massa eleifend placerat. Aliquam nec risus nisl. Cras accumsan nisi dolor, sit amet consequat tortor sodales ac.</p></div>
-            <div class="p-2 w-100 bd-highlight"><img class="imgConnemara" src="{{ asset('images/team.jpeg') }}" alt=""></div>
-        </div>
     </div>
-
 {% endblock %}
 

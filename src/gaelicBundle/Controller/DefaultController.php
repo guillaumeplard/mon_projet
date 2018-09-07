@@ -41,7 +41,12 @@ class DefaultController extends Controller
     }
     public function sponsorsAction()
     {
-        return $this->render('@gaelic/Default/partenaire.html.twig');
+        $repository = $this->getDoctrine()->getRepository(Sponsors::class);
+        $partenaires = $repository->findAll();
+
+        return $this->render('@gaelic/Default/partenaire.html.twig', array(
+            'partenaires' => $partenaires
+        ));
     }
     public function contactAction(Request $request)
     {
@@ -82,7 +87,6 @@ class DefaultController extends Controller
 
 
         }
-
         $repository = $this->getDoctrine()->getRepository(Entrainement::class);
         $entrainements=$repository->findAll();
 
@@ -90,7 +94,7 @@ class DefaultController extends Controller
 
         return $this->render('@gaelic/Default/contact.html.twig',array(
 
-            'formView' => $formView, 'entrainements' => $entrainements
+            'formView' => $formView,'entrainements' => $entrainements
         ));
     }
 
